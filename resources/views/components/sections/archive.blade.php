@@ -92,7 +92,7 @@
                         { formula: 'H₂O', name: 'Pure Water', detail: 'Cooling Solvent' },
                         { formula: 'HCl', name: 'Acidic Vapor', detail: 'Etching Agent' }
                     ],
-                    note: 'Highly volatile light vapor captured in high mountain thermals, vital for exothermic ignition.'
+                    note: 'Volatile light vapor captured in high thermals, vital for exothermic ignition.'
                 },
                 'O': {
                     number: '08',
@@ -111,7 +111,7 @@
                         { formula: 'Fe₂O₃', name: 'Iron Oxide', detail: 'Blast Furnace Slag' },
                         { formula: 'H₂O', name: 'Water Vapor', detail: 'Quenching Vapor' }
                     ],
-                    note: 'Pervades the Elemental Realm atmosphere; sustains thermal oxidation required in the great forges.'
+                    note: 'Sustains thermal oxidation required in the great forges across the realm.'
                 },
                 'S': {
                     number: '16',
@@ -130,7 +130,7 @@
                         { formula: 'FeS', name: 'Iron Sulfide', detail: 'Pyros Blade Coating' },
                         { formula: 'SO₂', name: 'Sulfur Dioxide', detail: 'Pungent Deterrent' }
                     ],
-                    note: 'Harvested from volcanic fumaroles; readily binds with forged metals to impart elemental flame.'
+                    note: 'Harvested from volcanic vents; readily binds with metals to impart flame.'
                 },
                 'NA': {
                     number: '11',
@@ -149,7 +149,7 @@
                         { formula: 'NaCl', name: 'Rock Salt', detail: 'Preservation Flux' },
                         { formula: 'NaOH', name: 'Caustic Lye', detail: 'Alchemical Cleanser' }
                     ],
-                    note: 'Soft, lustrous metal that violently combusts upon contact with moisture; stored under mineral oil.'
+                    note: 'Soft lustrous metal that violently combusts upon contact with moisture.'
                 },
                 'CL': {
                     number: '17',
@@ -168,7 +168,7 @@
                         { formula: 'NaCl', name: 'Table Salt', detail: 'Mineral Stabilizer' },
                         { formula: 'HCl', name: 'Acid Solvent', detail: 'Ore Dissolution' }
                     ],
-                    note: 'Dense, pungent vapor distilled from dried salt pans, indispensable for dissolving stubborn mineral ores.'
+                    note: 'Dense pungent vapor distilled from salt pans, vital for dissolving ores.'
                 }
             }
          }">
@@ -229,7 +229,7 @@
             </div>
 
             <!-- Main Two-Column Archive Workspace -->
-            <div class="grid grid-cols-1 lg:grid-cols-12 items-stretch">
+            <div class="grid grid-cols-1 lg:grid-cols-12 items-stretch min-h-[540px] lg:min-h-[560px]">
                 
                 <!-- =============================================================
                      LEFT SIDE: Featured Elemental Specimen Panel (Iron Ore / Specimen Tray)
@@ -250,7 +250,7 @@
                     </div>
 
                     <!-- Low-Poly Faceted Mineral Specimen Mounting Chamber -->
-                    <div class="relative w-full rounded-lg bg-[#162025] border-2 border-[#2D3C43] shadow-inner p-4 sm:p-5 flex flex-col items-center justify-center my-2 min-h-[260px] sm:min-h-[290px] overflow-hidden group">
+                    <div class="relative w-full rounded-lg bg-[#162025] border-2 border-[#2D3C43] shadow-inner p-4 sm:p-5 flex flex-col items-center justify-center my-2 h-[320px] sm:h-[350px] overflow-hidden group">
                         
                         <!-- Archival Measurement Grid & Crosshairs (Background of Specimen Tray) -->
                         <svg class="absolute inset-0 w-full h-full opacity-20 pointer-events-none" xmlns="http://www.w3.org/2000/svg">
@@ -282,13 +282,13 @@
                         </div>
 
                         <!-- Real Elemental Field Specimen Artwork (Dynamic per selected element) -->
-                        <div class="relative z-10 w-full max-w-[260px] sm:max-w-[280px] aspect-square rounded-lg overflow-hidden border border-[#2D3C43] shadow-[0_12px_24px_rgba(0,0,0,0.55)] transition-transform duration-500 group-hover:scale-[1.02] bg-[#12191C]">
+                        <div class="relative z-10 w-[220px] h-[220px] sm:w-[250px] sm:h-[250px] aspect-square rounded-lg overflow-hidden border border-[#2D3C43] shadow-[0_12px_24px_rgba(0,0,0,0.55)] transition-transform duration-300 group-hover:scale-[1.02] bg-[#12191C] shrink-0">
                             <img 
                                 :src="specimens[activeTab].image"
                                 src="{{ asset('images/iron-specimen.jpg') }}" 
                                 :alt="'Reaktoria Low-Poly ' + specimens[activeTab].name + ' Field Specimen'"
                                 alt="Reaktoria Low-Poly Raw Iron Ore Field Specimen with Forged Sample" 
-                                class="w-full h-full object-cover select-none transition-all duration-300"
+                                class="w-full h-full object-cover select-none"
                                 loading="lazy"
                             />
                             <!-- Subtle Ambient Specimen Glass Reflection -->
@@ -296,7 +296,7 @@
                         </div>
 
                         <!-- Brass Identification Plaque at Bottom of Specimen Mount -->
-                        <div class="relative z-10 mt-2 px-3 py-1 rounded bg-[#0F171A] border border-[#2B3B42] flex items-center gap-2 font-mono text-[10px] text-[#93A8B3] select-none">
+                        <div class="relative z-10 mt-3 px-3 py-1 rounded bg-[#0F171A] border border-[#2B3B42] flex items-center gap-2 font-mono text-[10px] text-[#93A8B3] select-none shrink-0">
                             <span class="w-1.5 h-1.5 rounded-full bg-[#E3B44C]"></span>
                             <span class="font-bold text-white tracking-widest" x-text="specimens[activeTab].name + ' SPECIMEN'">IRON SPECIMEN</span>
                             <span class="text-stone-600">&bull;</span>
@@ -356,7 +356,7 @@
                     <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 py-5 border-b border-[#E2D5BE]">
                         
                         <!-- Property 1: ATOMIC NUMBER -->
-                        <div class="p-3 sm:p-3.5 rounded bg-[#F2EBDE]/75 border border-[#DDD0B8] shadow-2xs">
+                        <div class="p-3 sm:p-3.5 rounded bg-[#F2EBDE]/75 border border-[#DDD0B8] shadow-2xs min-h-[4.75rem] sm:min-h-[5.25rem] flex flex-col justify-between">
                             <span class="block text-[10px] font-mono font-bold uppercase tracking-wider text-[#7A674D] mb-1">
                                 ATOMIC NUMBER
                             </span>
@@ -366,7 +366,7 @@
                         </div>
 
                         <!-- Property 2: CATEGORY -->
-                        <div class="p-3 sm:p-3.5 rounded bg-[#F2EBDE]/75 border border-[#DDD0B8] shadow-2xs">
+                        <div class="p-3 sm:p-3.5 rounded bg-[#F2EBDE]/75 border border-[#DDD0B8] shadow-2xs min-h-[4.75rem] sm:min-h-[5.25rem] flex flex-col justify-between">
                             <span class="block text-[10px] font-mono font-bold uppercase tracking-wider text-[#7A674D] mb-1">
                                 CATEGORY
                             </span>
@@ -376,7 +376,7 @@
                         </div>
 
                         <!-- Property 3: SYMBOL -->
-                        <div class="p-3 sm:p-3.5 rounded bg-[#F2EBDE]/75 border border-[#DDD0B8] shadow-2xs">
+                        <div class="p-3 sm:p-3.5 rounded bg-[#F2EBDE]/75 border border-[#DDD0B8] shadow-2xs min-h-[4.75rem] sm:min-h-[5.25rem] flex flex-col justify-between">
                             <span class="block text-[10px] font-mono font-bold uppercase tracking-wider text-[#7A674D] mb-1">
                                 SYMBOL
                             </span>
@@ -386,11 +386,11 @@
                         </div>
 
                         <!-- Property 4: ROLE -->
-                        <div class="p-3 sm:p-3.5 rounded bg-[#F2EBDE]/75 border border-[#DDD0B8] shadow-2xs">
+                        <div class="p-3 sm:p-3.5 rounded bg-[#F2EBDE]/75 border border-[#DDD0B8] shadow-2xs min-h-[4.75rem] sm:min-h-[5.25rem] flex flex-col justify-between">
                             <span class="block text-[10px] font-mono font-bold uppercase tracking-wider text-[#7A674D] mb-1">
                                 ROLE
                             </span>
-                            <span class="font-body text-xs sm:text-sm font-bold text-reaktoria-deep-forest leading-snug" x-text="specimens[activeTab].role">
+                            <span class="font-body text-xs sm:text-sm font-bold text-reaktoria-deep-forest leading-snug line-clamp-2" x-text="specimens[activeTab].role">
                                 Forging Material
                             </span>
                         </div>
@@ -415,11 +415,11 @@
                                     COMMONLY REACTS WITH
                                 </span>
                                 
-                                <div class="flex flex-wrap items-center gap-2">
+                                <div class="flex flex-wrap items-center gap-1.5 sm:gap-2 min-h-[2.5rem]">
                                     <template x-for="reactant in specimens[activeTab].reacts" :key="reactant.symbol">
-                                        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded bg-[#F3ECDC] border border-[#D8C9AA] text-xs font-mono shadow-2xs">
+                                        <div class="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded bg-[#F3ECDC] border border-[#D8C9AA] text-xs font-mono shadow-2xs shrink-0">
                                             <span class="font-bold text-[#8C6211] text-sm" x-text="reactant.symbol">S</span>
-                                            <span class="text-[10px] text-[#7A674D]" x-text="reactant.name">Sulfur</span>
+                                            <span class="text-[10px] text-[#7A674D] whitespace-nowrap" x-text="reactant.name">Sulfur</span>
                                         </div>
                                     </template>
 
@@ -443,11 +443,11 @@
                                     DISCOVERIES
                                 </span>
                                 
-                                <div class="flex flex-wrap items-center gap-2">
+                                <div class="flex flex-wrap items-center gap-1.5 sm:gap-2 min-h-[2.5rem]">
                                     <template x-for="discovery in specimens[activeTab].discoveries" :key="discovery.formula">
-                                        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded bg-[#F4EDE0] border border-[#D9CBB0] text-xs font-mono shadow-2xs">
+                                        <div class="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded bg-[#F4EDE0] border border-[#D9CBB0] text-xs font-mono shadow-2xs shrink-0">
                                             <span class="font-bold text-reaktoria-deep-forest text-sm" x-text="discovery.formula">FeS</span>
-                                            <span class="text-[10px] text-[#8C6211]" x-text="discovery.name">Iron Sulfide</span>
+                                            <span class="text-[10px] text-[#8C6211] whitespace-nowrap" x-text="discovery.name">Iron Sulfide</span>
                                         </div>
                                     </template>
 
@@ -470,7 +470,7 @@
                     </div>
 
                     <!-- Small Field Note -->
-                    <div class="mt-5 p-3.5 sm:p-4 rounded bg-[#F2EBDE]/85 border-l-3 border-[#B84E1F] border-t border-r border-b border-[#DDD0B8] shadow-2xs">
+                    <div class="mt-5 p-3.5 sm:p-4 rounded bg-[#F2EBDE]/85 border-l-3 border-[#B84E1F] border-t border-r border-b border-[#DDD0B8] shadow-2xs min-h-[5.25rem] sm:min-h-[5.5rem] flex flex-col justify-center">
                         <div class="flex items-center gap-1.5 mb-1">
                             <span class="w-1.5 h-1.5 rounded-full bg-[#B84E1F]"></span>
                             <span class="text-[10px] font-mono font-bold uppercase tracking-wider text-[#B84E1F]">
@@ -507,9 +507,9 @@
                         type="button"
                         @click="activeTab = 'FE'"
                         :class="activeTab === 'FE' 
-                            ? 'bg-[#FAF6EE] text-reaktoria-deep-forest border-t-2 border-t-[#B84E1F] border-x border-b border-[#D5C6AA] shadow-xs' 
-                            : 'bg-[#E4D7BE]/70 text-[#7A674D] border border-[#CEBF9E] hover:bg-[#E4D7BE] hover:text-reaktoria-deep-forest'"
-                        class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded font-mono text-xs font-bold transition-all cursor-pointer">
+                            ? 'bg-[#FAF6EE] text-reaktoria-deep-forest border-t-[#B84E1F] border-x-[#D5C6AA] border-b-[#D5C6AA] shadow-xs' 
+                            : 'bg-[#E4D7BE]/70 text-[#7A674D] border-t-transparent border-[#CEBF9E] hover:bg-[#E4D7BE] hover:text-reaktoria-deep-forest'"
+                        class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded font-mono text-xs font-bold border-t-2 border-x border-b transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#B84E1F]/60">
                         <span class="w-1.5 h-1.5 rounded-full" :class="activeTab === 'FE' ? 'bg-[#B84E1F]' : 'bg-[#7A674D]/40'"></span>
                         <span>01 FE</span>
                     </button>
@@ -519,9 +519,9 @@
                         type="button"
                         @click="activeTab = 'H'"
                         :class="activeTab === 'H' 
-                            ? 'bg-[#FAF6EE] text-reaktoria-deep-forest border-t-2 border-t-[#B84E1F] border-x border-b border-[#D5C6AA] shadow-xs' 
-                            : 'bg-[#E4D7BE]/70 text-[#7A674D] border border-[#CEBF9E] hover:bg-[#E4D7BE] hover:text-reaktoria-deep-forest'"
-                        class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded font-mono text-xs font-bold transition-all cursor-pointer">
+                            ? 'bg-[#FAF6EE] text-reaktoria-deep-forest border-t-[#B84E1F] border-x-[#D5C6AA] border-b-[#D5C6AA] shadow-xs' 
+                            : 'bg-[#E4D7BE]/70 text-[#7A674D] border-t-transparent border-[#CEBF9E] hover:bg-[#E4D7BE] hover:text-reaktoria-deep-forest'"
+                        class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded font-mono text-xs font-bold border-t-2 border-x border-b transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#B84E1F]/60">
                         <span class="w-1.5 h-1.5 rounded-full" :class="activeTab === 'H' ? 'bg-[#B84E1F]' : 'bg-[#7A674D]/40'"></span>
                         <span>02 H</span>
                     </button>
@@ -531,9 +531,9 @@
                         type="button"
                         @click="activeTab = 'O'"
                         :class="activeTab === 'O' 
-                            ? 'bg-[#FAF6EE] text-reaktoria-deep-forest border-t-2 border-t-[#B84E1F] border-x border-b border-[#D5C6AA] shadow-xs' 
-                            : 'bg-[#E4D7BE]/70 text-[#7A674D] border border-[#CEBF9E] hover:bg-[#E4D7BE] hover:text-reaktoria-deep-forest'"
-                        class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded font-mono text-xs font-bold transition-all cursor-pointer">
+                            ? 'bg-[#FAF6EE] text-reaktoria-deep-forest border-t-[#B84E1F] border-x-[#D5C6AA] border-b-[#D5C6AA] shadow-xs' 
+                            : 'bg-[#E4D7BE]/70 text-[#7A674D] border-t-transparent border-[#CEBF9E] hover:bg-[#E4D7BE] hover:text-reaktoria-deep-forest'"
+                        class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded font-mono text-xs font-bold border-t-2 border-x border-b transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#B84E1F]/60">
                         <span class="w-1.5 h-1.5 rounded-full" :class="activeTab === 'O' ? 'bg-[#B84E1F]' : 'bg-[#7A674D]/40'"></span>
                         <span>03 O</span>
                     </button>
@@ -543,9 +543,9 @@
                         type="button"
                         @click="activeTab = 'S'"
                         :class="activeTab === 'S' 
-                            ? 'bg-[#FAF6EE] text-reaktoria-deep-forest border-t-2 border-t-[#B84E1F] border-x border-b border-[#D5C6AA] shadow-xs' 
-                            : 'bg-[#E4D7BE]/70 text-[#7A674D] border border-[#CEBF9E] hover:bg-[#E4D7BE] hover:text-reaktoria-deep-forest'"
-                        class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded font-mono text-xs font-bold transition-all cursor-pointer">
+                            ? 'bg-[#FAF6EE] text-reaktoria-deep-forest border-t-[#B84E1F] border-x-[#D5C6AA] border-b-[#D5C6AA] shadow-xs' 
+                            : 'bg-[#E4D7BE]/70 text-[#7A674D] border-t-transparent border-[#CEBF9E] hover:bg-[#E4D7BE] hover:text-reaktoria-deep-forest'"
+                        class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded font-mono text-xs font-bold border-t-2 border-x border-b transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#B84E1F]/60">
                         <span class="w-1.5 h-1.5 rounded-full" :class="activeTab === 'S' ? 'bg-[#B84E1F]' : 'bg-[#7A674D]/40'"></span>
                         <span>04 S</span>
                     </button>
@@ -555,9 +555,9 @@
                         type="button"
                         @click="activeTab = 'NA'"
                         :class="activeTab === 'NA' 
-                            ? 'bg-[#FAF6EE] text-reaktoria-deep-forest border-t-2 border-t-[#B84E1F] border-x border-b border-[#D5C6AA] shadow-xs' 
-                            : 'bg-[#E4D7BE]/70 text-[#7A674D] border border-[#CEBF9E] hover:bg-[#E4D7BE] hover:text-reaktoria-deep-forest'"
-                        class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded font-mono text-xs font-bold transition-all cursor-pointer">
+                            ? 'bg-[#FAF6EE] text-reaktoria-deep-forest border-t-[#B84E1F] border-x-[#D5C6AA] border-b-[#D5C6AA] shadow-xs' 
+                            : 'bg-[#E4D7BE]/70 text-[#7A674D] border-t-transparent border-[#CEBF9E] hover:bg-[#E4D7BE] hover:text-reaktoria-deep-forest'"
+                        class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded font-mono text-xs font-bold border-t-2 border-x border-b transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#B84E1F]/60">
                         <span class="w-1.5 h-1.5 rounded-full" :class="activeTab === 'NA' ? 'bg-[#B84E1F]' : 'bg-[#7A674D]/40'"></span>
                         <span>05 NA</span>
                     </button>
@@ -567,9 +567,9 @@
                         type="button"
                         @click="activeTab = 'CL'"
                         :class="activeTab === 'CL' 
-                            ? 'bg-[#FAF6EE] text-reaktoria-deep-forest border-t-2 border-t-[#B84E1F] border-x border-b border-[#D5C6AA] shadow-xs' 
-                            : 'bg-[#E4D7BE]/70 text-[#7A674D] border border-[#CEBF9E] hover:bg-[#E4D7BE] hover:text-reaktoria-deep-forest'"
-                        class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded font-mono text-xs font-bold transition-all cursor-pointer">
+                            ? 'bg-[#FAF6EE] text-reaktoria-deep-forest border-t-[#B84E1F] border-x-[#D5C6AA] border-b-[#D5C6AA] shadow-xs' 
+                            : 'bg-[#E4D7BE]/70 text-[#7A674D] border-t-transparent border-[#CEBF9E] hover:bg-[#E4D7BE] hover:text-reaktoria-deep-forest'"
+                        class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded font-mono text-xs font-bold border-t-2 border-x border-b transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#B84E1F]/60">
                         <span class="w-1.5 h-1.5 rounded-full" :class="activeTab === 'CL' ? 'bg-[#B84E1F]' : 'bg-[#7A674D]/40'"></span>
                         <span>06 CL</span>
                     </button>

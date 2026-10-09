@@ -20,7 +20,7 @@
             <a href="#gameplay" class="px-3 py-1.5 text-sm font-medium font-display tracking-wide text-reaktoria-cream-dim hover:text-white hover:bg-white/5 rounded transition-colors">
                 Gameplay
             </a>
-            <a href="#modes" class="px-3 py-1.5 text-sm font-medium font-display tracking-wide text-reaktoria-cream-dim hover:text-white hover:bg-white/5 rounded transition-colors">
+            <a href="#game-modes" class="px-3 py-1.5 text-sm font-medium font-display tracking-wide text-reaktoria-cream-dim hover:text-white hover:bg-white/5 rounded transition-colors">
                 Modes
             </a>
             <a href="#archive" class="px-3 py-1.5 text-sm font-medium font-display tracking-wide text-reaktoria-cream-dim hover:text-white hover:bg-white/5 rounded transition-colors">
@@ -44,7 +44,7 @@
             <button 
                 @click="mobileOpen = !mobileOpen" 
                 type="button" 
-                class="p-2 rounded text-reaktoria-cream hover:bg-white/10 focus:outline-none"
+                class="p-2 rounded text-reaktoria-cream hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-reaktoria-cream/50"
                 aria-label="Toggle navigation menu"
             >
                 <svg x-show="!mobileOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -74,7 +74,7 @@
         <a href="#chemistry" @click="mobileOpen = false" class="block px-3 py-2 text-base font-display text-reaktoria-cream hover:bg-white/10 rounded">Chemistry</a>
         <a href="#adventure" @click="mobileOpen = false" class="block px-3 py-2 text-base font-display text-reaktoria-cream hover:bg-white/10 rounded">Adventure</a>
         <a href="#gameplay" @click="mobileOpen = false" class="block px-3 py-2 text-base font-display text-reaktoria-cream hover:bg-white/10 rounded">Gameplay</a>
-        <a href="#modes" @click="mobileOpen = false" class="block px-3 py-2 text-base font-display text-reaktoria-cream hover:bg-white/10 rounded">Modes</a>
+        <a href="#game-modes" @click="mobileOpen = false" class="block px-3 py-2 text-base font-display text-reaktoria-cream hover:bg-white/10 rounded">Modes</a>
         <a href="#archive" @click="mobileOpen = false" class="block px-3 py-2 text-base font-display text-reaktoria-cream hover:bg-white/10 rounded">Archive</a>
         
         <div class="pt-2">

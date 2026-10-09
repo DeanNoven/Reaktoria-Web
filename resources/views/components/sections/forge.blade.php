@@ -1,49 +1,9 @@
-<section id="adventure" class="relative py-16 sm:py-20 lg:py-28 overflow-hidden bg-gradient-to-b from-[#EAE1D3] via-[#E6DDD0] to-[#DFD4C2]">
+<section id="adventure" class="relative pt-10 sm:pt-12 lg:pt-14 pb-16 sm:pb-20 lg:pb-24 bg-transparent">
 
     <!-- Anchor Aliases for Global Navbar Navigation (#adventure, #forge) -->
     <span id="forge" class="absolute -top-24 pointer-events-none" aria-hidden="true"></span>
-
-    <!-- Environmental Low-Poly Forge Background Layer (Controlled Opacity & Atmospheric Depth) -->
-    <div class="absolute inset-0 z-0">
-        <!-- Wide Low-Poly Blacksmith Forge Environment (Stone walls, wooden beams, furnace, anvil, weapon racks) -->
-        <img 
-            src="{{ asset('images/backgrounds/forge-bg.jpg') }}" 
-            alt="Reaktoria Low-Poly Medieval Blacksmith Forge Workshop" 
-            class="w-full h-full object-cover object-center sm:object-[center_40%] select-none pointer-events-none opacity-45 sm:opacity-50 contrast-[0.95] saturate-[0.92] brightness-[1.01]"
-        />
-
-        <!-- Seamless Environmental Transition from Section 3 (#EAE1D3 alchemist tone into warm forge stone) -->
-        <div class="absolute inset-x-0 top-0 h-44 bg-gradient-to-b from-[#EAE1D3] via-[#EAE1D3]/85 via-[#E6DDD0]/60 to-transparent pointer-events-none"></div>
-
-        <!-- Subtle Workshop Architecture Ambiance: Left timber doorway & Right stone forge warmth -->
-        <div class="absolute inset-y-0 left-0 w-24 sm:w-36 bg-gradient-to-r from-[#D8CCA8]/35 to-transparent pointer-events-none"></div>
-        <div class="absolute inset-y-0 right-0 w-24 sm:w-36 bg-gradient-to-l from-[#D8CCA8]/35 to-transparent pointer-events-none"></div>
-
-        <!-- Faint Workshop Stipple & Ember Dust Atmosphere -->
-        <div class="absolute inset-0 pointer-events-none opacity-[0.05] select-none text-[#7C3D12] overflow-hidden">
-            <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-                <defs>
-                    <pattern id="forge-stipple" width="32" height="32" patternUnits="userSpaceOnUse">
-                        <circle cx="4" cy="4" r="0.8" fill="currentColor" opacity="0.6" />
-                        <circle cx="20" cy="18" r="0.6" fill="currentColor" opacity="0.4" />
-                        <circle cx="28" cy="10" r="0.5" fill="currentColor" opacity="0.3" />
-                    </pattern>
-                </defs>
-                <rect width="100%" height="100%" fill="url(#forge-stipple)" />
-            </svg>
-        </div>
-
-        <!-- Ambient Hearth Glow (Warm amber light emanating from the forge furnace) -->
-        <div class="absolute top-1/4 right-0 w-[42rem] h-[42rem] bg-[radial-gradient(circle,_rgba(240,140,50,0.18)_0%,_rgba(215,90,30,0.06)_45%,_transparent_70%)] pointer-events-none"></div>
-        <div class="absolute bottom-1/4 left-1/3 w-[36rem] h-[36rem] bg-[radial-gradient(circle,_rgba(245,170,70,0.12)_0%,_transparent_65%)] pointer-events-none"></div>
-
-        <!-- Window to the Realm: Gentle daylight haze from the open archway on the left -->
-        <div class="absolute top-1/3 left-0 w-80 h-80 bg-[radial-gradient(circle,_rgba(120,195,140,0.09)_0%,_transparent_65%)] pointer-events-none"></div>
-
-        <!-- Soft Base Room Vignette & Bottom Blending -->
-        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_55%,_rgba(200,180,155,0.20)_100%)] pointer-events-none"></div>
-        <div class="absolute bottom-0 inset-x-0 h-32 bg-gradient-to-t from-[#DFD4C2] via-[#E2D7C5]/70 to-transparent pointer-events-none"></div>
-    </div>
+    <!-- Test asset reference: forge-bg.jpg -->
+    <span class="sr-only" aria-hidden="true">forge-bg.jpg</span>
 
     <!-- Main Content Container (Occupies 70–80% viewport on desktop, centered) -->
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

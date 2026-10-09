@@ -18,7 +18,7 @@
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="min-h-full flex flex-col bg-[#F7FAF6] text-reaktoria-ink font-sans antialiased selection:bg-reaktoria-grass selection:text-white">
+<body id="top" class="min-h-full flex flex-col bg-[#F7FAF6] text-reaktoria-ink font-sans antialiased selection:bg-reaktoria-grass selection:text-white">
     <!-- Bright Warm Daylight Ambient Backdrop (Sky blue atmosphere blending into sunlit meadow) -->
     <div class="fixed inset-0 pointer-events-none -z-10 bg-gradient-to-b from-reaktoria-sky-light/40 via-[#F7FAF6] to-[#EDF6EB]/70"></div>
 

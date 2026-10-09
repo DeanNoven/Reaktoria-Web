@@ -6,7 +6,7 @@
         <img 
             src="{{ asset('images/backgrounds/section2-wide-bg.jpg') }}" 
             alt="Reaktoria Low-Poly Medieval Meadow, Distant Forest and Mountains" 
-            class="w-full h-full object-cover object-center sm:object-[center_35%] select-none pointer-events-none opacity-75 contrast-[0.92] saturate-[0.88] brightness-[1.01]"
+            class="w-full h-full object-cover object-center sm:object-[center_35%] select-none pointer-events-none opacity-65 contrast-[0.92] saturate-[0.88] brightness-[1.01]"
         />
 
         <!-- Gradual Environmental Transition from Hero (Soft atmospheric fog preserving landscape shapes) -->
