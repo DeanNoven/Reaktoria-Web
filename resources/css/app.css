@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,400..700;1,400..700&family=JetBrains+Mono:wght@500;600&display=swap');
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../views/**/*.blade.php';
+
+@theme {
+    /* Typography */
+    --font-display: 'Cinzel', Georgia, serif;
+    --font-body: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+    --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+    /* Primary Game Environment Colors */
+    --color-reaktoria-forest: #2F6B3C;
+    --color-reaktoria-forest-hover: #265731;
+    --color-reaktoria-forest-dark: #1F4727;
+
+    --color-reaktoria-deep-forest: #19452C;
+    --color-reaktoria-deep-forest-hover: #123320;
+
+    --color-reaktoria-grass: #63A84E;
+    --color-reaktoria-grass-hover: #549440;
+    --color-reaktoria-grass-light: #8BCB63;
+
+    --color-reaktoria-sky: #8CC8E8;
+    --color-reaktoria-sky-light: #C6E6F4;
+    --color-reaktoria-sky-hover: #79BCD9;
+
+    --color-reaktoria-earth: #8B6040;
+    --color-reaktoria-earth-hover: #775135;
+
+    --color-reaktoria-wood: #6B452E;
+    --color-reaktoria-wood-hover: #593925;
+    --color-reaktoria-wood-dark: #4A2E1D;
+
+    --color-reaktoria-stone: #71808A;
+    --color-reaktoria-stone-light: #94A3AC;
+    --color-reaktoria-stone-dark: #505D66;
+
+    --color-reaktoria-cream: #F7EBD0;
+    --color-reaktoria-cream-light: #FDF9F0;
+    --color-reaktoria-cream-dim: #DFCDB2;
+
+    --color-reaktoria-roof: #C85A3D;
+    --color-reaktoria-roof-hover: #B24E33;
+    --color-reaktoria-roof-light: #DC7458;
+
+    --color-reaktoria-chemistry: #42A9C6;
+    --color-reaktoria-chemistry-hover: #3595B0;
+    --color-reaktoria-chemistry-light: #67BED6;
+
+    --color-reaktoria-gold: #E3B44C;
+    --color-reaktoria-gold-hover: #D4A339;
+    --color-reaktoria-gold-light: #ECD07D;
+
+    /* Slate HUD & Ink Colors */
+    --color-reaktoria-hud: #1E2E36;
+    --color-reaktoria-hud-surface: #273A44;
+    --color-reaktoria-hud-border: #3A5260;
+    --color-reaktoria-ink: #1F3025;
+    --color-reaktoria-ink-muted: #536B5C;
+}
+
+@layer base {
+    body {
+        font-family: var(--font-body);
+        background-color: #F8FAF7;
+        color: var(--color-reaktoria-ink);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: var(--font-display);
+        letter-spacing: 0.02em;
+    }
+}
