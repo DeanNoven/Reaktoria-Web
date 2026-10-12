@@ -1,148 +1,116 @@
 <section id="world" class="relative py-16 sm:py-20 lg:py-28 overflow-hidden bg-[#EDF6EB]">
 
-    <!-- Environmental Low-Poly Background Layer (Atmospheric 6/10 continuation of the game world) -->
-    <div class="absolute inset-0 z-0">
-        <!-- Wide Atmospheric Low-Poly Medieval Landscape (~6/10 visibility, recognizable terrain depth) -->
-        <img 
-            src="{{ asset('images/backgrounds/section2-wide-bg.jpg') }}" 
-            alt="Reaktoria Low-Poly Medieval Meadow, Distant Forest and Mountains" 
-            class="w-full h-full object-cover object-center sm:object-[center_35%] select-none pointer-events-none opacity-65 contrast-[0.92] saturate-[0.88] brightness-[1.01]"
-        />
+    <!-- Clean Elegant Canvas Layer (No busy landscape background to ensure pure text readability and artwork focus) -->
+    <div class="absolute inset-0 z-0 pointer-events-none select-none" aria-hidden="true">
+        <!-- Top Seamless Environmental Transition from Section 1 (Hero meadow green) -->
+        <div class="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#EDF6EB] via-[#EDF6EB]/90 to-transparent"></div>
 
-        <!-- Gradual Environmental Transition from Hero (Soft atmospheric fog preserving landscape shapes) -->
-        <div class="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-[#EDF6EB]/70 via-[#EDF6EB]/30 to-transparent pointer-events-none"></div>
+        <!-- Soft Ambient Hearth & Meadow Illuminations -->
+        <div class="absolute top-1/6 left-1/12 w-[42rem] h-[42rem] bg-[radial-gradient(circle,_rgba(255,252,242,0.75)_0%,_transparent_65%)]"></div>
+        <div class="absolute top-1/2 right-1/12 w-[38rem] h-[38rem] bg-[radial-gradient(circle,_rgba(225,242,228,0.50)_0%,_transparent_65%)]"></div>
+        <div class="absolute bottom-1/6 left-1/5 w-[36rem] h-[36rem] bg-[radial-gradient(circle,_rgba(250,245,232,0.60)_0%,_transparent_65%)]"></div>
 
-        <!-- Atmospheric Depth Veil: Soft daylight haze letting outer edges remain clearly visible (~7-8/10) -->
-        <div class="absolute inset-y-0 right-0 w-full lg:w-7/12 bg-gradient-to-l from-transparent via-[#FAF8F1]/20 to-transparent pointer-events-none"></div>
-
-        <!-- Subtle Left & Bottom Ambient Meadow Atmosphere -->
-        <div class="absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-[#EDF6EB]/20 to-transparent pointer-events-none"></div>
-        <div class="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#EDF6EB]/85 via-[#EDF6EB]/40 to-transparent pointer-events-none"></div>
+        <!-- Bottom Seamless Transition into Section 3 Workshop (#FAF6EE) -->
+        <div class="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-[#FAF6EE] via-[#FAF6EE]/85 via-[#EDF6EB]/60 to-transparent"></div>
     </div>
 
-    <!-- Main Content Container -->
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <!-- Two-Column Editorial Composition: Integrated Environmental Illustration + Adventure Narrative -->
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+        <!-- Editorial Section Header (Clean Open Canvas, No Enclosing Boxes) -->
+        <div class="max-w-3xl mb-12 sm:mb-16 lg:mb-20 space-y-3.5">
             
-            <!-- LEFT: Environmental Illustration Integrated Into The World (No SaaS card styling) -->
-            <div class="lg:col-span-6 relative">
-                
-                <!-- Medieval Explorer's Field Plate (Organic parchment and stone borders) -->
-                <div class="relative rounded-2xl overflow-hidden border-2 border-[#D7CBAD]/80 shadow-[0_12px_28px_rgba(40,70,45,0.08)] bg-[#EDE4D0]/30 transition-transform duration-500 hover:scale-[1.01]">
-                    
-                    <img 
-                        src="{{ asset('images/village-intro.jpg') }}" 
-                        alt="Reaktoria Low-Poly Medieval Village, River, and Alchemist Workshop" 
-                        class="w-full h-auto aspect-[4/3] object-cover object-center select-none"
-                        loading="lazy"
-                    />
+            <p class="text-xs font-bold font-display uppercase tracking-widest text-[#2F6B3C]">
+                THE ELEMENTAL REALM
+            </p>
 
-                    <!-- In-World Plate Caption (Explorer's Journal Aesthetic) -->
-                    <div class="px-4 py-2.5 bg-[#FAF6EE]/95 border-t border-[#D7CBAD]/80 flex flex-wrap items-center justify-between gap-2 text-xs text-[#5D5545]">
-                        <span class="font-display font-bold tracking-wide flex items-center gap-1.5 text-reaktoria-deep-forest">
-                            <span class="text-[#2F6B3C]">🌲</span>
-                            <span>Wolfhaven Settlement &bull; Alchemist Workshop</span>
+            <h2 class="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-reaktoria-deep-forest tracking-tight uppercase leading-[1.1]">
+                WHERE CHEMISTRY <br class="hidden sm:inline" />
+                <span class="text-[#2F6B3C]">MEETS ADVENTURE</span>
+            </h2>
+
+            <p class="text-base sm:text-lg text-reaktoria-ink/85 leading-relaxed font-body">
+                Reaktoria is a living low-poly medieval realm where chemistry becomes part of the adventure. Explore forests, villages, rivers, and ruins across the Elemental Realm, discover natural elements in the wild, and turn your discoveries into power.
+            </p>
+
+        </div>
+
+        <!-- Alternating Zig-Zag Showcase (Witcher 3 Style: Clean Image Plate + Editorial Storytelling) -->
+        <div class="space-y-16 sm:space-y-20 lg:space-y-24">
+            
+            <!-- ROW 1: Untamed Wilderness Frontier (Image Left, Narrative Right) -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
+                
+                <!-- Left: Majestic Landscape Art Plate -->
+                <div class="lg:col-span-7">
+                    <div class="relative rounded-2xl overflow-hidden border-2 border-[#D5C6AA] shadow-[0_16px_36px_rgba(40,65,40,0.10)] bg-[#EDE4D0]/40 transition-transform duration-500 hover:scale-[1.01]">
+                        <div class="aspect-[16/10] overflow-hidden bg-[#24352A]">
+                            <img 
+                                src="{{ asset('images/realm-landscape.jpg') }}" 
+                                alt="Reaktoria Low-Poly Medieval Explorable Realm Landscape with Village, Watermill, River, Bridge, Ruins and Mountains" 
+                                class="w-full h-full object-cover object-center select-none"
+                                loading="lazy"
+                            />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Editorial Narrative -->
+                <div class="lg:col-span-5 space-y-4">
+                    <div class="space-y-2">
+                        <span class="text-xs font-bold font-display uppercase tracking-wider text-[#2F6B3C]">
+                            Wild Frontier Expanse
                         </span>
-                        
-                        <!-- Subtle Chemistry Cues integrated into discovery record -->
-                        <span class="font-mono font-semibold text-[11px] text-[#2F6B3C] tracking-wider bg-[#E8F2E4] px-2 py-0.5 rounded border border-[#C5DCBD]">
-                            Fe &bull; H &bull; O &bull; Na &bull; Cl
-                        </span>
+                        <h3 class="font-display font-extrabold text-2xl sm:text-3xl text-reaktoria-deep-forest tracking-tight uppercase">
+                            EXPLORE
+                        </h3>
                     </div>
 
+                    <p class="text-sm sm:text-base text-reaktoria-ink/85 leading-relaxed font-body">
+                        Venture beyond Wolfhaven Settlement across four living environments: ancient pine forests, swift river crossings, stone ruins, and rugged frontiers. Each territory holds unique chemical clues and raw materials waiting to be uncovered in their natural state.
+                    </p>
+
+                    <p class="text-sm text-reaktoria-ink-muted leading-relaxed font-body">
+                        From mountain mineral outcrops to riverbed silts, the geography itself serves as your open-air alchemy laboratory.
+                    </p>
                 </div>
 
             </div>
 
-            <!-- RIGHT: Introduction Narrative & Adventure Journey Progression -->
-            <div class="lg:col-span-6 space-y-7 relative">
+            <!-- ROW 2: Wolfhaven Settlement & Natural Alchemy (Narrative Left, Image Right) -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
                 
-                <!-- Atmospheric Parchment Readability Layer (Subtle un-shadowed environmental cushion) -->
-                <div class="absolute -inset-x-4 -inset-y-5 sm:-inset-x-6 sm:-inset-y-7 bg-gradient-to-br from-[#FAF7EF]/55 via-[#F2F7ED]/45 to-[#FAF6EE]/40 rounded-3xl border border-[#DFD5BA]/25 pointer-events-none -z-10"></div>
-
-                <!-- Eyebrow, Main Heading, and Supporting Text -->
-                <div class="space-y-4">
-                    <div class="inline-flex items-center gap-2">
-                        <span class="w-2 h-2 rounded-full bg-reaktoria-grass animate-pulse"></span>
-                        <span class="text-xs font-bold font-body uppercase tracking-[0.2em] text-[#2F6B3C]">
-                            THE ELEMENTAL REALM
+                <!-- Left: Editorial Narrative -->
+                <div class="lg:col-span-5 order-2 lg:order-1 space-y-4">
+                    <div class="space-y-2">
+                        <span class="text-xs font-bold font-display uppercase tracking-wider text-[#1B7088]">
+                            Settlement &amp; Mineral Veins
                         </span>
+                        <h3 class="font-display font-extrabold text-2xl sm:text-3xl text-reaktoria-deep-forest tracking-tight uppercase">
+                            EXPERIMENT
+                        </h3>
                     </div>
 
-                    <h2 class="font-display font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] text-reaktoria-deep-forest tracking-tight leading-[1.14]">
-                        WHERE CHEMISTRY <br class="hidden sm:inline" />
-                        <span class="text-reaktoria-forest">MEETS ADVENTURE</span>
-                    </h2>
+                    <p class="text-sm sm:text-base text-reaktoria-ink/85 leading-relaxed font-body">
+                        In <span class="font-semibold text-reaktoria-deep-forest">Wolfhaven Settlement</span>, the ancestral riverside village where alchemists, wanderers, and blacksmiths trade discoveries, science is an active craft. Active mineral veins run directly into the valley outskirts.
+                    </p>
 
-                    <p class="text-base sm:text-lg text-reaktoria-ink/85 leading-relaxed font-body">
-                        Reaktoria is a low-poly medieval world where chemistry becomes part of the adventure. Explore the realm, discover real elements, experiment with reactions, and turn your discoveries into power.
+                    <p class="text-sm text-reaktoria-ink-muted leading-relaxed font-body">
+                        Natural geology in Reaktoria is bound to authentic chemical logic. Locate native iron veins in the foothills, collect volatile sulfur crystals near thermal vents, and understand how elemental reactions shape the world around you.
                     </p>
                 </div>
 
-                <!-- Adventure Progression Pillars (Unboxed Journey Milestones, No SaaS Cards) -->
-                <div class="relative pl-7 sm:pl-8 space-y-6 before:absolute before:left-2.5 sm:before:left-3 before:top-3 before:bottom-3 before:w-[2px] before:bg-gradient-to-b before:from-[#2F6B3C]/50 before:via-[#1B7088]/50 before:to-[#C05621]/50">
-                    
-                    <!-- 01 — EXPLORE -->
-                    <div class="relative group">
-                        <!-- Journey Path Node Marker -->
-                        <div class="absolute -left-7 sm:-left-8 top-0.5 w-5 h-5 rounded-full bg-[#FAF6EE] border-2 border-[#2F6B3C] text-[#2F6B3C] flex items-center justify-center shadow-xs group-hover:scale-110 transition-transform">
-                            <span class="w-1.5 h-1.5 rounded-full bg-[#2F6B3C]"></span>
-                        </div>
-                        <div class="space-y-1">
-                            <div class="flex items-center gap-2">
-                                <span class="font-mono text-xs font-bold text-[#2F6B3C]">01 &mdash;</span>
-                                <h3 class="font-display font-bold text-sm sm:text-base tracking-wider text-reaktoria-deep-forest uppercase">
-                                    EXPLORE
-                                </h3>
-                            </div>
-                            <p class="text-xs sm:text-sm text-reaktoria-ink-muted leading-relaxed">
-                                Explore forests, villages, ruins, and battlefields across the Elemental Realm.
-                            </p>
+                <!-- Right: Village Art Plate -->
+                <div class="lg:col-span-7 order-1 lg:order-2">
+                    <div class="relative rounded-2xl overflow-hidden border-2 border-[#D5C6AA] shadow-[0_16px_36px_rgba(40,65,40,0.10)] bg-[#EDE4D0]/40 transition-transform duration-500 hover:scale-[1.01]">
+                        <div class="aspect-[16/10] overflow-hidden bg-[#24352A]">
+                            <img 
+                                src="{{ asset('images/village-intro.jpg') }}" 
+                                alt="Reaktoria Low-Poly Medieval Village, River, and Alchemist Workshop in Wolfhaven Settlement" 
+                                class="w-full h-full object-cover object-center select-none"
+                                loading="lazy"
+                            />
                         </div>
                     </div>
-
-                    <!-- 02 — EXPERIMENT -->
-                    <div class="relative group">
-                        <!-- Journey Path Node Marker -->
-                        <div class="absolute -left-7 sm:-left-8 top-0.5 w-5 h-5 rounded-full bg-[#FAF6EE] border-2 border-[#1B7088] text-[#1B7088] flex items-center justify-center shadow-xs group-hover:scale-110 transition-transform">
-                            <span class="w-1.5 h-1.5 rounded-full bg-[#1B7088]"></span>
-                        </div>
-                        <div class="space-y-1">
-                            <div class="flex items-center gap-2">
-                                <span class="font-mono text-xs font-bold text-[#1B7088]">02 &mdash;</span>
-                                <h3 class="font-display font-bold text-sm sm:text-base tracking-wider text-reaktoria-deep-forest uppercase">
-                                    EXPERIMENT
-                                </h3>
-                                <span class="font-mono text-[11px] font-semibold text-[#1B7088]/70 hidden sm:inline">&bull; Real reactions</span>
-                            </div>
-                            <p class="text-xs sm:text-sm text-reaktoria-ink-muted leading-relaxed">
-                                Combine real chemical elements and discover how they react.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- 03 — FORGE -->
-                    <div class="relative group">
-                        <!-- Journey Path Node Marker -->
-                        <div class="absolute -left-7 sm:-left-8 top-0.5 w-5 h-5 rounded-full bg-[#FAF6EE] border-2 border-[#C05621] text-[#C05621] flex items-center justify-center shadow-xs group-hover:scale-110 transition-transform">
-                            <span class="w-1.5 h-1.5 rounded-full bg-[#C05621]"></span>
-                        </div>
-                        <div class="space-y-1">
-                            <div class="flex items-center gap-2">
-                                <span class="font-mono text-xs font-bold text-[#C05621]">03 &mdash;</span>
-                                <h3 class="font-display font-bold text-sm sm:text-base tracking-wider text-reaktoria-deep-forest uppercase">
-                                    FORGE
-                                </h3>
-                                <span class="font-mono text-[11px] font-semibold text-[#C05621]/70 hidden sm:inline">&bull; Weapons &amp; items</span>
-                            </div>
-                            <p class="text-xs sm:text-sm text-reaktoria-ink-muted leading-relaxed">
-                                Transform successful discoveries into powerful weapons.
-                            </p>
-                        </div>
-                    </div>
-
                 </div>
 
             </div>

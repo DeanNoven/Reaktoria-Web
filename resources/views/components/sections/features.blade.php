@@ -1,7 +1,7 @@
-<section id="modes" class="relative py-14 sm:py-16 lg:py-20 overflow-hidden bg-gradient-to-b from-[#DDE9D7] via-[#EDE7DA] via-[#FAF6EE] to-[#F5EEDF]">
+<section id="features" class="relative py-14 sm:py-16 lg:py-20 overflow-hidden bg-gradient-to-b from-[#DDE9D7] via-[#EDE7DA] via-[#FAF6EE] to-[#F5EEDF]">
 
-    <!-- Anchor Aliases for Global Navbar Navigation (#modes, #features) -->
-    <span id="features" class="absolute -top-20 pointer-events-none" aria-hidden="true"></span>
+    <!-- Anchor Aliases for Global Navbar Navigation (#features, #modes) -->
+    <span id="modes" class="absolute -top-20 pointer-events-none" aria-hidden="true"></span>
 
     <!-- Environmental Background Transition Layer (Ancient Elemental Codex Workspace Archive) -->
     <div class="absolute inset-0 z-0">
@@ -19,19 +19,7 @@
         <!-- Atmospheric Parchment Softening Veil -->
         <div class="absolute inset-0 bg-[#FAF6EE]/40 pointer-events-none"></div>
 
-        <!-- Subtle Medieval Map & Parchment Watermark Accents -->
-        <div class="absolute inset-0 pointer-events-none opacity-[0.035] select-none text-[#5A381A] overflow-hidden">
-            <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-                <defs>
-                    <pattern id="features-compass-grid" width="48" height="48" patternUnits="userSpaceOnUse">
-                        <circle cx="24" cy="24" r="1.2" fill="currentColor" opacity="0.5" />
-                        <line x1="24" y1="18" x2="24" y2="30" stroke="currentColor" stroke-width="0.75" opacity="0.3" />
-                        <line x1="18" y1="24" x2="30" y2="24" stroke="currentColor" stroke-width="0.75" opacity="0.3" />
-                    </pattern>
-                </defs>
-                <rect width="100%" height="100%" fill="url(#features-compass-grid)" />
-            </svg>
-        </div>
+
 
         <!-- Soft Ambient Hearth & Parchment Glows -->
         <div class="absolute top-1/4 left-1/12 w-[36rem] h-[36rem] bg-[radial-gradient(circle,_rgba(245,215,160,0.20)_0%,_transparent_65%)] pointer-events-none"></div>
@@ -56,8 +44,7 @@
             
             <div class="space-y-2.5 max-w-2xl">
                 <!-- Eyebrow -->
-                <div class="inline-flex items-center gap-2">
-                    <span class="w-2 h-2 rounded-full bg-[#B84E1F] animate-pulse"></span>
+                <div>
                     <span class="text-xs font-bold font-body uppercase tracking-[0.2em] text-[#B84E1F]">
                         GAME FEATURES
                     </span>
@@ -76,8 +63,7 @@
             </div>
 
             <!-- In-World Codex Ledger Badge -->
-            <div class="hidden md:flex items-center gap-2.5 font-mono text-xs text-[#6B5A42] bg-[#FAF6EE]/90 backdrop-blur-md px-3.5 py-1.5 rounded-xl border border-[#D5C6AA]/80 shadow-xs self-start lg:self-center select-none">
-                <span class="w-1.5 h-1.5 rounded-full bg-[#1B7088]"></span>
+            <div class="hidden md:flex items-center gap-2 font-mono text-xs text-[#6B5A42] bg-[#FAF6EE]/90 backdrop-blur-md px-3.5 py-1.5 rounded-xl border border-[#D5C6AA]/80 shadow-xs self-start lg:self-center select-none">
                 <span class="font-bold text-reaktoria-deep-forest">Reaktoria Codex</span>
                 <span class="text-stone-300">&bull;</span>
                 <span>Four Core Pillars</span>
@@ -88,7 +74,7 @@
         <!-- Asymmetrical Editorial Feature Showcase Grid (Different Visual Weights: Primary, Secondary, Tertiary) -->
         <div class="grid grid-cols-1 lg:grid-cols-12 items-start lg:items-stretch gap-5 sm:gap-6 lg:gap-7">
             
-            <!-- PRIMARY FEATURE (LEFT COLUMN): Large Dominant Feature — 01 CHEMISTRY SYSTEM -->
+            <!-- PRIMARY FEATURE (LEFT COLUMN): Large Dominant Feature: 01 CHEMISTRY SYSTEM -->
             <div class="lg:col-span-7 flex flex-col h-full min-h-0 rounded-2xl sm:rounded-3xl border border-[#D5C6AA]/85 bg-gradient-to-br from-[#FAF6EE] via-[#F6EFE2] to-[#FAF5EA] shadow-[0_10px_28px_rgba(50,45,30,0.06)] overflow-hidden group">
                 
                 <!-- Alchemy Workbench Image Frame (Matches two stacked cards on the right with zero empty space below) -->
@@ -104,8 +90,7 @@
                     <div class="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-48 h-48 rounded-full bg-[radial-gradient(circle,_rgba(66,169,198,0.22)_0%,_transparent_70%)] pointer-events-none"></div>
 
                     <!-- In-World Pillar Number Badge -->
-                    <div class="absolute top-3 left-3 sm:top-3.5 sm:left-3.5 z-10 flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-[#FAF6EE]/92 backdrop-blur-md border border-[#D5C6AA] shadow-xs text-xs font-mono font-semibold text-[#14566A] select-none">
-                        <span class="w-1.5 h-1.5 rounded-full bg-reaktoria-chemistry"></span>
+                    <div class="absolute top-3 left-3 sm:top-3.5 sm:left-3.5 z-10 flex items-center px-2.5 py-1 rounded-md bg-[#FAF6EE]/92 backdrop-blur-md border border-[#D5C6AA] shadow-xs text-xs font-mono font-semibold text-[#14566A] select-none">
                         <span>01 &bull; Primary System</span>
                     </div>
 
@@ -185,7 +170,7 @@
 
             </div>
 
-            <!-- SECONDARY FEATURES (RIGHT COLUMN): Stacked Tactical Features — 02 FORGING & 03 BATTLE -->
+            <!-- SECONDARY FEATURES (RIGHT COLUMN): Stacked Tactical Features: 02 FORGING & 03 BATTLE -->
             <div class="lg:col-span-5 flex flex-col gap-5 sm:gap-6">
                 
                 <!-- FEATURE 2: WEAPON FORGING -->
@@ -201,8 +186,7 @@
                         />
                         
                         <!-- Status Badge -->
-                        <div class="absolute top-2.5 left-2.5 z-10 flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-[#FAF6EE]/92 backdrop-blur-md border border-[#D5C6AA] shadow-xs text-xs font-mono font-semibold text-[#B84E1F] select-none">
-                            <span class="w-1.5 h-1.5 rounded-full bg-[#E06726]"></span>
+                        <div class="absolute top-2.5 left-2.5 z-10 flex items-center px-2 py-0.5 rounded-md bg-[#FAF6EE]/92 backdrop-blur-md border border-[#D5C6AA] shadow-xs text-xs font-mono font-semibold text-[#B84E1F] select-none">
                             <span>02 &bull; Craft</span>
                         </div>
                     </div>
@@ -234,7 +218,13 @@
                                 <span class="text-stone-400">&rarr;</span>
                                 <span>Heat Infusion</span>
                                 <span class="text-stone-400">&rarr;</span>
-                                <span class="font-bold text-[#B84E1F]">⚔️ Pyros Blade</span>
+                                <span class="font-bold text-[#B84E1F] inline-flex items-center gap-1">
+                                    <svg class="w-3 h-3 text-[#B84E1F]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M14.5 17.5L3 6V3h3l11.5 11.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M13 19l6-6" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span>Pyros Blade</span>
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -254,8 +244,7 @@
                         />
                         
                         <!-- Status Badge -->
-                        <div class="absolute top-2.5 left-2.5 z-10 flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-[#FAF6EE]/92 backdrop-blur-md border border-[#D5C6AA] shadow-xs text-xs font-mono font-semibold text-[#9C381E] select-none">
-                            <span class="w-1.5 h-1.5 rounded-full bg-[#9C381E]"></span>
+                        <div class="absolute top-2.5 left-2.5 z-10 flex items-center px-2 py-0.5 rounded-md bg-[#FAF6EE]/92 backdrop-blur-md border border-[#D5C6AA] shadow-xs text-xs font-mono font-semibold text-[#9C381E] select-none">
                             <span>03 &bull; Combat</span>
                         </div>
                     </div>
@@ -296,7 +285,7 @@
 
             </div>
 
-            <!-- TERTIARY / WORLD SHOWCASE (BOTTOM / WIDE): Panoramic Feature — 04 WORLD EXPLORATION -->
+            <!-- TERTIARY / WORLD SHOWCASE (BOTTOM / WIDE): Panoramic Feature: 04 WORLD EXPLORATION -->
             <div class="lg:col-span-12 rounded-2xl sm:rounded-3xl border border-[#D5C6AA]/85 bg-gradient-to-br from-[#FAF6EE] via-[#F6EFE2] to-[#FAF5EA] shadow-[0_12px_32px_rgba(50,45,30,0.07)] overflow-hidden transition-transform duration-500 hover:scale-[1.004] group">
                 
                 <div class="grid grid-cols-1 lg:grid-cols-12 items-center">
@@ -311,20 +300,31 @@
                         />
 
                         <!-- Status Badge -->
-                        <div class="absolute top-3 left-3 sm:top-3.5 sm:left-3.5 z-10 flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-[#FAF6EE]/92 backdrop-blur-md border border-[#D5C6AA] shadow-xs text-xs font-mono font-semibold text-[#2F6B3C] select-none">
-                            <span class="w-1.5 h-1.5 rounded-full bg-[#2F6B3C]"></span>
+                        <div class="absolute top-3 left-3 sm:top-3.5 sm:left-3.5 z-10 flex items-center px-2.5 py-1 rounded-md bg-[#FAF6EE]/92 backdrop-blur-md border border-[#D5C6AA] shadow-xs text-xs font-mono font-semibold text-[#2F6B3C] select-none">
                             <span>04 &bull; Open World</span>
                         </div>
 
                         <!-- Environmental Landmark Tags Overlay -->
-                        <div class="absolute bottom-3 right-3 sm:bottom-3.5 sm:right-3.5 z-10 hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#FAF6EE]/94 backdrop-blur-md border border-[#D5C6AA] text-[11px] font-mono text-reaktoria-wood-dark select-none shadow-xs">
-                            <span>🌲 Forests</span>
+                        <div class="absolute bottom-3 right-3 sm:bottom-3.5 sm:right-3.5 z-10 hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-xl bg-[#FAF6EE]/94 backdrop-blur-md border border-[#D5C6AA] text-[11px] font-mono text-reaktoria-wood-dark select-none shadow-xs">
+                            <span class="flex items-center gap-1">
+                                <svg class="w-3 h-3 text-[#2F6B3C]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L7 9h3l-4 7h6v4h2v-4h6l-4-7h3z"/></svg>
+                                Forests
+                            </span>
                             <span class="text-stone-300">&bull;</span>
-                            <span>🏘️ Villages</span>
+                            <span class="flex items-center gap-1">
+                                <svg class="w-3 h-3 text-[#8C6211]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                                Villages
+                            </span>
                             <span class="text-stone-300">&bull;</span>
-                            <span>🌊 Rivers</span>
+                            <span class="flex items-center gap-1">
+                                <svg class="w-3 h-3 text-[#14566A]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12c2.5-2.5 5.5-2.5 8 0s5.5 2.5 8 0 5.5-2.5 4 0"/><path d="M2 17c2.5-2.5 5.5-2.5 8 0s5.5 2.5 8 0 5.5-2.5 4 0"/></svg>
+                                Rivers
+                            </span>
                             <span class="text-stone-300">&bull;</span>
-                            <span>🏰 Ruins</span>
+                            <span class="flex items-center gap-1">
+                                <svg class="w-3 h-3 text-[#B84E1F]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l3-2 3 2 3-2 3 2 3-2v14M9 10h2M13 10h2M9 14h2M13 14h2M9 21v-4h6v4"/></svg>
+                                Ruins
+                            </span>
                         </div>
                     </div>
 
@@ -350,19 +350,19 @@
                         <!-- Discovery & Location Milestones -->
                         <div class="pt-3 border-t border-[#E8DCBF]/50 grid grid-cols-2 gap-2 text-xs font-mono text-[#6B5A42]">
                             <div class="flex items-center gap-1.5">
-                                <span class="text-[#2F6B3C]">🌲</span>
+                                <svg class="w-3.5 h-3.5 text-[#2F6B3C] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L7 9h3l-4 7h6v4h2v-4h6l-4-7h3z"/></svg>
                                 <span>Dense Forests</span>
                             </div>
                             <div class="flex items-center gap-1.5">
-                                <span class="text-[#8C6211]">🏘️</span>
+                                <svg class="w-3.5 h-3.5 text-[#8C6211] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
                                 <span>Medieval Villages</span>
                             </div>
                             <div class="flex items-center gap-1.5">
-                                <span class="text-[#14566A]">🌊</span>
+                                <svg class="w-3.5 h-3.5 text-[#14566A] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12c2.5-2.5 5.5-2.5 8 0s5.5 2.5 8 0 5.5-2.5 4 0"/><path d="M2 17c2.5-2.5 5.5-2.5 8 0s5.5 2.5 8 0 5.5-2.5 4 0"/></svg>
                                 <span>Winding Rivers</span>
                             </div>
                             <div class="flex items-center gap-1.5">
-                                <span class="text-[#B84E1F]">🏰</span>
+                                <svg class="w-3.5 h-3.5 text-[#B84E1F] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l3-2 3 2 3-2 3 2 3-2v14M9 10h2M13 10h2M9 14h2M13 14h2M9 21v-4h6v4"/></svg>
                                 <span>Ancient Ruins</span>
                             </div>
                         </div>

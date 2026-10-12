@@ -1,11 +1,11 @@
-<section id="gameplay" class="relative py-10 sm:py-14 lg:py-16 overflow-hidden bg-gradient-to-b from-[#DFD4C2] via-[#E6EDE1] to-[#DDE9D7]">
+<section id="gameplay" class="relative py-12 sm:py-16 lg:py-20 overflow-hidden bg-gradient-to-b from-[#DFD4C2] via-[#E4ECE0] to-[#EFE8D9]">
 
     <!-- Anchor Aliases for Global Navbar Navigation (#gameplay, #battle) -->
     <span id="battle" class="absolute -top-20 pointer-events-none" aria-hidden="true"></span>
 
     <!-- Environmental Background Transition Layer (Elemental Wilderness Beyond the Adventure) -->
     <div class="absolute inset-0 z-0">
-        <!-- Wide Low-Poly Elemental Wilderness Environment Background (Distant World Atmospheric Styling) -->
+        <!-- Wide Low-Poly Elemental Wilderness Environment Background -->
         <img 
             src="{{ asset('images/backgrounds/gameplay-bg.jpg') }}" 
             alt="Reaktoria Low-Poly Elemental Wilderness Environmental Background" 
@@ -13,58 +13,43 @@
             loading="lazy"
         />
 
-        <!-- Seamless Environmental Transition from Section 4 (#DFD4C2 forge stone into bright meadow green) -->
-        <div class="absolute inset-x-0 top-0 h-32 sm:h-40 bg-gradient-to-b from-[#DFD4C2] via-[#DFD4C2]/85 via-[#E6EDE1]/60 to-transparent pointer-events-none"></div>
+        <!-- Seamless Environmental Transition from Forge Stone (#DFD4C2 into bright meadow green) -->
+        <div class="absolute inset-x-0 top-0 h-32 sm:h-40 bg-gradient-to-b from-[#DFD4C2] via-[#DFD4C2]/85 via-[#E4ECE0]/60 to-transparent pointer-events-none"></div>
 
-        <!-- Atmospheric Distance Haze Veil (Diffuses sharp geometric edges into distant aerial perspective) -->
-        <div class="absolute inset-0 bg-[#E6EDE1]/30 pointer-events-none"></div>
+        <!-- Atmospheric Distance Haze Veil -->
+        <div class="absolute inset-0 bg-[#E4ECE0]/30 pointer-events-none"></div>
 
         <!-- Gentle Sunlit Sky & Meadow Ambiance -->
         <div class="absolute top-1/6 right-1/4 w-[42rem] h-[30rem] bg-[radial-gradient(circle,_rgba(255,250,225,0.45)_0%,_transparent_65%)] pointer-events-none"></div>
         <div class="absolute bottom-1/4 left-1/5 w-[36rem] h-[36rem] bg-[radial-gradient(circle,_rgba(140,205,120,0.12)_0%,_transparent_65%)] pointer-events-none"></div>
 
-        <!-- Central Daylight Clearing (Gently softens the middle area behind the main gameplay card while preserving flanking landscape silhouettes) -->
+        <!-- Central Daylight Clearing -->
         <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(230,237,225,0.45)_0%,_rgba(230,237,225,0.15)_55%,_transparent_80%)] pointer-events-none"></div>
 
         <!-- Left & Right Soft Framing Tones -->
         <div class="absolute inset-y-0 left-0 w-24 sm:w-36 bg-gradient-to-r from-[#DFD4C2]/35 to-transparent pointer-events-none"></div>
         <div class="absolute inset-y-0 right-0 w-24 sm:w-36 bg-gradient-to-l from-[#DFD4C2]/35 to-transparent pointer-events-none"></div>
 
-        <!-- Faint Outdoor Meadow Stipple Atmosphere -->
-        <div class="absolute inset-0 pointer-events-none opacity-[0.035] select-none text-[#2F6B3C] overflow-hidden">
-            <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-                <defs>
-                    <pattern id="gameplay-stipple" width="36" height="36" patternUnits="userSpaceOnUse">
-                        <circle cx="6" cy="6" r="0.8" fill="currentColor" opacity="0.4" />
-                        <circle cx="24" cy="20" r="0.6" fill="currentColor" opacity="0.3" />
-                        <circle cx="30" cy="10" r="0.5" fill="currentColor" opacity="0.3" />
-                    </pattern>
-                </defs>
-                <rect width="100%" height="100%" fill="url(#gameplay-stipple)" />
-            </svg>
-        </div>
-
-        <!-- Ambient Room Vignette & Bottom Blending -->
+        <!-- Ambient Room Vignette & Bottom Blending into Modes (#EFE8D9) -->
         <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_60%,_rgba(180,200,170,0.15)_100%)] pointer-events-none"></div>
-        <div class="absolute bottom-0 inset-x-0 h-24 sm:h-28 bg-gradient-to-t from-[#DDE9D7] via-[#DFEAD9]/70 to-transparent pointer-events-none"></div>
+        <div class="absolute bottom-0 inset-x-0 h-28 sm:h-32 bg-gradient-to-t from-[#EFE8D9] via-[#EFE8D9]/75 to-transparent pointer-events-none"></div>
     </div>
 
     <!-- Main Content Container -->
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <!-- Asymmetrical Editorial Header (Strengthened Title, Compact Vertical Footprint) -->
-        <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-4 sm:gap-6 mb-5 sm:mb-6">
+        <!-- Asymmetrical Editorial Header -->
+        <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-4 sm:gap-6 mb-6 sm:mb-8">
             
             <div class="space-y-2.5 max-w-2xl">
-                <!-- Eyebrow with Meadow Pulse Indicator -->
-                <div class="inline-flex items-center gap-2">
-                    <span class="w-2 h-2 rounded-full bg-reaktoria-forest animate-pulse"></span>
+                <!-- Eyebrow -->
+                <div>
                     <span class="text-xs font-bold font-body uppercase tracking-[0.2em] text-[#2F6B3C]">
                         THE ADVENTURE
                     </span>
                 </div>
 
-                <!-- Main Heading (Strengthened by ~18%, authoritative editorial presence) -->
+                <!-- Main Heading -->
                 <h2 class="font-display font-extrabold text-3xl sm:text-4xl lg:text-[3.25rem] text-reaktoria-deep-forest tracking-tight leading-[1.08]">
                     DISCOVER. REACT. <span class="text-[#B84E1F]">BATTLE.</span>
                 </h2>
@@ -75,9 +60,8 @@
                 </p>
             </div>
 
-            <!-- In-World Stage Telemetry Badge (Quiet In-Game Metadata) -->
-            <div class="hidden lg:flex items-center gap-2.5 font-mono text-xs text-[#5D6B50] bg-[#FAF6EE]/85 backdrop-blur-md px-3.5 py-1.5 rounded-xl border border-[#D5C6AA]/80 shadow-xs self-start lg:self-end select-none">
-                <span class="w-2 h-2 rounded-full bg-[#2F6B3C]"></span>
+            <!-- In-World Stage Telemetry Badge -->
+            <div class="hidden lg:flex items-center gap-2 font-mono text-xs text-[#5D6B50] bg-[#FAF6EE]/90 backdrop-blur-md px-3.5 py-1.5 rounded-xl border border-[#D5C6AA]/80 shadow-xs self-start lg:self-end select-none">
                 <span class="font-bold text-reaktoria-deep-forest">Active Field Stage</span>
                 <span class="text-stone-300">&bull;</span>
                 <span>Wolfhaven Outskirts Crossing</span>
@@ -85,10 +69,9 @@
 
         </div>
 
-        <!-- Dominant Widescreen Environmental Gameplay Viewport (Compact Height, High Impact) -->
+        <!-- Panoramic HUD Viewport Plate -->
         <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden border-2 border-[#D5C6AA]/90 shadow-[0_16px_40px_rgba(35,50,30,0.12),_0_2px_8px_rgba(35,50,30,0.05)] bg-[#EFECE3] transition-transform duration-500 hover:scale-[1.004]">
             
-            <!-- High-Resolution Low-Poly Gameplay Scene Artwork (Compact Panoramic Aspect Ratio) -->
             <img 
                 src="{{ asset('images/gameplay-adventure.jpg') }}" 
                 alt="Reaktoria Low-Poly Medieval Adventure Gameplay in Forest Clearing with Chemical Weapon and Enemy Encounter" 
@@ -96,32 +79,29 @@
                 loading="lazy"
             />
 
-            <!-- Soft Ambient In-Game Lens Vignette -->
             <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_65%,_rgba(35,50,25,0.14)_100%)] pointer-events-none"></div>
 
-            <!-- IN-GAME HUD ELEMENT 1: Active Quest Marker (Top Left of Viewport) -->
+            <!-- In-game HUD overlays -->
             <div class="absolute top-3 left-3 sm:top-4 sm:left-4 z-20 flex items-center gap-2 sm:gap-2.5 px-3 py-1.5 rounded-xl bg-[#FAF6EE]/92 backdrop-blur-md border border-[#D5C6AA]/90 shadow-md text-xs font-mono select-none">
-                <span class="w-2 h-2 rounded-full bg-[#2F6B3C]"></span>
-                <span class="text-[10px] font-bold uppercase tracking-wider text-[#7A674D]">[ QUEST ]</span>
+                <span class="text-[10px] font-bold uppercase tracking-wider text-[#2F6B3C]">[ QUEST ]</span>
                 <span class="font-display font-bold text-reaktoria-deep-forest text-xs sm:text-sm tracking-wide">FOREST PATH</span>
             </div>
 
-            <!-- IN-GAME HUD ELEMENT 2: Environmental Landmark Marker (Top Right of Viewport, Desktop) -->
             <div class="absolute top-3 right-3 sm:top-4 sm:right-4 z-20 hidden md:flex items-center gap-2 px-3 py-1.5 rounded-xl bg-[#FAF6EE]/90 backdrop-blur-md border border-[#D5C6AA]/80 text-[11px] font-mono text-[#5A6F54] select-none shadow-sm">
-                <span>🧭</span>
+                <svg class="w-3.5 h-3.5 text-[#5A6F54]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="10" stroke-width="2"/>
+                    <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" fill="currentColor"/>
+                </svg>
                 <span class="font-semibold text-reaktoria-deep-forest">River Crossing &bull; Wolfhaven Lane</span>
             </div>
 
-            <!-- IN-GAME HUD ELEMENT 3: Hostile Encounter Marker (Middle Right of Viewport, near Wildling Scouts) -->
             <div class="absolute top-[30%] sm:top-[35%] right-3 sm:right-6 z-20 hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-xl bg-[#FAF6EE]/94 backdrop-blur-md border border-[#D5C6AA]/90 shadow-md text-xs font-mono select-none">
-                <span class="w-2 h-2 rounded-full bg-[#B84E1F] animate-pulse"></span>
                 <div class="flex flex-col">
                     <span class="text-[9px] uppercase tracking-wider text-[#B84E1F] font-bold">[ ENCOUNTER ]</span>
                     <span class="font-display font-bold text-reaktoria-deep-forest text-xs tracking-wide">WILDLING SCOUTS</span>
                 </div>
             </div>
 
-            <!-- IN-GAME HUD ELEMENT 4: Player Weapon & Chemical Reaction Telemetry (Lower Left of Viewport, near Adventurer) -->
             <div class="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 z-20 hidden sm:flex flex-col gap-1 p-2.5 sm:p-3 rounded-xl bg-[#FAF6EE]/95 backdrop-blur-md border border-[#D5C6AA]/90 shadow-lg text-xs font-mono select-none max-w-xs">
                 <div class="flex items-center justify-between gap-4 text-[10px] font-bold uppercase tracking-wider">
                     <span class="text-[#8C6211]">[ WEAPON ]</span>
@@ -129,7 +109,11 @@
                 </div>
                 <div class="flex items-center justify-between gap-3 font-semibold">
                     <span class="font-display font-bold text-reaktoria-deep-forest flex items-center gap-1.5 text-xs sm:text-sm">
-                        <span class="text-[#B84E1F]">⚔️</span> PYROS BLADE
+                        <svg class="w-3.5 h-3.5 text-[#B84E1F]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14.5 17.5L3 6V3h3l11.5 11.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M13 19l6-6" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        PYROS BLADE
                     </span>
                     <span class="text-[11px] font-mono font-bold text-[#14566A] bg-[#EAF2F5] px-2 py-0.5 rounded border border-[#BAD1DB]">
                         Fe + S &rarr; FeS
@@ -138,7 +122,7 @@
                 <span class="text-[10px] text-reaktoria-ink-muted">Elemental Heat &bull; Effective vs. Forest Encounters</span>
             </div>
 
-            <!-- MOBILE HUD FALLBACK STRIP (Displays neatly below the image on mobile so visuals stay crisp and unobstructed) -->
+            <!-- Mobile HUD fallback -->
             <div class="sm:hidden px-3.5 py-2.5 bg-[#FAF6EE]/98 border-t border-[#D5C6AA]/80 flex flex-wrap items-center justify-between gap-2 text-xs font-mono">
                 <div class="flex items-center gap-1.5 text-[#14566A]">
                     <span class="font-bold text-[10px] text-[#8C6211]">[ WEAPON ]</span>
@@ -155,88 +139,111 @@
 
         </div>
 
-        <!-- Integrated Adventure Progression Sequence (Field Journal Sequence Strip, One Continuous Flow) -->
-        <div class="mt-4 sm:mt-5 p-4 sm:p-5 bg-gradient-to-r from-[#FAF6EE]/95 via-[#F6F0E2]/92 to-[#FAF6EE]/95 rounded-xl border border-[#D6C5A2]/80 shadow-[0_6px_20px_rgba(40,55,30,0.05)]">
+        <!-- Field Combat Dossier & Tactical Engagement Ledger (Replaces generic 3-box stepper with authentic combat telemetry) -->
+        <div class="mt-6 sm:mt-8 p-6 sm:p-8 bg-[#FAF6EE]/95 rounded-2xl sm:rounded-3xl border border-[#D5C6AA]/90 shadow-[0_10px_30px_rgba(40,55,30,0.06)]">
             
-            <!-- Continuous 3-Step Gameplay Sequence -->
-            <div class="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3.5 md:gap-2">
+            <!-- Top Ledger Header -->
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-5 border-b border-[#D5C6AA]/70">
+                <div class="flex items-center gap-2">
+                    <h3 class="font-display font-bold text-base sm:text-lg text-reaktoria-deep-forest tracking-wide uppercase">
+                        Field Combat Dossier
+                    </h3>
+                    <span class="font-mono text-xs text-[#8C6D4A]/70">&bull; Tactical Telemetry</span>
+                </div>
+                <div class="font-mono text-xs text-[#5D6B50] flex items-center gap-2 bg-[#F3EDE0] px-3 py-1.5 rounded-xl border border-[#DCD0BA] self-start sm:self-auto">
+                    <span class="font-bold text-reaktoria-deep-forest">Active Weapon:</span>
+                    <span class="text-[#B84E1F] font-bold">Pyros Blade [FeS]</span>
+                    <span class="text-stone-300">&bull;</span>
+                    <span class="text-[#14566A]">Thermal Class</span>
+                </div>
+            </div>
+
+            <!-- Two-Column Tactical Layout: Action Combat Plate (Left) + Ruled Engagement Ledger (Right) -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 pt-6 items-stretch">
                 
-                <!-- 01 — EXPLORE -->
-                <div class="flex items-start gap-3 flex-1 group">
-                    <span class="font-mono text-xs font-bold text-[#2F6B3C] bg-[#E8F2E4] px-2 py-0.5 rounded-md border border-[#C6DCBF] shrink-0 group-hover:scale-105 transition-transform">
-                        01
-                    </span>
-                    <div class="space-y-0.5">
-                        <div class="flex items-center gap-1.5">
-                            <h4 class="font-display font-bold text-xs sm:text-sm tracking-wider uppercase text-reaktoria-deep-forest">
-                                EXPLORE
-                            </h4>
-                            <span class="font-mono text-[10px] font-semibold text-[#2F6B3C]/75">&bull; Discovery</span>
+                <!-- Left: Action Combat Plate with In-World Annotation -->
+                <div class="lg:col-span-5 flex flex-col justify-between">
+                    <div class="relative rounded-xl overflow-hidden border border-[#D5C6AA] shadow-sm bg-[#EFECE3] aspect-[16/10]">
+                        <img 
+                            src="{{ asset('images/feature-battle.jpg') }}" 
+                            alt="Reaktoria Low-Poly Combat Strike: Pyros Blade Striking Hostile Wildling Scouts" 
+                            class="w-full h-full object-cover object-center select-none"
+                            loading="lazy"
+                        />
+                        <!-- Inset Action Tag -->
+                        <div class="absolute bottom-2.5 left-2.5 z-10 flex items-center px-2.5 py-1 rounded-md bg-[#FAF6EE]/94 backdrop-blur-md border border-[#D5C6AA] text-[10px] font-mono text-[#9C381E] font-bold shadow-xs">
+                            <span>Field Strike: Thermal Discharge</span>
                         </div>
-                        <p class="text-xs text-reaktoria-ink-muted leading-relaxed">
-                            Discover the world and find raw elemental opportunities.
+                    </div>
+
+                    <!-- Caption / In-Game Rationale -->
+                    <p class="mt-3 text-xs text-reaktoria-ink-muted leading-relaxed font-body">
+                        When the forged Pyros Blade strikes, synthesized Iron Sulfide (<span class="font-mono font-semibold text-[#14566A]">FeS</span>) ignites an elemental heat flare, piercing forest beast defenses and illuminating shadowy clearings.
+                    </p>
+                </div>
+
+                <!-- Right: Ruled Engagement Ledger (Clean Ruled List, No Nested Boxes) -->
+                <div class="lg:col-span-7 divide-y divide-[#E2D4B5]/70 flex flex-col justify-between">
+                    
+                    <!-- Tactical Row 01: Reaction Affinity -->
+                    <div class="pb-4 space-y-1.5">
+                        <div class="flex items-center justify-between text-xs font-mono">
+                            <span class="font-bold uppercase tracking-wider text-[#2F6B3C]">01. Reaction Affinity</span>
+                            <span class="text-[#2F6B3C] font-semibold bg-[#E8F2E4] px-2 py-0.5 rounded border border-[#C6DCBF]">Thermal Advantage</span>
+                        </div>
+                        <h4 class="font-display font-bold text-sm sm:text-base text-reaktoria-deep-forest">
+                            Pyros Infusion vs. Wildling Scouts
+                        </h4>
+                        <p class="text-xs text-reaktoria-ink/80 leading-relaxed font-body">
+                            Creatures native to dense canopies rely on thick bark hides. Standard iron strikes glance off, but heat-infused sulfur compounds trigger an exothermic response, breaking defensive shields upon impact.
                         </p>
                     </div>
-                </div>
 
-                <!-- Connecting Flow Indicator (Desktop) -->
-                <div class="hidden md:flex items-center justify-center text-[#B89B72]/70 px-2 shrink-0 select-none">
-                    <span class="font-mono text-sm tracking-tighter text-[#B89B72]">&bull;&bull;&bull;&rarr;</span>
-                </div>
-
-                <!-- 02 — EXPERIMENT -->
-                <div class="flex items-start gap-3 flex-1 border-t md:border-t-0 pt-3 md:pt-0 border-[#E2D4B5]/50 group">
-                    <span class="font-mono text-xs font-bold text-[#1B7088] bg-[#EAF2F5] px-2 py-0.5 rounded-md border border-[#BCD4DC] shrink-0 group-hover:scale-105 transition-transform">
-                        02
-                    </span>
-                    <div class="space-y-0.5">
-                        <div class="flex items-center gap-1.5">
-                            <h4 class="font-display font-bold text-xs sm:text-sm tracking-wider uppercase text-reaktoria-deep-forest">
-                                EXPERIMENT
-                            </h4>
-                            <span class="font-mono text-[10px] font-semibold text-[#1B7088]/75">&bull; Synthesis</span>
+                    <!-- Tactical Row 02: Environmental Chemistry Dynamics -->
+                    <div class="py-4 space-y-1.5">
+                        <div class="flex items-center justify-between text-xs font-mono">
+                            <span class="font-bold uppercase tracking-wider text-[#14566A]">02. Environmental Dynamics</span>
+                            <span class="text-[#14566A] font-semibold bg-[#EAF2F5] px-2 py-0.5 rounded border border-[#BAD1DB]">Terrain Interaction</span>
                         </div>
-                        <p class="text-xs text-reaktoria-ink-muted leading-relaxed">
-                            Use chemistry knowledge to create useful reactions.
+                        <h4 class="font-display font-bold text-sm sm:text-base text-reaktoria-deep-forest">
+                            Weather and Biome Feedback
+                        </h4>
+                        <p class="text-xs text-reaktoria-ink/80 leading-relaxed font-body">
+                            Cross river shallows to cool overheated blades. In dry undergrowth, thermal strikes ignite brief ember patches that deny flanking paths, turning the terrain itself into a tactical ally.
                         </p>
                     </div>
-                </div>
 
-                <!-- Connecting Flow Indicator (Desktop) -->
-                <div class="hidden md:flex items-center justify-center text-[#B89B72]/70 px-2 shrink-0 select-none">
-                    <span class="font-mono text-sm tracking-tighter text-[#B89B72]">&bull;&bull;&bull;&rarr;</span>
-                </div>
-
-                <!-- 03 — BATTLE -->
-                <div class="flex items-start gap-3 flex-1 border-t md:border-t-0 pt-3 md:pt-0 border-[#E2D4B5]/50 group">
-                    <span class="font-mono text-xs font-bold text-[#B84E1F] bg-[#FBEFE5] px-2 py-0.5 rounded-md border border-[#EAC9B0] shrink-0 group-hover:scale-105 transition-transform">
-                        03
-                    </span>
-                    <div class="space-y-0.5">
-                        <div class="flex items-center gap-1.5">
-                            <h4 class="font-display font-bold text-xs sm:text-sm tracking-wider uppercase text-reaktoria-deep-forest">
-                                BATTLE
-                            </h4>
-                            <span class="font-mono text-[10px] font-semibold text-[#B84E1F]/75">&bull; Tactical Combat</span>
+                    <!-- Tactical Row 03: Field Reagent Cycle -->
+                    <div class="pt-4 space-y-1.5">
+                        <div class="flex items-center justify-between text-xs font-mono">
+                            <span class="font-bold uppercase tracking-wider text-[#8C6211]">03. Field Reagent Cycle</span>
+                            <span class="text-[#8C6211] font-semibold bg-[#FAF4E6] px-2 py-0.5 rounded border border-[#DDD0B8]">Combat Loop</span>
                         </div>
-                        <p class="text-xs text-reaktoria-ink-muted leading-relaxed">
-                            Bring the result into combat to face hostile encounters.
+                        <h4 class="font-display font-bold text-sm sm:text-base text-reaktoria-deep-forest">
+                            Harvest, Synthesize, and Re-Engage
+                        </h4>
+                        <p class="text-xs text-reaktoria-ink/80 leading-relaxed font-body">
+                            Each weapon discharge draws on elemental charges. Collect raw sulfur crystals from roadside mineral veins and iron scrap from ruins to replenish your blade without returning to the workshop.
                         </p>
                     </div>
+
                 </div>
 
             </div>
 
-            <!-- Grounded Chemistry-to-Gameplay Connection Bar -->
-            <div class="mt-3.5 pt-2.5 border-t border-[#E8DCBF]/50 flex flex-wrap items-center justify-between gap-2.5 text-xs font-mono text-[#8C6D4A]/80">
+            <!-- Grounded Chemistry-to-Combat Loop Bar -->
+            <div class="mt-5 pt-3.5 border-t border-[#E8DCBF]/70 flex flex-wrap items-center justify-between gap-3 text-xs font-mono text-[#5D462E]">
                 <div class="flex items-center gap-2">
-                    <span class="text-[#2F6B3C]">🌲</span>
-                    <span class="font-bold text-reaktoria-deep-forest">Gameplay Loop</span>
-                    <span>&mdash;</span>
-                    <span>Chemistry Discovery &rarr; Crafting &rarr; Gameplay Use</span>
+                    <svg class="w-3.5 h-3.5 text-[#2F6B3C]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="m8 14-6 6h20l-6-6" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="m12 3-7 11h14z" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="font-bold text-reaktoria-deep-forest">Integrated Field Loop</span>
+                    <span class="text-[#8C6D4A]/60">&bull;</span>
+                    <span>Synthesis &rarr; Anvil Forging &rarr; Tactical Combat</span>
                 </div>
-                <div class="flex items-center gap-1.5 text-[11px] font-semibold bg-[#FAF6EE] px-2.5 py-0.5 rounded border border-[#DFD3BB] text-[#14566A]">
-                    <span>[Fe] + [S] &rarr; FeS &rarr; ⚔️ Pyros Blade Wielded</span>
+                <div class="flex items-center gap-2 text-[11px] font-semibold bg-[#FAF4E6] px-3 py-1 rounded-lg border border-[#DFD3BB] text-[#14566A]">
+                    <span>[Fe] + [S] &rarr; FeS &rarr; Pyros Blade Deployed</span>
                 </div>
             </div>
 

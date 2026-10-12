@@ -30,15 +30,20 @@
 
         <!-- Right: Action Button -->
         <div class="hidden sm:flex items-center gap-3">
-            <x-ui.button variant="menu" size="sm" href="#enter-game" class="px-4 py-2 text-xs font-display tracking-widest uppercase border-reaktoria-cream/90 shadow-md">
-                <span>⚔️</span>
+            <x-ui.button variant="menu" size="sm" href="#enter-game" @click="$dispatch('open-game-modal')" class="px-4 py-2 text-xs font-display tracking-widest uppercase border-reaktoria-cream/90 shadow-md">
+                <svg class="w-3.5 h-3.5 text-reaktoria-cream-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14.5 17.5L3 6V3h3l11.5 11.5" />
+                    <path d="M13 19l6-6" />
+                    <path d="M16 16l4 4" />
+                    <path d="M19 21l2-2" />
+                </svg>
                 <span>Enter Game</span>
             </x-ui.button>
         </div>
 
         <!-- Mobile Menu Toggle Button -->
         <div class="flex md:hidden items-center gap-2">
-            <x-ui.button variant="menu" size="sm" href="#enter-game" class="sm:hidden text-xs px-2.5 py-1.5">
+            <x-ui.button variant="menu" size="sm" href="#enter-game" @click="$dispatch('open-game-modal')" class="sm:hidden text-xs px-2.5 py-1.5">
                 Play
             </x-ui.button>
             <button 
@@ -78,8 +83,13 @@
         <a href="#archive" @click="mobileOpen = false" class="block px-3 py-2 text-base font-display text-reaktoria-cream hover:bg-white/10 rounded">Archive</a>
         
         <div class="pt-2">
-            <x-ui.button variant="menu" size="md" href="#enter-game" class="w-full justify-center">
-                <span>⚔️</span>
+            <x-ui.button variant="menu" size="md" href="#enter-game" @click="$dispatch('open-game-modal'); mobileOpen = false" class="w-full justify-center">
+                <svg class="w-4 h-4 text-reaktoria-cream-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14.5 17.5L3 6V3h3l11.5 11.5" />
+                    <path d="M13 19l6-6" />
+                    <path d="M16 16l4 4" />
+                    <path d="M19 21l2-2" />
+                </svg>
                 <span>Enter Game</span>
             </x-ui.button>
         </div>

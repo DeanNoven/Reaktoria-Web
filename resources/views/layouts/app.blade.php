@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>@yield('title', 'Reaktoria — Chemistry Fantasy Adventure')</title>
+    <title>@yield('title', 'Reaktoria: Chemistry Fantasy Adventure')</title>
     <meta name="description" content="@yield('description', 'A colorful low-poly 3D medieval fantasy adventure game with chemistry as its core gameplay mechanic.')">
 
     <!-- Google Fonts: Cinzel (Display), Plus Jakarta Sans (Body), JetBrains Mono (Chemical UI) -->

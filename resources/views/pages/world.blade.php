@@ -1,5 +1,5 @@
 <x-layouts.app>
-    <x-slot:title>Reaktoria — The Elemental Realm (World)</x-slot:title>
+    <x-slot:title>Reaktoria: The Elemental Realm (World)</x-slot:title>
     <x-slot:description>Explore the peaceful medieval valley, pine forests, rivers, and watchtowers of the Elemental Realm in Reaktoria.</x-slot:description>
 
     <!-- Top Navigation Bar -->

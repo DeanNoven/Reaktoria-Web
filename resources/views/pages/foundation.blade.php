@@ -1,5 +1,5 @@
 <x-layouts.app>
-    <x-slot:title>Reaktoria — Visual & Technical Foundation</x-slot:title>
+    <x-slot:title>Reaktoria: Visual & Technical Foundation</x-slot:title>
 
     <div class="py-10 sm:py-14">
         <x-ui.container size="default" class="space-y-12">
@@ -206,15 +206,15 @@
 
                     <div class="flex flex-wrap items-center gap-3 p-4 bg-gradient-to-r from-reaktoria-hud via-[#24353E] to-reaktoria-hud rounded-lg border-2 border-reaktoria-hud-border">
                         <x-ui.button variant="menu" size="md" class="gap-2.5">
-                            <span>⚔️</span>
+                            <svg class="w-4 h-4 text-reaktoria-cream" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 17.5L3 6V3h3l11.5 11.5"/><path d="M13 19l6-6"/><path d="M16 16l4 4"/><path d="M19 21l2-2"/></svg>
                             <span>Campaign Mode</span>
                         </x-ui.button>
                         <x-ui.button variant="menu" size="md" class="gap-2.5 opacity-80 hover:opacity-100">
-                            <span>🧪</span>
+                            <svg class="w-4 h-4 text-reaktoria-cream" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.31L4.15 19.4A2 2 0 0 0 5.85 22h12.3a2 2 0 0 0 1.7-2.6L14 9.31V2"/><path d="M8.5 2h7"/></svg>
                             <span>Creative Lab</span>
                         </x-ui.button>
                         <x-ui.button variant="menu" size="md" class="gap-2.5 opacity-80 hover:opacity-100">
-                            <span>⚙️</span>
+                            <svg class="w-4 h-4 text-reaktoria-cream" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
                             <span>Settings</span>
                         </x-ui.button>
                     </div>
@@ -340,7 +340,10 @@
                         <span class="text-xs font-bold text-reaktoria-wood uppercase font-display">Timber Wood Frame</span>
                         <x-ui.image-container frame="wood" aspect="video">
                             <div class="w-full h-full bg-gradient-to-br from-[#8BCB63]/40 via-reaktoria-cream/50 to-reaktoria-sky/40 flex flex-col items-center justify-center p-4 text-center">
-                                <span class="text-2xl mb-1">🌲 🏠 🌲</span>
+                                <div class="flex items-center gap-1.5 text-reaktoria-wood mb-1">
+                                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L7 9h3l-4 7h6v4h2v-4h6l-4-7h3z"/></svg>
+                                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+                                </div>
                                 <span class="font-display font-bold text-sm text-reaktoria-wood">Village Environment Frame</span>
                                 <span class="text-xs text-reaktoria-ink-muted">Ready for Blender 3D blockouts</span>
                             </div>
@@ -352,7 +355,10 @@
                         <span class="text-xs font-bold text-reaktoria-stone-dark uppercase font-display">Stone Masonry Frame</span>
                         <x-ui.image-container frame="stone" aspect="video">
                             <div class="w-full h-full bg-gradient-to-br from-reaktoria-stone/20 via-[#F7FAF6] to-reaktoria-sky/30 flex flex-col items-center justify-center p-4 text-center">
-                                <span class="text-2xl mb-1">⚔️ 🏰 🛡️</span>
+                                <div class="flex items-center gap-1.5 text-reaktoria-stone-dark mb-1">
+                                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 17.5L3 6V3h3l11.5 11.5"/><path d="M13 19l6-6"/></svg>
+                                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                </div>
                                 <span class="font-display font-bold text-sm text-reaktoria-stone-dark">Battle Arena Frame</span>
                                 <span class="text-xs text-reaktoria-ink-muted">Ready for combat clearing maps</span>
                             </div>
@@ -364,7 +370,10 @@
                         <span class="text-xs font-bold text-reaktoria-hud uppercase font-display">Game HUD Frame</span>
                         <x-ui.image-container frame="hud" aspect="video">
                             <div class="w-full h-full bg-reaktoria-hud flex flex-col items-center justify-center p-4 text-center text-reaktoria-cream">
-                                <span class="text-2xl mb-1">🧪 ⚗️ ⚡</span>
+                                <div class="flex items-center gap-1.5 text-reaktoria-gold mb-1">
+                                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.31L4.15 19.4A2 2 0 0 0 5.85 22h12.3a2 2 0 0 0 1.7-2.6L14 9.31V2"/></svg>
+                                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                                </div>
                                 <span class="font-display font-bold text-sm text-reaktoria-gold">Chemical Reaction Frame</span>
                                 <span class="text-xs text-reaktoria-cream-dim">Ready for flask synthesis renders</span>
                             </div>

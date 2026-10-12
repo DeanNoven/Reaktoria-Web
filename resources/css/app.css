@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,400..700;1,400..700&family=JetBrains+Mono:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,400..700;1,400..700&display=swap');
 @import 'tailwindcss';
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
@@ -6,11 +6,11 @@
 @source '../views/**/*.blade.php';
 
 @theme {
-    /* Typography */
+    /* Typography: 2 Core Fonts Only (Cinzel for Headings/Display & Plus Jakarta Sans for Body/UI) */
     --font-display: 'Cinzel', Georgia, serif;
     --font-body: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
     --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
-    --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+    --font-mono: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
 
     /* Primary Game Environment Colors */
     --color-reaktoria-forest: #2F6B3C;
@@ -75,5 +75,14 @@
     h1, h2, h3, h4, h5, h6 {
         font-family: var(--font-display);
         letter-spacing: 0.02em;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        *, ::before, ::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+            scroll-behavior: auto !important;
+        }
     }
 }
