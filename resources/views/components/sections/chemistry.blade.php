@@ -92,7 +92,7 @@
                         >
                             <div class="aspect-[4/3] overflow-hidden bg-[#24352A]">
                                 <img 
-                                    src="{{ asset('images/alchemist-workshop.jpg') }}" 
+                                    src="{{ asset('images/alchemist-workshop.jpg') }}"
                                     alt="Reaktoria Low-Poly Medieval Alchemist Workshop with Reaction Flask and Raw Materials" 
                                     class="w-full h-full object-cover object-center select-none transition-transform duration-700 ease-out"
                                     :class="selected === null ? 'group-hover:scale-[1.03]' : ''"
