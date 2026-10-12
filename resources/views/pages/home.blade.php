@@ -20,7 +20,7 @@
                 <img 
                     src="{{ asset('images/backgrounds/workshop-tall-bg.jpg') }}" 
                     alt="Reaktoria Low-Poly Medieval Craft Hall: chemistry-bg.jpg & forge-bg.jpg" 
-                    class="w-full h-full object-cover object-center select-none pointer-events-none opacity-12 sm:opacity-15 contrast-[0.98] saturate-[0.95] brightness-[1.01]"
+                    class="w-full h-full object-cover object-center select-none pointer-events-none opacity-20 sm:opacity-25 contrast-[0.98] saturate-[0.95] brightness-[1.01]"
                     loading="lazy"
                 />
 
