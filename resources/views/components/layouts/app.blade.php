@@ -1,5 +1,5 @@
 @props([
-    'title' => 'Reaktoria — Chemistry Fantasy Adventure',
+    'title' => 'Reaktoria: Chemistry Fantasy Adventure',
     'description' => 'A colorful low-poly 3D medieval fantasy adventure game with chemistry as its core gameplay mechanic.',
 ])
 

@@ -1,44 +1,21 @@
-<!-- =========================================================================
-     SECTION 8 — ELEMENTAL ARCHIVE: KNOW WHAT YOU'RE MIXING
-     In-World Medieval Scientific Archive & Elemental Specimen Database
-     ========================================================================= -->
+<!-- Section 8 / Pilar 4: Elemental Archive -->
 <section id="archive" class="relative py-16 sm:py-20 lg:py-24 overflow-hidden bg-gradient-to-b from-[#EFE8D9] via-[#F4EFE4] to-[#E9DFC9]">
 
-    <!-- Global Anchor for Navbar Navigation (#archive) -->
+    <!-- Global Anchor for Navbar and Footer Navigation (#archive, #elemental-archive) -->
     <span id="elemental-archive" class="absolute -top-24 pointer-events-none" aria-hidden="true"></span>
 
-    <!-- Environmental Background Transition Layer (Subtle Archival Docket Grid & Ambient Warmth) -->
-    <div class="absolute inset-0 z-0 pointer-events-none select-none">
-        <!-- Wide Low-Poly Medieval Elemental Research Archive Background (~45-50% visibility for recognizable room environment) -->
+    <!-- Environmental archive background -->
+    <div class="absolute inset-0 z-0 pointer-events-none select-none" aria-hidden="true">
         <img 
             src="{{ asset('images/backgrounds/archive-bg.jpg') }}" 
-            alt="Reaktoria Low-Poly Medieval Elemental Research Archive & Specimen Room" 
+            alt="Reaktoria Elemental Archive Study and Specimen Dossier Background" 
             class="w-full h-full object-cover object-center select-none pointer-events-none opacity-45 sm:opacity-50 contrast-[0.95] saturate-[0.92] brightness-[1.01]"
             loading="lazy"
         />
 
-        <!-- Seamless Transition from Section 7 (#EFE8D9) -->
         <div class="absolute inset-x-0 top-0 h-28 sm:h-32 bg-gradient-to-b from-[#EFE8D9] via-[#EFE8D9]/75 to-transparent"></div>
-
-        <!-- Light Atmospheric Parchment Softening Veil (Subtly integrates image without washing out shelving & drawers) -->
         <div class="absolute inset-0 bg-[#F4EFE4]/18 pointer-events-none"></div>
-
-        <!-- Central Readability Dissolve (Softly clears the center directly behind the main dossier, leaving outer edges crisp) -->
         <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(244,239,228,0.45)_0%,_rgba(244,239,228,0.10)_50%,_transparent_75%)] pointer-events-none"></div>
-
-        <!-- Archival Metric Ledger Stipple & Registration Pattern -->
-        <div class="absolute inset-0 opacity-[0.025] text-[#4A2E1D]">
-            <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-                <defs>
-                    <pattern id="archive-grid-pattern" width="48" height="48" patternUnits="userSpaceOnUse">
-                        <circle cx="24" cy="24" r="0.9" fill="currentColor" />
-                        <line x1="24" y1="20" x2="24" y2="28" stroke="currentColor" stroke-width="0.5" opacity="0.4" />
-                        <line x1="20" y1="24" x2="28" y2="24" stroke="currentColor" stroke-width="0.5" opacity="0.4" />
-                    </pattern>
-                </defs>
-                <rect width="100%" height="100%" fill="url(#archive-grid-pattern)" />
-            </svg>
-        </div>
 
         <!-- Faint Ambient Archival Glows -->
         <div class="absolute top-1/4 left-1/12 w-96 h-96 rounded-full bg-[radial-gradient(circle,_rgba(227,180,76,0.06)_0%,_transparent_70%)]"></div>
@@ -48,7 +25,7 @@
         <div class="absolute inset-y-0 left-0 w-16 sm:w-24 bg-gradient-to-r from-[#DFD4C2]/15 to-transparent pointer-events-none"></div>
         <div class="absolute inset-y-0 right-0 w-16 sm:w-24 bg-gradient-to-l from-[#DFD4C2]/15 to-transparent pointer-events-none"></div>
 
-        <!-- Soft Bottom Blending -->
+        <!-- Soft Bottom Blending into Gallery (#E9DFC9) -->
         <div class="absolute bottom-0 inset-x-0 h-24 bg-gradient-to-t from-[#E9DFC9] via-[#E9DFC9]/75 to-transparent pointer-events-none"></div>
     </div>
 
@@ -173,15 +150,12 @@
             }
          }">
 
-        <!-- =================================================================
-             SECTION HEADER: In-World Scientific Archive
-             ================================================================= -->
+        <!-- SECTION HEADER: In-World Scientific Archive -->
         <div class="flex flex-col md:flex-row md:items-end justify-between gap-5 mb-8 sm:mb-10 lg:mb-12">
             
             <div class="space-y-3 max-w-2xl">
-                <!-- Eyebrow Pill -->
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-[#E4D8BE]/85 border border-[#CEBF9E] shadow-2xs">
-                    <span class="w-2 h-2 rounded-full bg-[#14566A]"></span>
+                <!-- Eyebrow -->
+                <div class="inline-flex items-center px-3 py-1 rounded-lg bg-[#E4D8BE]/85 border border-[#CEBF9E] shadow-2xs">
                     <span class="text-xs font-mono font-bold tracking-widest text-[#5A452E] uppercase">
                         ELEMENTAL ARCHIVE
                     </span>
@@ -198,9 +172,8 @@
                 </p>
             </div>
 
-            <!-- Top-Right Archival Registry Badge -->
-            <div class="hidden sm:inline-flex items-center gap-2.5 font-mono text-xs text-[#5A452E] bg-[#E8DEC8]/90 px-3.5 py-2 rounded-lg border border-[#D0C2A5] shadow-xs select-none self-start md:self-end">
-                <span class="w-2 h-2 rounded-full bg-[#42A9C6]"></span>
+            <!-- Archival Registry Badge -->
+            <div class="hidden sm:inline-flex items-center gap-2 font-mono text-xs text-[#5A452E] bg-[#E8DEC8]/90 px-3.5 py-2 rounded-xl border border-[#D0C2A5] shadow-xs select-none self-start md:self-end">
                 <span class="font-bold tracking-wider text-reaktoria-deep-forest uppercase">FIELD ARCHIVE</span>
                 <span class="text-stone-400">&bull;</span>
                 <span class="tracking-wide">REAKTORIA RESEARCH</span>
@@ -208,15 +181,12 @@
 
         </div>
 
-        <!-- =================================================================
-             MAIN FEATURED ARCHIVE AREA: Specimen Folio & Research Dossier
-             ================================================================= -->
-        <div class="relative rounded-xl sm:rounded-2xl overflow-hidden border-2 border-[#C9BCA0] bg-[#FAF6EE] shadow-[0_20px_50px_rgba(40,30,15,0.08),_0_2px_8px_rgba(40,30,15,0.04)]">
+        <!-- MAIN FEATURED ARCHIVE DOSSIER: Specimen Folio & Research Ledger -->
+        <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden border-2 border-[#C9BCA0] bg-[#FAF6EE] shadow-[0_20px_50px_rgba(40,30,15,0.08),_0_2px_8px_rgba(40,30,15,0.04)]">
             
             <!-- Folio Header Bar (Archival Docket Registry Line) -->
-            <div class="bg-[#ECE2CE] border-b border-[#D5C6AA] px-4 sm:px-6 py-2 flex flex-wrap items-center justify-between gap-2 text-[11px] font-mono text-[#7A674D] select-none">
+            <div class="bg-[#ECE2CE] border-b border-[#D5C6AA] px-4 sm:px-6 py-2.5 flex flex-wrap items-center justify-between gap-2 text-[11px] font-mono text-[#7A674D] select-none">
                 <div class="flex items-center gap-2">
-                    <span class="w-1.5 h-1.5 rounded-full bg-[#B84E1F]"></span>
                     <span class="font-bold text-reaktoria-deep-forest tracking-wider uppercase">ARCHIVAL SPECIMEN DOSSIER</span>
                     <span class="text-stone-400">&bull;</span>
                     <span class="text-[#8C6211]" x-text="'REGISTRY NO. RK-' + specimens[activeTab].number + '-' + specimens[activeTab].symbol.toUpperCase()">REGISTRY NO. RK-26-FE</span>
@@ -231,15 +201,12 @@
             <!-- Main Two-Column Archive Workspace -->
             <div class="grid grid-cols-1 lg:grid-cols-12 items-stretch min-h-[540px] lg:min-h-[560px]">
                 
-                <!-- =============================================================
-                     LEFT SIDE: Featured Elemental Specimen Panel (Iron Ore / Specimen Tray)
-                     ============================================================= -->
+                <!-- LEFT SIDE: Specimen Mounting Chamber & Physical Observation -->
                 <div class="lg:col-span-5 p-5 sm:p-7 lg:p-8 flex flex-col justify-between bg-[#F2EBDE]/70 border-b lg:border-b-0 lg:border-r border-[#DDCFB7]">
                     
                     <!-- Archival Label Top -->
                     <div class="flex items-center justify-between gap-2 mb-3">
-                        <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-[#E4D7BE] border border-[#CBBBA0] font-mono text-[10px] sm:text-xs font-bold tracking-wider text-[#634E35] uppercase shadow-2xs select-none">
-                            <span class="w-1.5 h-1.5 rounded-full bg-[#B84E1F]"></span>
+                        <div class="inline-flex items-center px-2.5 py-1 rounded-md bg-[#E4D7BE] border border-[#CBBBA0] font-mono text-[10px] sm:text-xs font-bold tracking-wider text-[#634E35] uppercase shadow-2xs select-none">
                             <span x-text="specimens[activeTab].label">ELEMENT 01 / FIELD SPECIMEN</span>
                         </div>
 
@@ -250,7 +217,7 @@
                     </div>
 
                     <!-- Low-Poly Faceted Mineral Specimen Mounting Chamber -->
-                    <div class="relative w-full rounded-lg bg-[#162025] border-2 border-[#2D3C43] shadow-inner p-4 sm:p-5 flex flex-col items-center justify-center my-2 h-[320px] sm:h-[350px] overflow-hidden group">
+                    <div class="relative w-full rounded-xl bg-[#141E23] border border-[#2B3B42] shadow-inner p-4 sm:p-5 flex flex-col items-center justify-center my-2 h-[320px] sm:h-[350px] overflow-hidden group">
                         
                         <!-- Archival Measurement Grid & Crosshairs (Background of Specimen Tray) -->
                         <svg class="absolute inset-0 w-full h-full opacity-20 pointer-events-none" xmlns="http://www.w3.org/2000/svg">
@@ -268,21 +235,21 @@
                         </svg>
 
                         <!-- Corner Telemetry Stamp Overlays -->
-                        <div class="absolute top-2.5 left-3 font-mono text-[9px] text-[#67BED6]/60 tracking-wider uppercase select-none">
+                        <div class="absolute top-2.5 left-3 font-mono text-[9px] text-[#9CD5E6] tracking-wider uppercase select-none">
                             TRAY // 80mm
                         </div>
-                        <div class="absolute top-2.5 right-3 font-mono text-[9px] text-[#67BED6]/60 tracking-wider uppercase select-none">
+                        <div class="absolute top-2.5 right-3 font-mono text-[9px] text-[#9CD5E6] tracking-wider uppercase select-none">
                             OPTICAL AXIS // 90°
                         </div>
-                        <div class="absolute bottom-2.5 left-3 font-mono text-[9px] text-[#8CB4C2]/60 tracking-wider uppercase select-none">
+                        <div class="absolute bottom-2.5 left-3 font-mono text-[9px] text-[#B6D8E2] tracking-wider uppercase select-none">
                             LUSTER // METALLIC
                         </div>
-                        <div class="absolute bottom-2.5 right-3 font-mono text-[9px] text-[#8CB4C2]/60 tracking-wider uppercase select-none">
+                        <div class="absolute bottom-2.5 right-3 font-mono text-[9px] text-[#B6D8E2] tracking-wider uppercase select-none">
                             PURITY // 96.4%
                         </div>
 
-                        <!-- Real Elemental Field Specimen Artwork (Dynamic per selected element) -->
-                        <div class="relative z-10 w-[220px] h-[220px] sm:w-[250px] sm:h-[250px] aspect-square rounded-lg overflow-hidden border border-[#2D3C43] shadow-[0_12px_24px_rgba(0,0,0,0.55)] transition-transform duration-300 group-hover:scale-[1.02] bg-[#12191C] shrink-0">
+                        <!-- Real Elemental Field Specimen Artwork -->
+                        <div class="relative z-10 w-[220px] h-[220px] sm:w-[250px] sm:h-[250px] aspect-square rounded-xl overflow-hidden border border-[#2D3C43] shadow-[0_12px_24px_rgba(0,0,0,0.55)] transition-transform duration-300 group-hover:scale-[1.02] bg-[#10171A] shrink-0">
                             <img 
                                 :src="specimens[activeTab].image"
                                 src="{{ asset('images/iron-specimen.jpg') }}" 
@@ -292,12 +259,11 @@
                                 loading="lazy"
                             />
                             <!-- Subtle Ambient Specimen Glass Reflection -->
-                            <div class="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-lg pointer-events-none"></div>
+                            <div class="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-xl pointer-events-none"></div>
                         </div>
 
                         <!-- Brass Identification Plaque at Bottom of Specimen Mount -->
-                        <div class="relative z-10 mt-3 px-3 py-1 rounded bg-[#0F171A] border border-[#2B3B42] flex items-center gap-2 font-mono text-[10px] text-[#93A8B3] select-none shrink-0">
-                            <span class="w-1.5 h-1.5 rounded-full bg-[#E3B44C]"></span>
+                        <div class="relative z-10 mt-3 px-3 py-1 rounded-md bg-[#0F171A] border border-[#2B3B42] flex items-center gap-2 font-mono text-[10px] text-[#93A8B3] select-none shrink-0">
                             <span class="font-bold text-white tracking-widest" x-text="specimens[activeTab].name + ' SPECIMEN'">IRON SPECIMEN</span>
                             <span class="text-stone-600">&bull;</span>
                             <span class="text-[#67BED6]" x-text="'[' + specimens[activeTab].symbol + ']'">[Fe]</span>
@@ -317,7 +283,7 @@
                         </div>
 
                         <!-- Classification: TRANSITION METAL -->
-                        <span class="font-mono text-[10px] sm:text-xs font-bold tracking-wider uppercase px-2.5 py-1 rounded bg-[#E4D7BE] text-[#5A452E] border border-[#CBBBA0] shadow-2xs select-none"
+                        <span class="font-mono text-[10px] sm:text-xs font-bold tracking-wider uppercase px-2.5 py-1 rounded-md bg-[#E4D7BE] text-[#5A452E] border border-[#CBBBA0] shadow-2xs select-none"
                               x-text="specimens[activeTab].classification">
                             TRANSITION METAL
                         </span>
@@ -325,9 +291,7 @@
 
                 </div>
 
-                <!-- =============================================================
-                     RIGHT SIDE: Clean Research-Data Panel
-                     ============================================================= -->
+                <!-- RIGHT SIDE: Ruled Scientific Dossier & Research Ledger -->
                 <div class="lg:col-span-7 p-6 sm:p-8 lg:p-10 flex flex-col justify-between bg-[#FAF6EE]">
                     
                     <!-- Research Dossier Header -->
@@ -345,52 +309,52 @@
                             </p>
                         </div>
 
-                        <!-- Large Symbol: Fe -->
-                        <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-lg bg-[#EFE6D4] border-2 border-[#D5C6AA] flex flex-col items-center justify-center shadow-xs select-none shrink-0">
+                        <!-- Large Symbol Tile: Fe -->
+                        <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-xl bg-[#EFE6D4] border-2 border-[#D5C6AA] flex flex-col items-center justify-center shadow-xs select-none shrink-0">
                             <span class="font-display font-black text-3xl sm:text-4xl text-[#14566A]" x-text="specimens[activeTab].symbol">Fe</span>
                             <span class="font-mono text-[9px] font-bold text-[#8C6211] -mt-1" x-text="'Z=' + specimens[activeTab].number">Z=26</span>
                         </div>
                     </div>
 
-                    <!-- Properties Grid (Atomic Number, Category, Symbol, Role) -->
-                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 py-5 border-b border-[#E2D5BE]">
+                    <!-- Properties Grid: Cohesive Ruled Data Table (Eliminates floating nested cards) -->
+                    <div class="grid grid-cols-2 sm:grid-cols-4 border border-[#DDCFB7] divide-y sm:divide-y-0 sm:divide-x divide-[#DDCFB7] rounded-xl bg-[#F6F0E3]/70 overflow-hidden shadow-2xs my-5">
                         
                         <!-- Property 1: ATOMIC NUMBER -->
-                        <div class="p-3 sm:p-3.5 rounded bg-[#F2EBDE]/75 border border-[#DDD0B8] shadow-2xs min-h-[4.75rem] sm:min-h-[5.25rem] flex flex-col justify-between">
-                            <span class="block text-[10px] font-mono font-bold uppercase tracking-wider text-[#7A674D] mb-1">
+                        <div class="p-3.5 sm:p-4 flex flex-col justify-between min-h-[5rem]">
+                            <span class="block text-[10px] font-mono font-bold uppercase tracking-wider text-[#7A674D]">
                                 ATOMIC NUMBER
                             </span>
-                            <span class="font-mono text-lg sm:text-2xl font-bold text-reaktoria-deep-forest" x-text="specimens[activeTab].number">
+                            <span class="font-mono text-xl sm:text-2xl font-bold text-reaktoria-deep-forest mt-1" x-text="specimens[activeTab].number">
                                 26
                             </span>
                         </div>
 
                         <!-- Property 2: CATEGORY -->
-                        <div class="p-3 sm:p-3.5 rounded bg-[#F2EBDE]/75 border border-[#DDD0B8] shadow-2xs min-h-[4.75rem] sm:min-h-[5.25rem] flex flex-col justify-between">
-                            <span class="block text-[10px] font-mono font-bold uppercase tracking-wider text-[#7A674D] mb-1">
+                        <div class="p-3.5 sm:p-4 flex flex-col justify-between min-h-[5rem]">
+                            <span class="block text-[10px] font-mono font-bold uppercase tracking-wider text-[#7A674D]">
                                 CATEGORY
                             </span>
-                            <span class="font-body text-sm sm:text-base font-bold text-reaktoria-deep-forest" x-text="specimens[activeTab].category">
+                            <span class="font-body text-sm sm:text-base font-bold text-reaktoria-deep-forest mt-1" x-text="specimens[activeTab].category">
                                 Metal
                             </span>
                         </div>
 
                         <!-- Property 3: SYMBOL -->
-                        <div class="p-3 sm:p-3.5 rounded bg-[#F2EBDE]/75 border border-[#DDD0B8] shadow-2xs min-h-[4.75rem] sm:min-h-[5.25rem] flex flex-col justify-between">
-                            <span class="block text-[10px] font-mono font-bold uppercase tracking-wider text-[#7A674D] mb-1">
+                        <div class="p-3.5 sm:p-4 flex flex-col justify-between min-h-[5rem]">
+                            <span class="block text-[10px] font-mono font-bold uppercase tracking-wider text-[#7A674D]">
                                 SYMBOL
                             </span>
-                            <span class="font-mono text-lg sm:text-2xl font-bold text-[#14566A]" x-text="specimens[activeTab].symbol">
+                            <span class="font-mono text-xl sm:text-2xl font-bold text-[#14566A] mt-1" x-text="specimens[activeTab].symbol">
                                 Fe
                             </span>
                         </div>
 
                         <!-- Property 4: ROLE -->
-                        <div class="p-3 sm:p-3.5 rounded bg-[#F2EBDE]/75 border border-[#DDD0B8] shadow-2xs min-h-[4.75rem] sm:min-h-[5.25rem] flex flex-col justify-between">
-                            <span class="block text-[10px] font-mono font-bold uppercase tracking-wider text-[#7A674D] mb-1">
+                        <div class="p-3.5 sm:p-4 flex flex-col justify-between min-h-[5rem]">
+                            <span class="block text-[10px] font-mono font-bold uppercase tracking-wider text-[#7A674D]">
                                 ROLE
                             </span>
-                            <span class="font-body text-xs sm:text-sm font-bold text-reaktoria-deep-forest leading-snug line-clamp-2" x-text="specimens[activeTab].role">
+                            <span class="font-body text-xs sm:text-sm font-bold text-reaktoria-deep-forest leading-snug mt-1" x-text="specimens[activeTab].role">
                                 Forging Material
                             </span>
                         </div>
@@ -398,10 +362,9 @@
                     </div>
 
                     <!-- Reaction Profile & Discoveries Section -->
-                    <div class="py-5 border-b border-[#E2D5BE] space-y-4">
+                    <div class="py-5 border-t border-[#E2D5BE] space-y-4">
                         
-                        <div class="flex items-center gap-2">
-                            <span class="w-1.5 h-1.5 rounded-full bg-[#B84E1F]"></span>
+                        <div>
                             <h4 class="font-mono text-xs font-bold uppercase tracking-widest text-[#B84E1F]">
                                 REACTION PROFILE
                             </h4>
@@ -415,9 +378,9 @@
                                     COMMONLY REACTS WITH
                                 </span>
                                 
-                                <div class="flex flex-wrap items-center gap-1.5 sm:gap-2 min-h-[2.5rem]">
+                                <div class="flex flex-wrap items-center gap-2 min-h-[2.5rem]">
                                     <template x-for="reactant in specimens[activeTab].reacts" :key="reactant.symbol">
-                                        <div class="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded bg-[#F3ECDC] border border-[#D8C9AA] text-xs font-mono shadow-2xs shrink-0">
+                                        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#F3ECDC] border border-[#D8C9AA] text-xs font-mono shadow-2xs shrink-0">
                                             <span class="font-bold text-[#8C6211] text-sm" x-text="reactant.symbol">S</span>
                                             <span class="text-[10px] text-[#7A674D] whitespace-nowrap" x-text="reactant.name">Sulfur</span>
                                         </div>
@@ -425,11 +388,11 @@
 
                                     <!-- Static SSR Fallback for Iron Reactants (guarantees text indexing) -->
                                     <div class="contents" x-show="false">
-                                        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded bg-[#FAF2DC] border border-[#DECFA9] text-xs font-mono">
+                                        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#FAF2DC] border border-[#DECFA9] text-xs font-mono">
                                             <span class="font-bold text-[#8C6211] text-sm">S</span>
                                             <span class="text-[10px] text-[#7A674D]">Sulfur</span>
                                         </div>
-                                        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded bg-[#E8F4F8] border border-[#C5DFE8] text-xs font-mono">
+                                        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#E8F4F8] border border-[#C5DFE8] text-xs font-mono">
                                             <span class="font-bold text-[#14566A] text-sm">O₂</span>
                                             <span class="text-[10px] text-[#558190]">Oxygen</span>
                                         </div>
@@ -443,9 +406,9 @@
                                     DISCOVERIES
                                 </span>
                                 
-                                <div class="flex flex-wrap items-center gap-1.5 sm:gap-2 min-h-[2.5rem]">
+                                <div class="flex flex-wrap items-center gap-2 min-h-[2.5rem]">
                                     <template x-for="discovery in specimens[activeTab].discoveries" :key="discovery.formula">
-                                        <div class="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded bg-[#F4EDE0] border border-[#D9CBB0] text-xs font-mono shadow-2xs shrink-0">
+                                        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#F4EDE0] border border-[#D9CBB0] text-xs font-mono shadow-2xs shrink-0">
                                             <span class="font-bold text-reaktoria-deep-forest text-sm" x-text="discovery.formula">FeS</span>
                                             <span class="text-[10px] text-[#8C6211] whitespace-nowrap" x-text="discovery.name">Iron Sulfide</span>
                                         </div>
@@ -453,11 +416,11 @@
 
                                     <!-- Static SSR Fallback for Iron Discoveries (guarantees text indexing) -->
                                     <div class="contents" x-show="false">
-                                        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded bg-[#F4EDE0] border border-[#D9CBB0] text-xs font-mono">
+                                        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#F4EDE0] border border-[#D9CBB0] text-xs font-mono">
                                             <span class="font-bold text-reaktoria-deep-forest text-sm">FeS</span>
                                             <span class="text-[10px] text-[#8C6211]">Iron Sulfide</span>
                                         </div>
-                                        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded bg-[#F4EDE0] border border-[#D9CBB0] text-xs font-mono">
+                                        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#F4EDE0] border border-[#D9CBB0] text-xs font-mono">
                                             <span class="font-bold text-reaktoria-deep-forest text-sm">Fe₂O₃</span>
                                             <span class="text-[10px] text-[#B84E1F]">Iron Oxide</span>
                                         </div>
@@ -469,13 +432,15 @@
 
                     </div>
 
-                    <!-- Small Field Note -->
-                    <div class="mt-5 p-3.5 sm:p-4 rounded bg-[#F2EBDE]/85 border-l-3 border-[#B84E1F] border-t border-r border-b border-[#DDD0B8] shadow-2xs min-h-[5.25rem] sm:min-h-[5.5rem] flex flex-col justify-center">
-                        <div class="flex items-center gap-1.5 mb-1">
-                            <span class="w-1.5 h-1.5 rounded-full bg-[#B84E1F]"></span>
-                            <span class="text-[10px] font-mono font-bold uppercase tracking-wider text-[#B84E1F]">
-                                FIELD NOTE
-                            </span>
+                    <!-- Archival Field Observation Callout (Eliminates generic colored left stripe) -->
+                    <div class="mt-5 p-4 rounded-xl bg-[#F6F0E3]/90 border border-[#DDCFB7] shadow-2xs min-h-[5.5rem] flex flex-col justify-center">
+                        <div class="flex items-center justify-between gap-2 mb-1.5">
+                            <div>
+                                <span class="text-[10px] font-mono font-bold uppercase tracking-wider text-[#B84E1F]">
+                                    FIELD NOTE
+                                </span>
+                            </div>
+                            <span class="text-[10px] font-mono text-[#8C7355] uppercase">Expedition Log</span>
                         </div>
                         <p class="font-body text-xs sm:text-sm text-reaktoria-ink/85 italic leading-relaxed" x-text="specimens[activeTab].note">
                             Iron forms the foundation of many forged discoveries throughout the realm.
@@ -486,91 +451,94 @@
 
             </div>
 
-            <!-- =================================================================
-                 BOTTOM: Elemental Archive Index (Archival Specimen Tabs)
-                 ================================================================= -->
+            <!-- Elemental Archive Index (Archival Specimen Tabs) -->
             <div class="bg-[#ECE2CE] border-t border-[#D5C6AA] px-4 sm:px-6 lg:px-8 py-3.5 flex flex-col md:flex-row md:items-center justify-between gap-3 select-none">
                 
                 <!-- Archival Registry Heading -->
                 <div class="flex items-center gap-2 font-mono text-xs text-[#7A674D]">
-                    <span class="w-2 h-2 rounded-full bg-[#14566A]"></span>
                     <span class="font-bold uppercase tracking-wider text-reaktoria-deep-forest">ARCHIVE INDEX</span>
                     <span class="text-stone-300">&bull;</span>
                     <span class="text-[11px] text-[#7A674D] hidden sm:inline">SELECT SPECIMEN DOSSIER</span>
                 </div>
 
                 <!-- Archival Specimen Labels / Research Index Tabs -->
-                <div class="flex flex-wrap items-center gap-2 sm:gap-2.5">
+                <div class="flex flex-wrap items-center gap-2 sm:gap-2.5" role="tablist" aria-label="Elemental Specimen Selector">
                     
-                    <!-- 01 FE (Default Active / Selected Entry) -->
+                    <!-- 01 FE -->
                     <button 
                         type="button"
+                        role="tab"
+                        :aria-selected="activeTab === 'FE'"
                         @click="activeTab = 'FE'"
                         :class="activeTab === 'FE' 
-                            ? 'bg-[#FAF6EE] text-reaktoria-deep-forest border-t-[#B84E1F] border-x-[#D5C6AA] border-b-[#D5C6AA] shadow-xs' 
+                            ? 'bg-[#FAF6EE] text-reaktoria-deep-forest border-t-[#B84E1F] border-x-[#D5C6AA] border-b-[#FAF6EE] shadow-xs' 
                             : 'bg-[#E4D7BE]/70 text-[#7A674D] border-t-transparent border-[#CEBF9E] hover:bg-[#E4D7BE] hover:text-reaktoria-deep-forest'"
-                        class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded font-mono text-xs font-bold border-t-2 border-x border-b transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#B84E1F]/60">
-                        <span class="w-1.5 h-1.5 rounded-full" :class="activeTab === 'FE' ? 'bg-[#B84E1F]' : 'bg-[#7A674D]/40'"></span>
+                        class="inline-flex items-center px-3 py-1.5 rounded-t-lg font-mono text-xs font-bold border-t-2 border-x border-b transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#B84E1F]/60">
                         <span>01 FE</span>
                     </button>
 
                     <!-- 02 H -->
                     <button 
                         type="button"
+                        role="tab"
+                        :aria-selected="activeTab === 'H'"
                         @click="activeTab = 'H'"
                         :class="activeTab === 'H' 
-                            ? 'bg-[#FAF6EE] text-reaktoria-deep-forest border-t-[#B84E1F] border-x-[#D5C6AA] border-b-[#D5C6AA] shadow-xs' 
+                            ? 'bg-[#FAF6EE] text-reaktoria-deep-forest border-t-[#B84E1F] border-x-[#D5C6AA] border-b-[#FAF6EE] shadow-xs' 
                             : 'bg-[#E4D7BE]/70 text-[#7A674D] border-t-transparent border-[#CEBF9E] hover:bg-[#E4D7BE] hover:text-reaktoria-deep-forest'"
-                        class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded font-mono text-xs font-bold border-t-2 border-x border-b transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#B84E1F]/60">
-                        <span class="w-1.5 h-1.5 rounded-full" :class="activeTab === 'H' ? 'bg-[#B84E1F]' : 'bg-[#7A674D]/40'"></span>
+                        class="inline-flex items-center px-3 py-1.5 rounded-t-lg font-mono text-xs font-bold border-t-2 border-x border-b transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#B84E1F]/60">
                         <span>02 H</span>
                     </button>
 
                     <!-- 03 O -->
                     <button 
                         type="button"
+                        role="tab"
+                        :aria-selected="activeTab === 'O'"
                         @click="activeTab = 'O'"
                         :class="activeTab === 'O' 
-                            ? 'bg-[#FAF6EE] text-reaktoria-deep-forest border-t-[#B84E1F] border-x-[#D5C6AA] border-b-[#D5C6AA] shadow-xs' 
+                            ? 'bg-[#FAF6EE] text-reaktoria-deep-forest border-t-[#B84E1F] border-x-[#D5C6AA] border-b-[#FAF6EE] shadow-xs' 
                             : 'bg-[#E4D7BE]/70 text-[#7A674D] border-t-transparent border-[#CEBF9E] hover:bg-[#E4D7BE] hover:text-reaktoria-deep-forest'"
-                        class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded font-mono text-xs font-bold border-t-2 border-x border-b transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#B84E1F]/60">
-                        <span class="w-1.5 h-1.5 rounded-full" :class="activeTab === 'O' ? 'bg-[#B84E1F]' : 'bg-[#7A674D]/40'"></span>
+                        class="inline-flex items-center px-3 py-1.5 rounded-t-lg font-mono text-xs font-bold border-t-2 border-x border-b transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#B84E1F]/60">
                         <span>03 O</span>
                     </button>
 
                     <!-- 04 S -->
                     <button 
                         type="button"
+                        role="tab"
+                        :aria-selected="activeTab === 'S'"
                         @click="activeTab = 'S'"
                         :class="activeTab === 'S' 
-                            ? 'bg-[#FAF6EE] text-reaktoria-deep-forest border-t-[#B84E1F] border-x-[#D5C6AA] border-b-[#D5C6AA] shadow-xs' 
+                            ? 'bg-[#FAF6EE] text-reaktoria-deep-forest border-t-[#B84E1F] border-x-[#D5C6AA] border-b-[#FAF6EE] shadow-xs' 
                             : 'bg-[#E4D7BE]/70 text-[#7A674D] border-t-transparent border-[#CEBF9E] hover:bg-[#E4D7BE] hover:text-reaktoria-deep-forest'"
-                        class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded font-mono text-xs font-bold border-t-2 border-x border-b transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#B84E1F]/60">
-                        <span class="w-1.5 h-1.5 rounded-full" :class="activeTab === 'S' ? 'bg-[#B84E1F]' : 'bg-[#7A674D]/40'"></span>
+                        class="inline-flex items-center px-3 py-1.5 rounded-t-lg font-mono text-xs font-bold border-t-2 border-x border-b transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#B84E1F]/60">
                         <span>04 S</span>
                     </button>
 
                     <!-- 05 NA -->
                     <button 
                         type="button"
+                        role="tab"
+                        :aria-selected="activeTab === 'NA'"
                         @click="activeTab = 'NA'"
                         :class="activeTab === 'NA' 
-                            ? 'bg-[#FAF6EE] text-reaktoria-deep-forest border-t-[#B84E1F] border-x-[#D5C6AA] border-b-[#D5C6AA] shadow-xs' 
+                            ? 'bg-[#FAF6EE] text-reaktoria-deep-forest border-t-[#B84E1F] border-x-[#D5C6AA] border-b-[#FAF6EE] shadow-xs' 
                             : 'bg-[#E4D7BE]/70 text-[#7A674D] border-t-transparent border-[#CEBF9E] hover:bg-[#E4D7BE] hover:text-reaktoria-deep-forest'"
-                        class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded font-mono text-xs font-bold border-t-2 border-x border-b transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#B84E1F]/60">
-                        <span class="w-1.5 h-1.5 rounded-full" :class="activeTab === 'NA' ? 'bg-[#B84E1F]' : 'bg-[#7A674D]/40'"></span>
+                        class="inline-flex items-center px-3 py-1.5 rounded-t-lg font-mono text-xs font-bold border-t-2 border-x border-b transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#B84E1F]/60">
                         <span>05 NA</span>
                     </button>
 
                     <!-- 06 CL -->
                     <button 
                         type="button"
+                        role="tab"
+                        :aria-selected="activeTab === 'CL'"
                         @click="activeTab = 'CL'"
                         :class="activeTab === 'CL' 
-                            ? 'bg-[#FAF6EE] text-reaktoria-deep-forest border-t-[#B84E1F] border-x-[#D5C6AA] border-b-[#D5C6AA] shadow-xs' 
+                            ? 'bg-[#FAF6EE] text-reaktoria-deep-forest border-t-[#B84E1F] border-x-[#D5C6AA] border-b-[#FAF6EE] shadow-xs' 
                             : 'bg-[#E4D7BE]/70 text-[#7A674D] border-t-transparent border-[#CEBF9E] hover:bg-[#E4D7BE] hover:text-reaktoria-deep-forest'"
-                        class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded font-mono text-xs font-bold border-t-2 border-x border-b transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#B84E1F]/60">
-                        <span class="w-1.5 h-1.5 rounded-full" :class="activeTab === 'CL' ? 'bg-[#B84E1F]' : 'bg-[#7A674D]/40'"></span>
+                        class="inline-flex items-center px-3 py-1.5 rounded-t-lg font-mono text-xs font-bold border-t-2 border-x border-b transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#B84E1F]/60">
                         <span>06 CL</span>
                     </button>
 

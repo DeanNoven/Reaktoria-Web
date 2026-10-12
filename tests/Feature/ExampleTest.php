@@ -55,7 +55,7 @@ class ExampleTest extends TestCase
         $response->assertSee('id="adventure"', false);
         $response->assertSee('id="forge"', false);
 
-        // Section 5 (Untouched)
+        // Pilar 3: Field Battle & Game Modes (Combat Telemetry & Game Modes)
         $response->assertSee('THE ADVENTURE');
         $response->assertSee('DISCOVER. REACT.');
         $response->assertSee('BATTLE.');
@@ -69,31 +69,13 @@ class ExampleTest extends TestCase
         $response->assertSee('WILDLING SCOUTS');
         $response->assertSee('gameplay-adventure.jpg');
         $response->assertSee('gameplay-bg.jpg');
+        $response->assertSee('feature-battle.jpg');
+        $response->assertSee('Field Combat Dossier');
+        $response->assertSee('Pyros Infusion vs. Wildling Scouts');
         $response->assertSee('id="gameplay"', false);
         $response->assertSee('id="battle"', false);
 
-        // Section 6 (Refined Pass 1: Game Features)
-        $response->assertSee('GAME FEATURES');
-        $response->assertSee('BUILT TO EXPERIMENT.');
-        $response->assertSee('BUILT TO EXPLORE.');
-        $response->assertSee('Discover elements, experiment with reactions, forge your discoveries into weapons');
-        $response->assertSee('CHEMISTRY SYSTEM');
-        $response->assertSee('Combine real elements, trigger reactions, and discover what happens when chemistry becomes part of the adventure.');
-        $response->assertSee('WEAPON FORGING');
-        $response->assertSee('Transform successful discoveries into weapons, tools, and items built for the adventure.');
-        $response->assertSee('WORLD EXPLORATION');
-        $response->assertSee('Explore forests, villages, rivers, ruins, and battlefields across the Elemental Realm.');
-        $response->assertSee('BATTLE &amp; DISCOVERY', false);
-        $response->assertSee('Bring your creations into the field and discover new ways to face hostile encounters.');
-        $response->assertSee('chemistry-workbench.jpg');
-        $response->assertSee('feature-forging.jpg');
-        $response->assertSee('feature-battle.jpg');
-        $response->assertSee('realm-landscape.jpg');
-        $response->assertSee('features-bg.jpg');
-        $response->assertSee('id="modes"', false);
-        $response->assertSee('id="features"', false);
-
-        // Section 7 (Game Modes — Play Your Way)
+        // Pilar 3 Part B: Game Modes (Play Your Way)
         $response->assertSee('GAME MODES');
         $response->assertSee('PLAY YOUR WAY.');
         $response->assertSee('Master the challenge. Or experiment without limits.');
@@ -106,6 +88,8 @@ class ExampleTest extends TestCase
         $response->assertSee('section7-campaign.jpg');
         $response->assertSee('section7-creative.jpg');
         $response->assertSee('id="game-modes"', false);
+        $response->assertSee('id="features"', false);
+        $response->assertSee('id="modes"', false);
         $response->assertSee('Progression Mode');
         $response->assertSee('Free Experimentation');
         $response->assertDontSee('Sandbox Mode');

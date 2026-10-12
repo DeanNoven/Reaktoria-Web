@@ -1,5 +1,5 @@
 <x-layouts.app>
-    <x-slot:title>Reaktoria — Low-Poly Medieval Fantasy Adventure & Chemistry</x-slot:title>
+    <x-slot:title>Reaktoria: Low-Poly Medieval Fantasy Adventure & Chemistry</x-slot:title>
     <x-slot:description>Explore a colorful medieval world where chemistry becomes adventure. Combine real chemical elements, uncover the logic behind reactions, and forge powerful weapons.</x-slot:description>
 
     <!-- Top Navigation Bar -->
@@ -10,17 +10,17 @@
         <!-- Section 1: Above-The-Fold Cinematic Hero Section (Untouched) -->
         <x-sections.hero />
 
-        <!-- Section 2: Introduction — The Elemental Realm -->
+        <!-- Section 2: Introduction: The Elemental Realm -->
         <x-sections.world />
 
-        <!-- Section 3 & 4: Workshop Hall (Chemistry & Forging) — Unified Single Background -->
+        <!-- Section 3 & 4: Workshop Hall (Chemistry & Forging): Unified Single Background -->
         <div class="relative overflow-hidden bg-[#FAF6EE]">
             <!-- Single Continuous Background Spanning Both Section 3 and Section 4 -->
             <div class="absolute inset-0 z-0 pointer-events-none select-none">
                 <img 
                     src="{{ asset('images/backgrounds/workshop-tall-bg.jpg') }}" 
-                    alt="Reaktoria Low-Poly Medieval Craft Hall — chemistry-bg.jpg & forge-bg.jpg" 
-                    class="w-full h-full object-cover object-center select-none pointer-events-none opacity-55 sm:opacity-60 contrast-[0.98] saturate-[0.95] brightness-[1.01]"
+                    alt="Reaktoria Low-Poly Medieval Craft Hall: chemistry-bg.jpg & forge-bg.jpg" 
+                    class="w-full h-full object-cover object-center select-none pointer-events-none opacity-12 sm:opacity-15 contrast-[0.98] saturate-[0.95] brightness-[1.01]"
                     loading="lazy"
                 />
 
@@ -36,29 +36,21 @@
                 <div class="absolute bottom-0 inset-x-0 h-32 bg-gradient-to-t from-[#DFD4C2] via-[#E2D7C5]/70 to-transparent pointer-events-none"></div>
             </div>
 
-            <!-- Section 3: Chemistry — The Art of Reaction -->
+            <!-- Merged Interactive Section: Discover Chemistry and Forge -->
             <x-sections.chemistry />
-
-            <!-- Section 4: From Reaction to Power — The Art of Forging -->
-            <x-sections.forge />
         </div>
 
-        <!-- Section 5: Gameplay / Adventure — Discover. React. Battle. -->
+        <!-- Pilar 3: Field Battle & Game Modes (Combat Telemetry & Game Modes) -->
         <x-sections.gameplay />
-
-        <!-- Section 6: Features — Built to Experiment. Built to Explore. -->
-        <x-sections.features />
-
-        <!-- Section 7: Game Modes — Play Your Way (01 Campaign & 02 Creative) -->
         <x-sections.modes />
 
-        <!-- Section 8: Elemental Archive — Know What You're Mixing -->
+        <!-- Section 8: Elemental Archive: Know What You're Mixing -->
         <x-sections.archive />
 
-        <!-- Section 9: Gallery — Visual Archive: A World Worth Discovering -->
+        <!-- Section 9: Gallery: Visual Archive: A World Worth Discovering -->
         <x-sections.gallery />
 
-        <!-- Section 10: Final CTA — Your Journey Begins: Enter The Realm -->
+        <!-- Section 10: Final CTA: Your Journey Begins: Enter The Realm -->
         <x-sections.cta />
     </main>
 

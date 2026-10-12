@@ -1,36 +1,29 @@
 <section class="relative min-h-[calc(100vh-4.5rem)] flex items-center justify-between overflow-hidden bg-[#8CC8E8]">
 
-    <!-- Background Low-Poly Environment Image -->
-    <div class="absolute inset-0 z-0">
+    <!-- Environmental background -->
+    <div class="absolute inset-0 z-0" aria-hidden="true">
         <img 
             src="{{ asset('images/hero-environment.jpg') }}" 
-            alt="Reaktoria Low-Poly Medieval Fantasy World" 
+            alt="" 
             class="w-full h-full object-cover object-center lg:object-[65%_center] select-none pointer-events-none"
         />
         
-        <!-- Soft Daytime Atmosphere Gradients (No heavy black vignette or dark shadows) -->
-        <!-- Left daylight wash for crisp typography legibility -->
         <div class="absolute inset-0 bg-gradient-to-r from-[#F7FAF6]/95 via-[#F7FAF6]/80 to-transparent sm:w-4/5 lg:w-3/5 pointer-events-none"></div>
-        
-        <!-- Subtle sunlit ambient top & bottom transitions -->
         <div class="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-[#1E2E36]/30 to-transparent pointer-events-none"></div>
         <div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#EDF6EB] to-transparent pointer-events-none"></div>
     </div>
 
-    <!-- Main Hero Content Container -->
     <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 flex flex-col justify-center">
         
         <div class="max-w-2xl space-y-6 sm:space-y-7">
             
-            <!-- Eyebrow & Chemistry Visual Cue -->
             <div class="flex flex-wrap items-center gap-2.5">
-                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold font-body uppercase tracking-widest bg-reaktoria-forest/15 border-2 border-reaktoria-forest/40 text-reaktoria-deep-forest shadow-xs">
-                    <span class="w-2 h-2 rounded-full bg-reaktoria-grass animate-pulse"></span>
-                    THE ELEMENTAL REALM
+                <span class="inline-flex items-center px-3 py-1 rounded-lg text-xs font-bold font-body uppercase tracking-widest bg-reaktoria-forest/15 border-2 border-reaktoria-forest/40 text-reaktoria-deep-forest shadow-xs">
+                    LOW-POLY MEDIEVAL ADVENTURE
                 </span>
 
                 <!-- Subtle Chemistry Cue: Science inside Fantasy -->
-                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold font-mono bg-reaktoria-chemistry/15 border-2 border-reaktoria-chemistry/40 text-[#185E73] shadow-xs">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-semibold font-mono bg-reaktoria-chemistry/15 border-2 border-reaktoria-chemistry/40 text-[#185E73] shadow-xs">
                     <svg class="w-3.5 h-3.5 text-reaktoria-chemistry" viewBox="0 0 24 28" fill="none">
                         <path d="M10 2H14M11 2V8L5 20C4 22 5.5 25 8 25H16C18.5 25 20 22 19 20L13 8V2" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
                         <circle cx="12" cy="18" r="2" fill="currentColor"/>
@@ -63,13 +56,22 @@
             <div class="pt-2 flex flex-wrap items-center gap-3.5 sm:gap-4">
                 <!-- Primary CTA: Adventurous & Inviting -->
                 <x-ui.button variant="forest" size="lg" href="#enter-game" class="px-6 py-3.5 text-sm sm:text-base font-display font-bold tracking-wider shadow-md hover:scale-102">
-                    <span class="text-lg">⚔️</span>
+                    <svg class="w-4 h-4 text-reaktoria-cream-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14.5 17.5L3 6V3h3l11.5 11.5" />
+                        <path d="M13 19l6-6" />
+                        <path d="M16 16l4 4" />
+                        <path d="M19 21l2-2" />
+                    </svg>
                     <span>ENTER THE REALM</span>
                 </x-ui.button>
 
                 <!-- Secondary CTA: Educational / Exploratory -->
                 <x-ui.button variant="chemistry" size="lg" href="#chemistry" class="px-6 py-3.5 text-sm sm:text-base font-display font-bold tracking-wider shadow-md hover:scale-102">
-                    <span class="text-lg">🧪</span>
+                    <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M10 2v5.5L4.5 18a2 2 0 0 0 1.7 3h11.6a2 2 0 0 0 1.7-3L14 7.5V2" />
+                        <path d="M8.5 2h7" />
+                        <path d="M7 15h10" />
+                    </svg>
                     <span>DISCOVER CHEMISTRY</span>
                 </x-ui.button>
             </div>
@@ -77,17 +79,26 @@
             <!-- Subtle Feature Tags / In-World Pills -->
             <div class="pt-4 border-t-2 border-[#DCE8DC] flex flex-wrap items-center gap-y-2 gap-x-4 text-xs font-semibold text-reaktoria-ink-muted uppercase tracking-wider">
                 <div class="flex items-center gap-1.5">
-                    <span class="text-reaktoria-forest">🌲</span>
+                    <svg class="w-3.5 h-3.5 text-reaktoria-forest" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="m8 14-6 6h20l-6-6" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="m12 3-7 11h14z" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
                     <span>Low-Poly Medieval World</span>
                 </div>
                 <span class="text-reaktoria-stone/40">•</span>
                 <div class="flex items-center gap-1.5">
-                    <span class="text-reaktoria-chemistry">⚗️</span>
+                    <svg class="w-3.5 h-3.5 text-reaktoria-chemistry" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M10 2v5.5L4.5 18a2 2 0 0 0 1.7 3h11.6a2 2 0 0 0 1.7-3L14 7.5V2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M8.5 2h7" stroke-linecap="round"/>
+                    </svg>
                     <span>Real Chemical Reactions</span>
                 </div>
                 <span class="text-reaktoria-stone/40">•</span>
                 <div class="flex items-center gap-1.5">
-                    <span class="text-reaktoria-gold">⚔️</span>
+                    <svg class="w-3.5 h-3.5 text-reaktoria-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14.5 17.5L3 6V3h3l11.5 11.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M13 19l6-6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
                     <span>Elemental Adventure</span>
                 </div>
             </div>

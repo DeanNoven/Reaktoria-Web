@@ -1,52 +1,26 @@
-<!-- =========================================================================
-     SECTION 9 — GALLERY: VISUAL ARCHIVE
-     Editorial Curated Game Artbook: A World Worth Discovering
-     ========================================================================= -->
+<!-- Section 9: Visual archive -->
 <section id="gallery" class="relative py-16 sm:py-20 lg:py-24 overflow-hidden bg-gradient-to-b from-[#E9DFC9] via-[#F5EEDF] via-[#FAF6EE] to-[#ECE3D2]">
 
     <!-- Anchor Aliases for Global Navigation (#gallery, #visual-archive) -->
     <span id="visual-archive" class="absolute -top-24 pointer-events-none" aria-hidden="true"></span>
 
-    <!-- Environmental Transition Layer (Warm Parchment / Cartographic Grid) -->
-    <div class="absolute inset-0 z-0 pointer-events-none select-none">
-        
-        <!-- Seamless Transition from Section 8 (#E9DFC9) -->
+    <!-- Environmental transition layer -->
+    <div class="absolute inset-0 z-0 pointer-events-none select-none" aria-hidden="true">
         <div class="absolute inset-x-0 top-0 h-28 sm:h-32 bg-gradient-to-b from-[#E9DFC9] via-[#E9DFC9]/80 to-transparent"></div>
 
-        <!-- Archival Metric Stipple Pattern -->
-        <div class="absolute inset-0 opacity-[0.03] text-[#4A2E1D]">
-            <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-                <defs>
-                    <pattern id="gallery-grid-pattern" width="56" height="56" patternUnits="userSpaceOnUse">
-                        <circle cx="28" cy="28" r="1" fill="currentColor" />
-                        <line x1="28" y1="20" x2="28" y2="36" stroke="currentColor" stroke-width="0.5" opacity="0.4" />
-                        <line x1="20" y1="28" x2="36" y2="28" stroke="currentColor" stroke-width="0.5" opacity="0.4" />
-                    </pattern>
-                </defs>
-                <rect width="100%" height="100%" fill="url(#gallery-grid-pattern)" />
-            </svg>
-        </div>
-
-        <!-- Warm Ambient Hearth & Parchment Glows -->
         <div class="absolute top-1/4 left-1/12 w-96 h-96 rounded-full bg-[radial-gradient(circle,_rgba(227,180,76,0.05)_0%,_transparent_70%)]"></div>
         <div class="absolute bottom-1/4 right-1/12 w-96 h-96 rounded-full bg-[radial-gradient(circle,_rgba(66,169,198,0.05)_0%,_transparent_70%)]"></div>
 
-        <!-- Soft Bottom Blending -->
         <div class="absolute bottom-0 inset-x-0 h-24 bg-gradient-to-t from-[#ECE3D2] via-[#ECE3D2]/75 to-transparent"></div>
-
     </div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
-        <!-- =================================================================
-             SECTION HEADER: Editorial Visual Archive
-             ================================================================= -->
         <div class="flex flex-col md:flex-row md:items-end justify-between gap-5 mb-10 sm:mb-12 lg:mb-14">
             
             <div class="space-y-3 max-w-2xl">
                 <!-- Eyebrow Pill -->
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-[#E4D7BE]/90 border border-[#CEBF9E] shadow-2xs">
-                    <span class="w-2 h-2 rounded-full bg-[#14566A]"></span>
+                <div class="inline-flex items-center px-3 py-1 rounded bg-[#E4D7BE]/90 border border-[#CEBF9E] shadow-2xs">
                     <span class="text-xs font-mono font-bold tracking-widest text-[#5A452E] uppercase">
                         VISUAL ARCHIVE
                     </span>
@@ -64,8 +38,7 @@
             </div>
 
             <!-- Top-Right Archival Registry Badge -->
-            <div class="hidden sm:inline-flex items-center gap-2.5 font-mono text-xs text-[#5A452E] bg-[#E8DEC8]/90 px-3.5 py-2 rounded-lg border border-[#D0C2A5] shadow-xs select-none self-start md:self-end">
-                <span class="w-2 h-2 rounded-full bg-[#E3B44C]"></span>
+            <div class="hidden sm:inline-flex items-center gap-2 font-mono text-xs text-[#5A452E] bg-[#E8DEC8]/90 px-3.5 py-2 rounded-lg border border-[#D0C2A5] shadow-xs select-none self-start md:self-end">
                 <span class="font-bold tracking-wider text-reaktoria-deep-forest uppercase">CHRONICLE FOLIO</span>
                 <span class="text-stone-400">&bull;</span>
                 <span class="tracking-wide">FOUR FIELD STUDIES</span>
@@ -88,7 +61,7 @@
                 <div class="relative overflow-hidden w-full aspect-[16/10] sm:aspect-[2/1] lg:aspect-[21/9] bg-[#141E22]">
                     <img 
                         src="{{ asset('images/gallery-realm.jpg') }}" 
-                        alt="Reaktoria Low-Poly Realm Panoramic Landscape — Castle, River Valley, Village, and Distant Mountains" 
+                        alt="Reaktoria Low-Poly Realm Panoramic Landscape: Castle, River Valley, Village, and Distant Mountains" 
                         class="w-full h-full object-cover select-none transition-transform duration-700 ease-out group-hover:scale-[1.025]"
                         loading="lazy"
                     />
@@ -106,8 +79,7 @@
                         </h3>
                     </div>
                     
-                    <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded font-mono text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-[#5A452E] bg-[#EBE0CD] border border-[#D5C6AA]">
-                        <span class="w-1.5 h-1.5 rounded-full bg-[#14566A]"></span>
+                    <span class="inline-flex items-center px-2.5 py-0.5 rounded font-mono text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-[#5A452E] bg-[#EBE0CD] border border-[#D5C6AA]">
                         <span>WORLD ENVIRONMENT</span>
                     </span>
                 </div>
@@ -145,8 +117,7 @@
                             </h3>
                         </div>
                         
-                        <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded font-mono text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-[#5A452E] bg-[#EBE0CD] border border-[#D5C6AA]">
-                            <span class="w-1.5 h-1.5 rounded-full bg-[#42A9C6]"></span>
+                        <span class="inline-flex items-center px-2.5 py-0.5 rounded font-mono text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-[#5A452E] bg-[#EBE0CD] border border-[#D5C6AA]">
                             <span>ALCHEMY WORKSPACE</span>
                         </span>
                     </div>
@@ -178,8 +149,7 @@
                             </h3>
                         </div>
                         
-                        <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded font-mono text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-[#5A452E] bg-[#EBE0CD] border border-[#D5C6AA]">
-                            <span class="w-1.5 h-1.5 rounded-full bg-[#B84E1F]"></span>
+                        <span class="inline-flex items-center px-2.5 py-0.5 rounded font-mono text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-[#5A452E] bg-[#EBE0CD] border border-[#D5C6AA]">
                             <span>BLACKSMITH WORKSHOP</span>
                         </span>
                     </div>
@@ -197,7 +167,7 @@
                 <div class="relative overflow-hidden w-full aspect-[16/10] sm:aspect-[2/1] lg:aspect-[21/9] bg-[#141E22]">
                     <img 
                         src="{{ asset('images/gallery-adventure.jpg') }}" 
-                        alt="Reaktoria Low-Poly Panoramic Realm Expedition — Ancient Arch Bridge, Waterfall Canyon, and Floating Sky Islands" 
+                        alt="Reaktoria Low-Poly Panoramic Realm Expedition: Ancient Arch Bridge, Waterfall Canyon, and Floating Sky Islands" 
                         class="w-full h-full object-cover select-none transition-transform duration-700 ease-out group-hover:scale-[1.025]"
                         loading="lazy"
                     />
@@ -215,10 +185,9 @@
                         </h3>
                     </div>
                     
-                    <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded font-mono text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-[#5A452E] bg-[#EBE0CD] border border-[#D5C6AA]">
-                        <span class="w-1.5 h-1.5 rounded-full bg-[#2F6B3C]"></span>
-                        <span>FIELD EXPLORATION</span>
-                    </span>
+                    <span class="inline-flex items-center px-2.5 py-0.5 rounded font-mono text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-[#5A452E] bg-[#EBE0CD] border border-[#D5C6AA]">
+                            <span>FIELD EXPLORATION</span>
+                        </span>
                 </div>
 
             </article>
