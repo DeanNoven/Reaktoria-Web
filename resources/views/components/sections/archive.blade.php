@@ -96,7 +96,7 @@
             'classification' => 'REACTIVE NONMETAL',
             'desc' => 'Brimstone crystals from caldera vents that readily impart fiery properties to forged steel.',
             'reacts' => [
-                ['symbol' => 'Fe', 'name' => 'Iron'],
+                ['symbol' => 'Fes', 'name' => 'Iron'],
                 ['symbol' => 'O₂', 'name' => 'Oxygen'],
             ],
             'discoveries' => [
@@ -415,7 +415,6 @@
                         </div>
 
 
-
                         <!-- Calligraphic Large Identity Callout below Frame -->
                         <div class="absolute flex items-baseline gap-1.5 select-none leading-none"
                              style="left: 14.2%; top: 76.8%;">
@@ -429,7 +428,7 @@
                             </span>
                             <span class="font-display font-black text-[2.4cqw] text-[#1A110B] tracking-wider leading-none" 
                                   x-text="current.name + ':'">
-                                IRON:
+                                IRON
                             </span>
                         </div>
 
@@ -439,7 +438,7 @@
                         
                         <!-- Field Research Profile Header -->
                         <div class="absolute space-y-[0.15cqw]"
-                             style="left: 46.8%; top: 17.5%; width: 32.5%;">
+                             style="left: 46.8%; top: 20.5%; width: 32.5%;">
                             <span class="block text-[0.85cqw] font-mono font-bold uppercase tracking-widest text-[#94672D]">
                                 FIELD RESEARCH PROFILE
                             </span>
@@ -455,7 +454,7 @@
 
                         <!-- Top Right Postal Stamp Tile -->
                         <div class="absolute flex flex-col items-center justify-center text-center select-none"
-                             style="left: 81.0%; top: 19.5%; width: 8.0%; height: 10.8%;">
+                             style="left: 81.0%; top: 19.5%; width: 10.0%; height: 10.8%;">
                             <span class="font-display font-black text-[2.2cqw] text-[#1A110B] leading-none" 
                                   x-text="current.symbol.toUpperCase()">
                                 Fe
@@ -477,8 +476,7 @@
                                     <span class="block font-mono font-bold uppercase tracking-wider text-[0.72cqw] text-[#2B1D14]">ATOMIC</span>
                                     <span class="block font-mono font-bold uppercase tracking-wider text-[0.72cqw] text-[#2B1D14]">NUMBER</span>
                                 </div>
-                                <span class="font-display font-black text-[2.2cqw] text-[#1A110B] leading-none" 
-                                      x-text="current.number">
+                                <span class="font-display flex justify-center items-center w-full h-full font-black text-[2.2cqw] text-[#1A110B] leading-none" x-text="current.number">
                                     26
                                 </span>
                             </div>
@@ -489,7 +487,7 @@
                                 <span class="block font-mono font-bold uppercase tracking-wider text-[0.72cqw] text-[#2B1D14]">
                                     CATEGORY
                                 </span>
-                                <span class="font-body font-bold text-[1.2cqw] text-[#1A110B] leading-tight" 
+                                <span class="font-body flex justify-center items-center w-full h-full font-bold text-[1.2cqw] text-[#1A110B] leading-tight" 
                                       x-text="current.category">
                                     Metal
                                 </span>
@@ -501,7 +499,7 @@
                                 <span class="block font-mono font-bold uppercase tracking-wider text-[0.72cqw] text-[#2B1D14]">
                                     SYMBOL
                                 </span>
-                                <span class="font-display font-black text-[2.2cqw] text-[#1A110B] uppercase leading-none" 
+                                <span class="font-display flex justify-center items-center w-full h-full font-black text-[2.2cqw] text-[#1A110B] uppercase leading-none" 
                                       x-text="current.symbol">
                                     Fe
                                 </span>
@@ -513,7 +511,7 @@
                                 <span class="block font-mono font-bold uppercase tracking-wider text-[0.72cqw] text-[#2B1D14]">
                                     ROLE
                                 </span>
-                                <span class="font-body font-bold text-[1.05cqw] text-[#1A110B] leading-tight line-clamp-2" 
+                                <span class="font-body flex justify-center items-center w-full h-full text-center font-bold text-[1.05cqw] text-[#1A110B] leading-tight line-clamp-2" 
                                       x-text="current.role">
                                     Forging Material
                                 </span>
@@ -522,14 +520,14 @@
                         </div>
 
                         <!-- Reaction Profile Header -->
-                        <div class="absolute" style="left: 46.8%; top: 54.0%;">
+                        <div class="absolute" style="left: 46.8%; top: 59.5%;">
                             <h4 class="font-display font-bold uppercase tracking-wider text-[1.0cqw] text-[#2B1D14]">
                                 REACTION PROFILE
                             </h4>
                         </div>
 
                         <!-- Sub-Section A: COMMONLY REACTS WITH -->
-                        <div class="absolute" style="left: 46.8%; top: 58.8%;">
+                        <div class="absolute" style="left: 46.8%; top: 62.0%;">
                             <span class="block font-mono font-bold uppercase tracking-wider text-[0.8cqw] text-[#2B1D14]">
                                 COMMONLY REACTS WITH
                             </span>
@@ -558,7 +556,7 @@
                         </div>
 
                         <!-- Sub-Section B: DISCOVERIES -->
-                        <div class="absolute" style="left: 68.4%; top: 58.8%;">
+                        <div class="absolute" style="left: 68.4%; top: 60.8%;">
                             <span class="block font-mono font-bold uppercase tracking-wider text-[0.8cqw] text-[#2B1D14]">
                                 DISCOVERIES
                             </span>
@@ -588,7 +586,7 @@
 
                         <!-- Field Note Box (Inside pre-drawn box) -->
                         <div class="absolute flex flex-col justify-between pt-[0.6cqw] pb-[0.8cqw] px-[1.2cqw]"
-                             style="left: 46.8%; top: 78.8%; width: 44.0%; height: 12.5%;">
+                             style="left: 46.8%; top: 78.8%; width: 43.0%; height: 12.5%;">
                             <div class="flex items-center justify-between">
                                 <span class="font-mono font-bold uppercase tracking-wider text-[0.85cqw] text-[#2B1D14]">
                                     FIELD NOTE
@@ -646,7 +644,7 @@
                             IRON
                         </h3>
                         <p class="text-xs font-body italic text-[#2E1B0E]/80 mt-1" x-text="current.desc">
-                            Primary metallic foundation for blades, heavy plate, and elemental reaction catalysts.
+                            Primarsssy metallic foundation for blades, heavy plate, and elemental reaction catalysts.
                         </p>
                     </div>
 
@@ -833,7 +831,7 @@
                         <div class="absolute flex flex-col justify-between pt-[0.8cqw] pb-[0.8cqw] px-[0.9cqw]"
                              style="left: 56.8%; width: 10.8%; height: 100%;">
                             <span class="block font-mono font-bold uppercase tracking-wider text-[0.72cqw] text-[#2B1D14]">
-                                CATEGORY
+                                CATEGORYs
                             </span>
                             <span class="font-body font-bold text-[1.2cqw] text-[#1A110B] leading-tight" 
                                   x-text="nextSpecimen.category">
@@ -952,7 +950,7 @@
                         : 'bg-[#FAF5E8]/80 text-[#5D462E] border border-[#D5C6AA] hover:bg-[#FAF5E8] hover:text-[#19452C] hover:border-[#8C6211]'"
                 >
                     <span class="inline-block">{{ $spec['indexTag'] }}</span>
-                    <span class="hidden sm:inline-block ml-1 opacity-75 font-body font-normal">&bull; {{ $spec['name'] }}</span>
+                    <span class="hidden sm:inline-block ml-1 bg-red-500 opacity-75 font-body font-normal">&bull; {{ $spec['name'] }}</span>
                 </button>
             @endforeach
         </div>
