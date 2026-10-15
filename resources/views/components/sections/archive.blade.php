@@ -180,59 +180,167 @@
             },
             goTo(targetIndex) {
                 if (this.isAnimating || targetIndex === this.currentIndex) return;
-                const dir = targetIndex > this.currentIndex ? 'next' : 'prev';
+                const len = this.specimens.length;
+                const diff = (targetIndex - this.currentIndex + len) % len;
+                const dir = diff <= len / 2 ? 'next' : 'prev';
                 this.animateTo(targetIndex, dir);
             },
             animateTo(newIndex, direction) {
-                if (!window.gsap || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                    this.currentIndex = newIndex;
-                    return;
-                }
-
+                if (this.isAnimating) return;
                 this.isAnimating = true;
-                const dur = 0.55;
-                const ease = 'power2.out';
 
                 const activeCard = this.$refs.activeCard;
                 const prevCard = this.$refs.prevCard;
                 const nextCard = this.$refs.nextCard;
 
-                const tl = window.gsap.timeline({
-                    onComplete: () => {
-                        this.isAnimating = false;
+                const hasGsap = typeof window.gsap !== 'undefined';
+                const isDesktop = window.innerWidth >= 1024 && prevCard && nextCard && prevCard.offsetParent !== null;
+
+                if (!hasGsap) {
+                    this.currentIndex = newIndex;
+                    this.isAnimating = false;
+                    return;
+                }
+
+                try {
+                    if (isDesktop && (direction === 'next' || direction === 'prev')) {
+                        const activeRect = activeCard.getBoundingClientRect();
+                        const dur = 0.45;
+                        const ease = 'power2.out';
+
+                        if (direction === 'next') {
+                            const nextRect = nextCard.getBoundingClientRect();
+                            const moveX = (nextRect.left + nextRect.width / 2) - (activeRect.left + activeRect.width / 2);
+
+                            const tl = window.gsap.timeline({
+                                onComplete: () => {
+                                    this.currentIndex = newIndex;
+                                    window.gsap.set([activeCard, nextCard, prevCard], { clearProps: 'all' });
+                                    const nextRibbon = nextCard.querySelector('.next-ribbon');
+                                    const prevRibbon = prevCard.querySelector('.prev-ribbon');
+                                    if (nextRibbon) window.gsap.set(nextRibbon, { clearProps: 'all' });
+                                    if (prevRibbon) window.gsap.set(prevRibbon, { clearProps: 'all' });
+                                    this.isAnimating = false;
+                                }
+                            });
+
+                            // Next card glides from right to center, scales up and becomes active centerpiece
+                            tl.to(nextCard, {
+                                x: -moveX,
+                                yPercent: -50,
+                                scale: 1.0,
+                                opacity: 1.0,
+                                zIndex: 25,
+                                duration: dur,
+                                ease: ease,
+                            }, 0);
+
+                            // Active card glides left into previous card position and scales down
+                            tl.to(activeCard, {
+                                x: -moveX,
+                                scale: 0.82,
+                                opacity: 0.65,
+                                zIndex: 10,
+                                duration: dur,
+                                ease: ease,
+                            }, 0);
+
+                            // Previous card glides further left and fades out
+                            tl.to(prevCard, {
+                                x: -moveX * 0.7,
+                                yPercent: -50,
+                                opacity: 0,
+                                duration: dur * 0.75,
+                                ease: 'power2.in',
+                            }, 0);
+
+                            const nextRibbon = nextCard.querySelector('.next-ribbon');
+                            if (nextRibbon) {
+                                tl.to(nextRibbon, { opacity: 0, duration: dur * 0.5 }, 0);
+                            }
+                        } else {
+                            // direction === 'prev'
+                            const prevRect = prevCard.getBoundingClientRect();
+                            const moveX = (activeRect.left + activeRect.width / 2) - (prevRect.left + prevRect.width / 2);
+
+                            const tl = window.gsap.timeline({
+                                onComplete: () => {
+                                    this.currentIndex = newIndex;
+                                    window.gsap.set([activeCard, nextCard, prevCard], { clearProps: 'all' });
+                                    const nextRibbon = nextCard.querySelector('.next-ribbon');
+                                    const prevRibbon = prevCard.querySelector('.prev-ribbon');
+                                    if (nextRibbon) window.gsap.set(nextRibbon, { clearProps: 'all' });
+                                    if (prevRibbon) window.gsap.set(prevRibbon, { clearProps: 'all' });
+                                    this.isAnimating = false;
+                                }
+                            });
+
+                            // Previous card glides from left to center, scales up and becomes active centerpiece
+                            tl.to(prevCard, {
+                                x: moveX,
+                                yPercent: -50,
+                                scale: 1.0,
+                                opacity: 1.0,
+                                zIndex: 25,
+                                duration: dur,
+                                ease: ease,
+                            }, 0);
+
+                            // Active card glides right into next card position and scales down
+                            tl.to(activeCard, {
+                                x: moveX,
+                                scale: 0.82,
+                                opacity: 0.65,
+                                zIndex: 10,
+                                duration: dur,
+                                ease: ease,
+                            }, 0);
+
+                            // Next card glides further right and fades out
+                            tl.to(nextCard, {
+                                x: moveX * 0.7,
+                                yPercent: -50,
+                                opacity: 0,
+                                duration: dur * 0.75,
+                                ease: 'power2.in',
+                            }, 0);
+
+                            const prevRibbon = prevCard.querySelector('.prev-ribbon');
+                            if (prevRibbon) {
+                                tl.to(prevRibbon, { opacity: 0, duration: dur * 0.5 }, 0);
+                            }
+                        }
+                    } else {
+                        // Mobile, tablet, or multi-element jump: fluid slide-out & slide-in
+                        const slideDist = direction === 'next' ? -80 : 80;
+                        const dur = 0.22;
+
+                        const tl = window.gsap.timeline({
+                            onComplete: () => {
+                                this.isAnimating = false;
+                            }
+                        });
+
+                        tl.to(activeCard, {
+                            x: slideDist,
+                            opacity: 0,
+                            duration: dur,
+                            ease: 'power2.in',
+                        });
+
+                        tl.add(() => {
+                            this.currentIndex = newIndex;
+                        });
+
+                        tl.fromTo(activeCard, 
+                            { x: -slideDist, opacity: 0 }, 
+                            { x: 0, opacity: 1, duration: dur * 1.25, ease: 'power2.out', clearProps: 'all' }
+                        );
                     }
-                });
-
-                if (direction === 'next') {
-                    tl.to(activeCard, { x: -35, opacity: 0.35, duration: dur * 0.45, ease: 'power2.in' }, 0);
-                    if (prevCard) tl.to(prevCard, { x: -45, opacity: 0.2, duration: dur * 0.45, ease: 'power2.in' }, 0);
-                    if (nextCard) tl.to(nextCard, { x: -30, opacity: 0.85, duration: dur * 0.45, ease: 'power2.out' }, 0);
-
-                    tl.add(() => {
-                        this.currentIndex = newIndex;
-                    });
-
-                    tl.fromTo(activeCard, 
-                        { x: 35, opacity: 0.35 }, 
-                        { x: 0, opacity: 1, duration: dur * 0.55, ease: ease }
-                    );
-                    if (prevCard) tl.fromTo(prevCard, { x: 0, opacity: 0.2 }, { x: 0, opacity: 0.55, duration: dur * 0.5, ease: ease }, '-=' + (dur * 0.45));
-                    if (nextCard) tl.fromTo(nextCard, { x: 0, opacity: 0.2 }, { x: 0, opacity: 0.55, duration: dur * 0.5, ease: ease }, '-=' + (dur * 0.45));
-                } else {
-                    tl.to(activeCard, { x: 35, opacity: 0.35, duration: dur * 0.45, ease: 'power2.in' }, 0);
-                    if (nextCard) tl.to(nextCard, { x: 45, opacity: 0.2, duration: dur * 0.45, ease: 'power2.in' }, 0);
-                    if (prevCard) tl.to(prevCard, { x: 30, opacity: 0.85, duration: dur * 0.45, ease: 'power2.out' }, 0);
-
-                    tl.add(() => {
-                        this.currentIndex = newIndex;
-                    });
-
-                    tl.fromTo(activeCard, 
-                        { x: -35, opacity: 0.35 }, 
-                        { x: 0, opacity: 1, duration: dur * 0.55, ease: ease }
-                    );
-                    if (prevCard) tl.fromTo(prevCard, { x: 0, opacity: 0.2 }, { x: 0, opacity: 0.55, duration: dur * 0.5, ease: ease }, '-=' + (dur * 0.45));
-                    if (nextCard) tl.fromTo(nextCard, { x: 0, opacity: 0.2 }, { x: 0, opacity: 0.55, duration: dur * 0.5, ease: ease }, '-=' + (dur * 0.45));
+                } catch (e) {
+                    console.error('Archive transition error:', e);
+                    this.currentIndex = newIndex;
+                    this.isAnimating = false;
                 }
             }
          }">
@@ -302,7 +410,7 @@
                 x-ref="prevCard"
                 @click="prev()"
                 :aria-label="'Preview previous specimen: ' + prevSpecimen.name + ' (' + prevSpecimen.indexTag + ')'"
-                class="hidden lg:block absolute -left-2 xl:-left-10 2xl:-left-18 top-1/2 -translate-y-1/2 w-full max-w-3xl xl:max-w-4xl z-10 scale-[0.80] xl:scale-[0.84] opacity-65 hover:opacity-95 transition-all duration-300 cursor-pointer select-none filter drop-shadow-[0_16px_35px_rgba(20,15,8,0.30)]"
+                class="hidden lg:block absolute -left-2 xl:-left-10 2xl:-left-18 top-1/2 -translate-y-1/2 w-full max-w-3xl xl:max-w-4xl z-10 scale-[0.80] xl:scale-[0.84] opacity-65 hover:opacity-95 transition-opacity duration-200 cursor-pointer select-none filter drop-shadow-[0_16px_35px_rgba(20,15,8,0.30)]"
                 style="container-type: inline-size;"
                 tabindex="0"
                 role="button"
@@ -349,7 +457,7 @@
                     </div>
 
                     <!-- Prev Tag Ribbon Badge at Top -->
-                    <div class="absolute flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FAF5E8]/90 border border-[#8C6211] text-[1.1cqw] font-display font-bold text-[#8C6211] shadow-xs"
+                    <div class="prev-ribbon absolute flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FAF5E8]/90 border border-[#8C6211] text-[1.1cqw] font-display font-bold text-[#8C6211] shadow-xs"
                          style="left: 12.0%; top: 14.0%;">
                         <span>&lsaquo;</span>
                         <span class="uppercase tracking-wider">PREVIOUS</span>
@@ -362,7 +470,7 @@
                  ------------------------------------------------------------- -->
             <article 
                 x-ref="activeCard"
-                class="relative w-full max-w-4xl xl:max-w-5xl z-20 select-none filter drop-shadow-[0_24px_50px_rgba(20,15,8,0.40)] transition-all duration-300"
+                class="relative w-full max-w-4xl xl:max-w-5xl z-20 select-none filter drop-shadow-[0_24px_50px_rgba(20,15,8,0.40)]"
             >
                 
                 <!-- ---------------------------------------------------------
@@ -744,7 +852,7 @@
                 x-ref="nextCard"
                 @click="next()"
                 :aria-label="'Preview next specimen: ' + nextSpecimen.name + ' (' + nextSpecimen.indexTag + ')'"
-                class="hidden lg:block absolute -right-2 xl:-right-10 2xl:-right-18 top-1/2 -translate-y-1/2 w-full max-w-3xl xl:max-w-4xl z-10 scale-[0.80] xl:scale-[0.84] opacity-65 hover:opacity-95 transition-all duration-300 cursor-pointer select-none filter drop-shadow-[0_16px_35px_rgba(20,15,8,0.30)]"
+                class="hidden lg:block absolute -right-2 xl:-right-10 2xl:-right-18 top-1/2 -translate-y-1/2 w-full max-w-3xl xl:max-w-4xl z-10 scale-[0.80] xl:scale-[0.84] opacity-65 hover:opacity-95 transition-opacity duration-200 cursor-pointer select-none filter drop-shadow-[0_16px_35px_rgba(20,15,8,0.30)]"
                 style="container-type: inline-size;"
                 tabindex="0"
                 role="button"
@@ -780,7 +888,7 @@
                     </div>
 
                     <!-- Next Tag Ribbon Badge at Top -->
-                    <div class="absolute flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FAF5E8]/90 border border-[#8C6211] text-[1.1cqw] font-display font-bold text-[#8C6211] shadow-xs"
+                    <div class="next-ribbon absolute flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FAF5E8]/90 border border-[#8C6211] text-[1.1cqw] font-display font-bold text-[#8C6211] shadow-xs"
                          style="right: 12.0%; top: 14.0%;">
                         <span class="uppercase tracking-wider">NEXT</span>
                         <span>&rsaquo;</span>
