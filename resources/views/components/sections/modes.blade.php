@@ -1,33 +1,35 @@
 <!-- Section 6: Game Modes (Campaign vs Creative) -->
-<section id="game-modes" class="relative py-16 sm:py-20 lg:py-28 overflow-hidden bg-gradient-to-b from-[#EFE8D9] via-[#F8F4EC] to-[#EFE8D9]">
+<section id="game-modes" class="relative py-16 sm:py-20 lg:py-28 overflow-hidden bg-transparent">
 
     <!-- Anchor Aliases for Global Navbar and Footer Navigation (#features, #modes, #game-modes) -->
     <span id="features" class="absolute -top-20 pointer-events-none" aria-hidden="true"></span>
     <span id="modes" class="absolute -top-20 pointer-events-none" aria-hidden="true"></span>
     <span id="modes-view" class="absolute -top-24 pointer-events-none" aria-hidden="true"></span>
 
-    <!-- Environmental background transition -->
+    <!-- Shared Ambient Radial Illumination Layer -->
     <div class="absolute inset-0 z-0 pointer-events-none select-none" aria-hidden="true">
-        <div class="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-[#EFE8D9] to-transparent"></div>
-        <div class="absolute top-1/4 left-1/12 w-96 h-96 rounded-full bg-[radial-gradient(circle,_rgba(227,180,76,0.06)_0%,_transparent_70%)]"></div>
-        <div class="absolute bottom-1/4 right-1/12 w-96 h-96 rounded-full bg-[radial-gradient(circle,_rgba(66,169,198,0.06)_0%,_transparent_70%)]"></div>
+        <div class="absolute top-1/4 left-1/12 w-[40rem] h-[40rem] bg-[radial-gradient(circle,_rgba(255,252,242,0.75)_0%,_transparent_65%)]"></div>
+        <div class="absolute top-1/2 right-1/12 w-[38rem] h-[38rem] bg-[radial-gradient(circle,_rgba(225,242,228,0.50)_0%,_transparent_65%)]"></div>
+        <div class="absolute bottom-1/6 left-1/4 w-[34rem] h-[34rem] bg-[radial-gradient(circle,_rgba(250,245,232,0.60)_0%,_transparent_65%)]"></div>
     </div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
-        <!-- Editorial Section Header -->
-        <div class="max-w-3xl mb-10 sm:mb-14 lg:mb-16 space-y-3.5">
-            <span class="text-xs font-bold font-display uppercase tracking-widest text-[#2F6B3C]">
-                GAME MODES
-            </span>
+        <!-- Editorial Section Header: Parchment Scroll Presentation (Card 12: Ribbon Tag) -->
+        <div class="max-w-3xl mb-10 sm:mb-14 lg:mb-16 select-none">
+            <x-ui.parchment-scroll variant="card-12" padding="lg" class="w-full">
+                <span class="block text-xs font-bold font-display uppercase tracking-widest text-[#2F6B3C] mb-1.5">
+                    GAME MODES
+                </span>
 
-            <h2 class="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-reaktoria-deep-forest tracking-tight uppercase leading-[1.1]">
-                PLAY YOUR WAY.
-            </h2>
+                <h2 class="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-reaktoria-deep-forest tracking-tight uppercase leading-[1.1]">
+                    PLAY YOUR WAY.
+                </h2>
 
-            <p class="text-base sm:text-lg text-reaktoria-ink/80 leading-relaxed font-body">
-                Master the challenge. Or experiment without limits.
-            </p>
+                <p class="text-base sm:text-lg text-[#2E1B0E]/85 leading-relaxed font-body mt-3">
+                    Master the challenge. Or experiment without limits.
+                </p>
+            </x-ui.parchment-scroll>
         </div>
 
         <!-- TWO CINEMATIC EXPERIENCE PANELS: 01 CAMPAIGN (Progression) vs 02 CREATIVE (Free Experimentation) -->

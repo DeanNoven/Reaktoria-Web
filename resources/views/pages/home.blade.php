@@ -10,47 +10,92 @@
         <!-- Section 1: Above-The-Fold Cinematic Hero Section (Untouched) -->
         <x-sections.hero />
 
-        <!-- Section 2: Introduction: The Elemental Realm -->
-        <x-sections.world />
+        <!-- =================================================================
+             GLOBAL CANVAS SYSTEM (Sections 2, 3 & 4, 5, 6, 8)
+             Unified Base Color: #EDF6EB (Light Sage-Meadow Wash)
+             Shared Ambient Radial Illumination System:
+             - Warm parchment: rgba(255, 252, 242, 0.75)
+             - Secondary parchment: rgba(250, 245, 232, 0.60)
+             - Meadow illumination: rgba(225, 242, 228, 0.50)
+             ================================================================= -->
+        <div 
+            class="relative w-full bg-[#EDF6EB] overflow-hidden"
+            x-data="{
+                progress: 0,
+                updateProgress() {
+                    const bg = this.$refs.tapestryBg;
+                    if (!bg) return;
+                    const rect = this.$el.getBoundingClientRect();
+                    const maxScroll = this.$el.offsetHeight - window.innerHeight;
+                    if (maxScroll > 0) {
+                        const current = -rect.top;
+                        this.progress = Math.min(Math.max(current / maxScroll, 0), 1);
+                        bg.style.backgroundPosition = `center ${(this.progress * 100).toFixed(2)}%`;
+                    }
+                }
+            }"
+            x-init="
+                $nextTick(() => updateProgress());
+                let ticking = false;
+                const onScroll = () => {
+                    if (!ticking) {
+                        requestAnimationFrame(() => {
+                            updateProgress();
+                            ticking = false;
+                        });
+                        ticking = true;
+                    }
+                };
+                window.addEventListener('scroll', onScroll, { passive: true });
+                window.addEventListener('resize', onScroll, { passive: true });
+            "
+        >
+            
+            <!-- Continuous Grand Realm Tapestry Backdrop (Spans Section 2 through Section 8 Seamlessly) -->
+            <div class="absolute inset-0 z-0 pointer-events-none select-none" aria-hidden="true">
+                <div 
+                    x-ref="tapestryBg"
+                    class="w-full h-full image-background bg-cover bg-no-repeat bg-fixed select-none pointer-events-none opacity-85 contrast-[1.02] saturate-[1.05] transition-[background-position] duration-150 ease-out motion-reduce:transition-none"
+                    style="background-image: url('{{ asset('images/backgrounds/grand-realm-scroll.jpg') }}'); background-position: center 0%;  filter: brightness(65%);"
+                    role="img"
+                    aria-label="Reaktoria Continuous Grand Realm Tapestry"
+                ></div>
 
-        <!-- Section 3 & 4: Workshop Hall (Chemistry & Forging): Unified Single Background -->
-        <div class="relative overflow-hidden bg-[#FAF6EE]">
-            <!-- Single Continuous Background Spanning Both Section 3 and Section 4 -->
-            <div class="absolute inset-0 z-0 pointer-events-none select-none">
-                <img 
-                    src="{{ asset('images/backgrounds/workshop-tall-bg.jpg') }}" 
-                    alt="Reaktoria Low-Poly Medieval Craft Hall: chemistry-bg.jpg & forge-bg.jpg" 
-                    class="w-full h-full object-cover object-center select-none pointer-events-none opacity-12 sm:opacity-15 contrast-[0.98] saturate-[0.95] brightness-[1.01]"
-                    loading="lazy"
-                />
+                <!-- Top Seamless Transition from Hero Section -->
+                <div class="absolute inset-x-0 top-0 h-36 bg-gradient-to-b from-[#EDF6EB] via-[#EDF6EB]/85 to-transparent"></div>
 
-                <!-- Seamless Transition from Section 2 (#EDF6EB meadow into workshop stone) -->
-                <div class="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-[#EDF6EB] via-[#E7EDE3]/85 via-[#EEE5D5]/65 to-transparent pointer-events-none"></div>
-
-                <!-- Subtle Ambient Workshop Lighting -->
-                <div class="absolute top-1/6 right-1/6 w-[36rem] h-[36rem] bg-[radial-gradient(circle,_rgba(240,180,85,0.14)_0%,_transparent_65%)] pointer-events-none"></div>
-                <div class="absolute top-1/5 left-1/6 w-[32rem] h-[32rem] bg-[radial-gradient(circle,_rgba(140,200,230,0.08)_0%,_transparent_65%)] pointer-events-none"></div>
-                <div class="absolute bottom-1/4 right-1/12 w-[42rem] h-[42rem] bg-[radial-gradient(circle,_rgba(240,140,50,0.16)_0%,_transparent_65%)] pointer-events-none"></div>
-
-                <!-- Seamless Transition to Section 5 (#DFD4C2 forge stone into gameplay meadow) -->
-                <div class="absolute bottom-0 inset-x-0 h-32 bg-gradient-to-t from-[#DFD4C2] via-[#E2D7C5]/70 to-transparent pointer-events-none"></div>
+                <!-- Continuous Ambient Radial Illuminations Across Shared Canvas Flow -->
+                <div class="absolute top-[3%] left-[6%] w-[46rem] h-[46rem] bg-[radial-gradient(circle,_rgba(255,252,242,0.60)_0%,_transparent_65%)]"></div>
+                <div class="absolute top-[18%] right-[8%] w-[42rem] h-[42rem] bg-[radial-gradient(circle,_rgba(225,242,228,0.40)_0%,_transparent_65%)]"></div>
+                <div class="absolute top-[36%] left-[10%] w-[40rem] h-[40rem] bg-[radial-gradient(circle,_rgba(250,245,232,0.50)_0%,_transparent_65%)]"></div>
+                <div class="absolute top-[54%] right-[6%] w-[44rem] h-[44rem] bg-[radial-gradient(circle,_rgba(255,252,242,0.60)_0%,_transparent_65%)]"></div>
+                <div class="absolute top-[72%] left-[8%] w-[42rem] h-[42rem] bg-[radial-gradient(circle,_rgba(225,242,228,0.40)_0%,_transparent_65%)]"></div>
+                <div class="absolute bottom-[4%] right-[10%] w-[40rem] h-[40rem] bg-[radial-gradient(circle,_rgba(250,245,232,0.50)_0%,_transparent_65%)]"></div>
             </div>
 
-            <!-- Merged Interactive Section: Discover Chemistry and Forge -->
+            <!-- Section 2: Introduction: The Elemental Realm -->
+            <x-sections.world />
+
+            <!-- Section 3 & 4 (Merged): Workshop Hall (Discover Chemistry and Forge) -->
             <x-sections.chemistry />
+
+            <!-- Section 5: Field Battle / Gameplay -->
+            <x-sections.gameplay />
+
+            <!-- Section 6: Game Modes -->
+            <x-sections.modes />
+
+            <!-- Section 8: Elemental Archive -->
+            <x-sections.archive />
+
+            <!-- Bottom Seamless Transition into Section 9 (Gallery Parchment #E9DFC9) -->
+            <div class="absolute bottom-0 inset-x-0 h-36 bg-gradient-to-t from-[#E9DFC9] via-[#E9DFC9]/80 to-transparent pointer-events-none z-10"></div>
         </div>
 
-        <!-- Pilar 3: Field Battle & Game Modes (Combat Telemetry & Game Modes) -->
-        <x-sections.gameplay />
-        <x-sections.modes />
-
-        <!-- Section 8: Elemental Archive: Know What You're Mixing -->
-        <x-sections.archive />
-
-        <!-- Section 9: Gallery: Visual Archive: A World Worth Discovering -->
+        <!-- Section 9: Gallery: Visual Archive: A World Worth Discovering (Untouched) -->
         <x-sections.gallery />
 
-        <!-- Section 10: Final CTA: Your Journey Begins: Enter The Realm -->
+        <!-- Section 10: Final CTA: Your Journey Begins: Enter The Realm (Untouched) -->
         <x-sections.cta />
     </main>
 

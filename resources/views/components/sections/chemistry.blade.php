@@ -17,45 +17,61 @@
     <span class="sr-only" aria-hidden="true">chemistry-bg.jpg</span>
     <span class="sr-only" aria-hidden="true">forge-bg.jpg</span>
 
+    <!-- Section 3 & 4 seamlessly uses the continuous master realm tapestry from the parent container -->
+    <div class="absolute inset-0 z-0 pointer-events-none select-none" aria-hidden="true">
+        <!-- Subtle Ambient Radial Glow -->
+        <div class="absolute top-1/5 right-1/12 w-[38rem] h-[38rem] bg-[radial-gradient(circle,_rgba(255,252,242,0.40)_0%,_transparent_65%)]"></div>
+        <div class="absolute bottom-1/5 right-1/4 w-[34rem] h-[34rem] bg-[radial-gradient(circle,_rgba(250,245,232,0.30)_0%,_transparent_65%)]"></div>
+    </div>
+
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <!-- Main Section Header (Stays anchored and stable across all states) -->
-        <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14 lg:mb-16 space-y-3.5 select-none">
-            <div class="flex items-center justify-center gap-2 sm:gap-3 text-xs font-bold font-display uppercase tracking-widest">
-                <span class="text-[#1B7088]">THE ART OF REACTION</span>
-                <span class="text-[#D5C6AA]">&bull;</span>
-                <span class="text-[#B84E1F]">THE ART OF FORGING</span>
-            </div>
+        <!-- Main Section Header: Parchment Scroll Presentation -->
+        <div class="max-w-3xl mx-auto mb-10 sm:mb-14 lg:mb-16 select-none">
+            <x-ui.parchment-scroll variant="card-02" padding="lg" class="w-full text-center">
+                <div class="flex items-center justify-center gap-2 sm:gap-3 text-xs font-bold font-display uppercase tracking-widest mb-2">
+                    <span class="text-[#1B7088]">THE ART OF REACTION</span>
+                    <span class="text-[#D5C6AA]">&bull;</span>
+                    <span class="text-[#B84E1F]">THE ART OF FORGING</span>
+                </div>
 
-            <h2 class="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-reaktoria-deep-forest tracking-tight uppercase leading-[1.1]">
-                DISCOVER CHEMISTRY AND FORGE
-            </h2>
+                <h2 class="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-reaktoria-deep-forest tracking-tight uppercase leading-[1.1]">
+                    DISCOVER CHEMISTRY AND FORGE
+                </h2>
 
-            <p class="text-sm sm:text-base lg:text-lg text-reaktoria-ink/80 leading-relaxed font-body max-w-2xl mx-auto">
-                Two alchemical paths shape the Elemental Realm. Choose an endeavor below to explore reaction formulation or martial weapon craft.
-            </p>
+                <p class="text-sm sm:text-base lg:text-lg text-[#4A3B2A] leading-relaxed font-body max-w-2xl mx-auto mt-3">
+                    Two alchemical paths shape the Elemental Realm. Choose an endeavor below to explore reaction formulation or martial weapon craft.
+                </p>
+            </x-ui.parchment-scroll>
         </div>
 
         <!-- Floating Return Button Bar (Animates gently into view only in Focused State) -->
         <div 
-            class="mb-6 sm:mb-8 flex items-center justify-start transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] motion-reduce:transition-none"
+            class="mb-6 sm:mb-8 flex items-center justify-start transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] motion-reduce:transition-none select-none"
             :class="selected !== null ? 'opacity-100 translate-y-0 max-h-20 pointer-events-auto' : 'opacity-0 -translate-y-4 max-h-0 overflow-hidden pointer-events-none'"
         >
             <button 
                 type="button" 
                 @click="resetDiscovery()"
-                class="inline-flex items-center gap-2.5 px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl bg-[#FAF6EE] hover:bg-white text-reaktoria-deep-forest font-display font-bold text-xs sm:text-sm tracking-wider uppercase border-2 border-[#D5C6AA] shadow-[0_4px_12px_rgba(40,30,15,0.06)] hover:shadow-[0_6px_16px_rgba(40,30,15,0.12)] hover:border-[#19452C] transition-all duration-300 group cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#2F6B3C]"
+                class="group inline-block cursor-pointer focus:outline-none transition-transform duration-300 hover:scale-[1.03] active:scale-[0.98]"
                 aria-label="Back to both discoveries"
             >
-                <span class="text-base text-[#1B7088] group-hover:-translate-x-1 transition-transform duration-300">&larr;</span>
-                <span>BACK TO BOTH DISCOVERIES</span>
+                <x-ui.parchment-scroll variant="card-05" padding="none" class="!my-0">
+                    <div class="inline-flex items-center gap-2.5 px-4 py-2 sm:px-5 sm:py-2.5 text-reaktoria-deep-forest font-display font-bold text-xs sm:text-sm tracking-wider uppercase">
+                        <span 
+                            class="text-base group-hover:-translate-x-1.5 transition-transform duration-300"
+                            :class="selected === 'forge' ? 'text-[#B84E1F]' : 'text-[#1B7088]'"
+                        >&larr;</span>
+                        <span>BACK TO BOTH DISCOVERIES</span>
+                    </div>
+                </x-ui.parchment-scroll>
             </button>
         </div>
 
         <!-- Interactive Discovery Stage (Desktop 2-Column Grid, Mobile Responsive Stack) -->
         <div class="relative w-full">
             
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start lg:items-center">
                 
                 <!-- ============================================================ -->
                 <!-- COLUMN 1 (LEFT): Chemistry Artwork / Forge Explanation -->
@@ -73,15 +89,19 @@
                     >
                         <!-- Initial Title above Image (Glides up and transitions into explanation column when selected) -->
                         <div 
-                            class="space-y-1.5 select-none transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] motion-reduce:transition-none"
-                            :class="selected === 'chemistry' ? 'opacity-0 -translate-y-3 max-h-0 overflow-hidden mb-0' : 'opacity-100 translate-y-0 max-h-24 mb-1'"
+                            class="select-none transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] motion-reduce:transition-none"
+                            :class="selected === 'chemistry' ? 'opacity-0 -translate-y-3 max-h-0 overflow-hidden mb-0' : 'opacity-100 translate-y-0 max-h-48 mb-2'"
                         >
-                            <span class="text-xs font-bold font-display uppercase tracking-widest text-[#5D462E]">
-                                Alchemist&apos;s Field Folio
-                            </span>
-                            <h3 class="font-display font-extrabold text-2xl sm:text-3xl text-reaktoria-deep-forest uppercase tracking-tight">
-                                DISCOVER THE <span class="text-[#1B7088]">ELEMENTS</span>
-                            </h3>
+                            <x-ui.parchment-scroll variant="card-08" padding="none" class="my-0 w-full py-2.5 sm:py-3 px-3 sm:px-6">
+                                <div class="text-center space-y-0.5">
+                                    <span class="block text-[11px] sm:text-xs font-bold font-display uppercase tracking-widest text-[#5D462E]">
+                                        Alchemist&apos;s Field Folio
+                                    </span>
+                                    <h3 class="font-display font-extrabold text-lg sm:text-2xl text-reaktoria-deep-forest uppercase tracking-tight leading-snug">
+                                        DISCOVER THE <span class="text-[#1B7088]">ELEMENTS</span>
+                                    </h3>
+                                </div>
+                            </x-ui.parchment-scroll>
                         </div>
 
                         <!-- Art Plate (Interactive in initial state, focused in active state) -->
@@ -111,105 +131,105 @@
                                 </span>
                                 <span class="group-hover:translate-x-1.5 transition-transform duration-300 text-[#9CD5E6]">&rarr;</span>
                             </div>
-                        </div>
 
-                        <!-- Initial State Action Button -->
-                        <div x-show="selected === null" class="pt-1">
-                            <button 
-                                type="button"
-                                @click="selectDiscovery('chemistry')"
-                                class="w-full py-2.5 px-4 rounded-xl bg-[#FAF6EE] hover:bg-[#EAF2F5] text-reaktoria-deep-forest font-display font-bold text-xs tracking-wider uppercase border border-[#D5C6AA] hover:border-[#1B7088] shadow-2xs hover:shadow-xs transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#1B7088]"
+                            <!-- Hover Fade Overlay: Dim & "--select--" CTA -->
+                            <div 
+                                x-show="selected === null"
+                                class="absolute inset-0 z-20 flex items-center justify-center bg-black/45 backdrop-blur-[1.5px] opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none select-none"
                             >
-                                <span>Inspect Reaction Laboratory</span>
-                                <span class="text-[#1B7088]">&rarr;</span>
-                            </button>
+                                <div class="px-5 py-2.5 rounded-full bg-[#FAF1D8]/95 border-2 border-[#D5C6AA] shadow-[0_10px_28px_rgba(0,0,0,0.35)] text-reaktoria-deep-forest font-display font-extrabold text-xs sm:text-sm tracking-widest transition-transform duration-300 transform scale-90 group-hover:scale-100 flex items-center gap-2">
+                                    <span>--select--</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <!-- 1B: FORGE EXPLANATION PANEL -->
                     <!-- Reveals into Column 1 when Forge is focused. Hidden otherwise. -->
                     <div 
-                        class="transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] motion-reduce:transition-none space-y-6"
+                        class="transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] motion-reduce:transition-none"
                         :class="{
                             'opacity-100 translate-x-0 pointer-events-auto': selected === 'forge',
                             'opacity-0 -translate-x-16 pointer-events-none absolute inset-0 invisible': selected !== 'forge'
                         }"
                     >
-                        <!-- Forge Title & Eyebrow (Glides seamlessly into place) -->
-                        <div 
-                            class="space-y-3 transition-all duration-600 delay-100 ease-[cubic-bezier(0.16,1,0.3,1)] motion-reduce:transition-none"
-                            :class="selected === 'forge' ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'"
-                        >
-                            <div class="flex items-center gap-3">
-                                <span class="text-xs font-bold font-display uppercase tracking-widest text-[#5D462E]">
-                                    Blacksmith&apos;s Forge
-                                </span>
-                                <span class="text-[#D5C6AA]">&bull;</span>
-                                <span class="text-xs font-bold font-display uppercase tracking-widest text-[#B84E1F]">
-                                    THE ART OF FORGING
-                                </span>
+                        <x-ui.parchment-scroll variant="main" padding="md" class="w-full">
+                            <!-- Forge Title & Eyebrow (Glides seamlessly into place) -->
+                            <div 
+                                class="space-y-3 transition-all duration-600 delay-100 ease-[cubic-bezier(0.16,1,0.3,1)] motion-reduce:transition-none"
+                                :class="selected === 'forge' ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'"
+                            >
+                                <div class="flex items-center gap-3">
+                                    <span class="text-xs font-bold font-display uppercase tracking-widest text-[#5D462E]">
+                                        Blacksmith&apos;s Forge
+                                    </span>
+                                    <span class="text-[#D5C6AA]">&bull;</span>
+                                    <span class="text-xs font-bold font-display uppercase tracking-widest text-[#B84E1F]">
+                                        THE ART OF FORGING
+                                    </span>
+                                </div>
+
+                                <h3 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-reaktoria-deep-forest tracking-tight uppercase leading-[1.15]">
+                                    TURN DISCOVERY <br class="hidden sm:inline" />
+                                    <span class="text-[#B84E1F]">INTO POWER</span>
+                                </h3>
+
+                                <p class="text-base sm:text-lg text-[#4A3B2A] leading-relaxed font-body">
+                                    Every successful reaction can become more than a discovery. Transform chemical combinations into unique weapons and bring their power into the Elemental Realm.
+                                </p>
                             </div>
 
-                            <h3 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-reaktoria-deep-forest tracking-tight uppercase leading-[1.15]">
-                                TURN DISCOVERY <br class="hidden sm:inline" />
-                                <span class="text-[#B84E1F]">INTO POWER</span>
-                            </h3>
+                            <!-- Forge Progression Tiers -->
+                            <div 
+                                class="space-y-5 pt-4 border-t border-[#D6C4A7]/80 mt-5 transition-all duration-700 delay-200 ease-[cubic-bezier(0.16,1,0.3,1)] motion-reduce:transition-none"
+                                :class="selected === 'forge' ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
+                            >
+                                <!-- Tier I: DISCOVER -->
+                                <div class="flex items-start gap-4">
+                                    <span class="font-display font-bold text-base sm:text-lg text-[#1B7088] tracking-wider pt-0.5 shrink-0 select-none">
+                                        I.
+                                    </span>
+                                    <div class="space-y-1">
+                                        <h4 class="font-display font-bold text-base sm:text-lg text-reaktoria-deep-forest uppercase tracking-wide">
+                                            DISCOVER
+                                        </h4>
+                                        <p class="text-sm sm:text-base text-[#4A3B2A]/90 leading-relaxed font-body">
+                                            Understand the result of a successful chemical reaction.
+                                        </p>
+                                    </div>
+                                </div>
 
-                            <p class="text-base sm:text-lg text-reaktoria-ink/85 leading-relaxed font-body">
-                                Every successful reaction can become more than a discovery. Transform chemical combinations into unique weapons and bring their power into the Elemental Realm.
-                            </p>
-                        </div>
+                                <!-- Tier II: FORGE -->
+                                <div class="flex items-start gap-4">
+                                    <span class="font-display font-bold text-base sm:text-lg text-[#B84E1F] tracking-wider pt-0.5 shrink-0 select-none">
+                                        II.
+                                    </span>
+                                    <div class="space-y-1">
+                                        <h4 class="font-display font-bold text-base sm:text-lg text-reaktoria-deep-forest uppercase tracking-wide">
+                                            FORGE
+                                        </h4>
+                                        <p class="text-sm sm:text-base text-[#4A3B2A]/90 leading-relaxed font-body">
+                                            Transform the discovery into a unique weapon or item.
+                                        </p>
+                                    </div>
+                                </div>
 
-                        <!-- Forge Progression Tiers -->
-                        <div 
-                            class="space-y-5 pt-4 border-t border-[#D5C6AA]/70 transition-all duration-700 delay-200 ease-[cubic-bezier(0.16,1,0.3,1)] motion-reduce:transition-none"
-                            :class="selected === 'forge' ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
-                        >
-                            <!-- Tier I: DISCOVER -->
-                            <div class="flex items-start gap-4">
-                                <span class="font-display font-bold text-base sm:text-lg text-[#1B7088] tracking-wider pt-0.5 shrink-0 select-none">
-                                    I.
-                                </span>
-                                <div class="space-y-1">
-                                    <h4 class="font-display font-bold text-base sm:text-lg text-reaktoria-deep-forest uppercase tracking-wide">
-                                        DISCOVER
-                                    </h4>
-                                    <p class="text-sm sm:text-base text-reaktoria-ink/80 leading-relaxed font-body">
-                                        Understand the result of a successful chemical reaction.
-                                    </p>
+                                <!-- Tier III: WIELD -->
+                                <div class="flex items-start gap-4">
+                                    <span class="font-display font-bold text-base sm:text-lg text-[#2F6B3C] tracking-wider pt-0.5 shrink-0 select-none">
+                                        III.
+                                    </span>
+                                    <div class="space-y-1">
+                                        <h4 class="font-display font-bold text-base sm:text-lg text-reaktoria-deep-forest uppercase tracking-wide">
+                                            WIELD
+                                        </h4>
+                                        <p class="text-sm sm:text-base text-[#4A3B2A]/90 leading-relaxed font-body">
+                                            Bring your creation into the adventure and use its power in battle.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-
-                            <!-- Tier II: FORGE -->
-                            <div class="flex items-start gap-4">
-                                <span class="font-display font-bold text-base sm:text-lg text-[#B84E1F] tracking-wider pt-0.5 shrink-0 select-none">
-                                    II.
-                                </span>
-                                <div class="space-y-1">
-                                    <h4 class="font-display font-bold text-base sm:text-lg text-reaktoria-deep-forest uppercase tracking-wide">
-                                        FORGE
-                                    </h4>
-                                    <p class="text-sm sm:text-base text-reaktoria-ink/80 leading-relaxed font-body">
-                                        Transform the discovery into a unique weapon or item.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <!-- Tier III: WIELD -->
-                            <div class="flex items-start gap-4">
-                                <span class="font-display font-bold text-base sm:text-lg text-[#2F6B3C] tracking-wider pt-0.5 shrink-0 select-none">
-                                    III.
-                                </span>
-                                <div class="space-y-1">
-                                    <h4 class="font-display font-bold text-base sm:text-lg text-reaktoria-deep-forest uppercase tracking-wide">
-                                        WIELD
-                                    </h4>
-                                    <p class="text-sm sm:text-base text-reaktoria-ink/80 leading-relaxed font-body">
-                                        Bring your creation into the adventure and use its power in battle.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                        </x-ui.parchment-scroll>
                     </div>
 
                 </div>
@@ -230,15 +250,19 @@
                     >
                         <!-- Initial Title above Image (Glides up and transitions into explanation column when selected) -->
                         <div 
-                            class="space-y-1.5 select-none transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] motion-reduce:transition-none"
-                            :class="selected === 'forge' ? 'opacity-0 -translate-y-3 max-h-0 overflow-hidden mb-0' : 'opacity-100 translate-y-0 max-h-24 mb-1'"
+                            class="select-none transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] motion-reduce:transition-none"
+                            :class="selected === 'forge' ? 'opacity-0 -translate-y-3 max-h-0 overflow-hidden mb-0' : 'opacity-100 translate-y-0 max-h-48 mb-2'"
                         >
-                            <span class="text-xs font-bold font-display uppercase tracking-widest text-[#5D462E]">
-                                Blacksmith&apos;s Forge
-                            </span>
-                            <h3 class="font-display font-extrabold text-2xl sm:text-3xl text-reaktoria-deep-forest uppercase tracking-tight">
-                                TURN DISCOVERY <span class="text-[#B84E1F]">INTO POWER</span>
-                            </h3>
+                            <x-ui.parchment-scroll variant="card-08" padding="none" class="my-0 w-full py-2.5 sm:py-3 px-3 sm:px-6">
+                                <div class="text-center space-y-0.5">
+                                    <span class="block text-[11px] sm:text-xs font-bold font-display uppercase tracking-widest text-[#5D462E]">
+                                        Blacksmith&apos;s Forge
+                                    </span>
+                                    <h3 class="font-display font-extrabold text-lg sm:text-2xl text-reaktoria-deep-forest uppercase tracking-tight leading-snug">
+                                        TURN DISCOVERY <span class="text-[#B84E1F]">INTO POWER</span>
+                                    </h3>
+                                </div>
+                            </x-ui.parchment-scroll>
                         </div>
 
                         <!-- Art Plate (Interactive in initial state, focused in active state) -->
@@ -268,105 +292,105 @@
                                 </span>
                                 <span class="group-hover:translate-x-1.5 transition-transform duration-300 text-[#E8A572]">&rarr;</span>
                             </div>
-                        </div>
 
-                        <!-- Initial State Action Button -->
-                        <div x-show="selected === null" class="pt-1">
-                            <button 
-                                type="button"
-                                @click="selectDiscovery('forge')"
-                                class="w-full py-2.5 px-4 rounded-xl bg-[#FAF6EE] hover:bg-[#FBEFE5] text-reaktoria-deep-forest font-display font-bold text-xs tracking-wider uppercase border border-[#D5C6AA] hover:border-[#B84E1F] shadow-2xs hover:shadow-xs transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#B84E1F]"
+                            <!-- Hover Fade Overlay: Dim & "--select--" CTA -->
+                            <div 
+                                x-show="selected === null"
+                                class="absolute inset-0 z-20 flex items-center justify-center bg-black/45 backdrop-blur-[1.5px] opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none select-none"
                             >
-                                <span>Inspect Blacksmith Forge</span>
-                                <span class="text-[#B84E1F]">&rarr;</span>
-                            </button>
+                                <div class="px-5 py-2.5 rounded-full bg-[#FAF1D8]/95 border-2 border-[#D5C6AA] shadow-[0_10px_28px_rgba(0,0,0,0.35)] text-reaktoria-deep-forest font-display font-extrabold text-xs sm:text-sm tracking-widest transition-transform duration-300 transform scale-90 group-hover:scale-100 flex items-center gap-2">
+                                    <span>--select--</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <!-- 2B: CHEMISTRY EXPLANATION PANEL -->
                     <!-- Reveals into Column 2 when Chemistry is focused. Hidden otherwise. -->
                     <div 
-                        class="transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] motion-reduce:transition-none space-y-6"
+                        class="transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] motion-reduce:transition-none"
                         :class="{
                             'opacity-100 translate-x-0 pointer-events-auto': selected === 'chemistry',
                             'opacity-0 translate-x-16 pointer-events-none absolute inset-0 invisible': selected !== 'chemistry'
                         }"
                     >
-                        <!-- Chemistry Title & Eyebrow (Glides seamlessly into place) -->
-                        <div 
-                            class="space-y-3 transition-all duration-600 delay-100 ease-[cubic-bezier(0.16,1,0.3,1)] motion-reduce:transition-none"
-                            :class="selected === 'chemistry' ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'"
-                        >
-                            <div class="flex items-center gap-3">
-                                <span class="text-xs font-bold font-display uppercase tracking-widest text-[#5D462E]">
-                                    Alchemist&apos;s Field Folio
-                                </span>
-                                <span class="text-[#D5C6AA]">&bull;</span>
-                                <span class="text-xs font-bold font-display uppercase tracking-widest text-[#1B7088]">
-                                    THE ART OF REACTION
-                                </span>
+                        <x-ui.parchment-scroll variant="main" padding="md" class="w-full">
+                            <!-- Chemistry Title & Eyebrow (Glides seamlessly into place) -->
+                            <div 
+                                class="space-y-3 transition-all duration-600 delay-100 ease-[cubic-bezier(0.16,1,0.3,1)] motion-reduce:transition-none"
+                                :class="selected === 'chemistry' ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'"
+                            >
+                                <div class="flex items-center gap-3">
+                                    <span class="text-xs font-bold font-display uppercase tracking-widest text-[#5D462E]">
+                                        Alchemist&apos;s Field Folio
+                                    </span>
+                                    <span class="text-[#D5C6AA]">&bull;</span>
+                                    <span class="text-xs font-bold font-display uppercase tracking-widest text-[#1B7088]">
+                                        THE ART OF REACTION
+                                    </span>
+                                </div>
+
+                                <h3 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-reaktoria-deep-forest tracking-tight uppercase leading-[1.15]">
+                                    DISCOVER THE <br class="hidden sm:inline" />
+                                    <span class="text-[#1B7088]">ELEMENTS</span>
+                                </h3>
+
+                                <p class="text-base sm:text-lg text-[#4A3B2A] leading-relaxed font-body">
+                                    Combine real chemical elements, observe their reactions, and discover what happens when science becomes part of the adventure.
+                                </p>
                             </div>
 
-                            <h3 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-reaktoria-deep-forest tracking-tight uppercase leading-[1.15]">
-                                DISCOVER THE <br class="hidden sm:inline" />
-                                <span class="text-[#1B7088]">ELEMENTS</span>
-                            </h3>
+                            <!-- Chemistry Progression Steps -->
+                            <div 
+                                class="space-y-5 pt-4 border-t border-[#D6C4A7]/80 mt-5 transition-all duration-700 delay-200 ease-[cubic-bezier(0.16,1,0.3,1)] motion-reduce:transition-none"
+                                :class="selected === 'chemistry' ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
+                            >
+                                <!-- Step 01: SELECT -->
+                                <div class="flex items-start gap-4">
+                                    <span class="font-display font-bold text-base sm:text-lg text-[#1B7088] tracking-wider pt-0.5 shrink-0 select-none">
+                                        01.
+                                    </span>
+                                    <div class="space-y-1">
+                                        <h4 class="font-display font-bold text-base sm:text-lg text-reaktoria-deep-forest uppercase tracking-wide">
+                                            SELECT
+                                        </h4>
+                                        <p class="text-sm sm:text-base text-[#4A3B2A]/90 leading-relaxed font-body">
+                                            Choose elemental reagents from the table to begin formulation.
+                                        </p>
+                                    </div>
+                                </div>
 
-                            <p class="text-base sm:text-lg text-reaktoria-ink/85 leading-relaxed font-body">
-                                Combine real chemical elements, observe their reactions, and discover what happens when science becomes part of the adventure.
-                            </p>
-                        </div>
+                                <!-- Step 02: REACT -->
+                                <div class="flex items-start gap-4">
+                                    <span class="font-display font-bold text-base sm:text-lg text-[#8C6211] tracking-wider pt-0.5 shrink-0 select-none">
+                                        02.
+                                    </span>
+                                    <div class="space-y-1">
+                                        <h4 class="font-display font-bold text-base sm:text-lg text-reaktoria-deep-forest uppercase tracking-wide">
+                                            REACT
+                                        </h4>
+                                        <p class="text-sm sm:text-base text-[#4A3B2A]/90 leading-relaxed font-body">
+                                            Introduce heat energy into the vessel and observe exothermic transformation.
+                                        </p>
+                                    </div>
+                                </div>
 
-                        <!-- Chemistry Progression Steps -->
-                        <div 
-                            class="space-y-5 pt-4 border-t border-[#D5C6AA]/70 transition-all duration-700 delay-200 ease-[cubic-bezier(0.16,1,0.3,1)] motion-reduce:transition-none"
-                            :class="selected === 'chemistry' ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
-                        >
-                            <!-- Step 01: SELECT -->
-                            <div class="flex items-start gap-4">
-                                <span class="font-display font-bold text-base sm:text-lg text-[#1B7088] tracking-wider pt-0.5 shrink-0 select-none">
-                                    01.
-                                </span>
-                                <div class="space-y-1">
-                                    <h4 class="font-display font-bold text-base sm:text-lg text-reaktoria-deep-forest uppercase tracking-wide">
-                                        SELECT
-                                    </h4>
-                                    <p class="text-sm sm:text-base text-reaktoria-ink/80 leading-relaxed font-body">
-                                        Choose elemental reagents from the table to begin formulation.
-                                    </p>
+                                <!-- Step 03: DISCOVER -->
+                                <div class="flex items-start gap-4">
+                                    <span class="font-display font-bold text-base sm:text-lg text-[#2F6B3C] tracking-wider pt-0.5 shrink-0 select-none">
+                                        03.
+                                    </span>
+                                    <div class="space-y-1">
+                                        <h4 class="font-display font-bold text-base sm:text-lg text-reaktoria-deep-forest uppercase tracking-wide">
+                                            DISCOVER
+                                        </h4>
+                                        <p class="text-sm sm:text-base text-[#4A3B2A]/90 leading-relaxed font-body">
+                                            Synthesize a new mineral compound and record its real chemical properties.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-
-                            <!-- Step 02: REACT -->
-                            <div class="flex items-start gap-4">
-                                <span class="font-display font-bold text-base sm:text-lg text-[#8C6211] tracking-wider pt-0.5 shrink-0 select-none">
-                                    02.
-                                </span>
-                                <div class="space-y-1">
-                                    <h4 class="font-display font-bold text-base sm:text-lg text-reaktoria-deep-forest uppercase tracking-wide">
-                                        REACT
-                                    </h4>
-                                    <p class="text-sm sm:text-base text-reaktoria-ink/80 leading-relaxed font-body">
-                                        Introduce heat energy into the vessel and observe exothermic transformation.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <!-- Step 03: DISCOVER -->
-                            <div class="flex items-start gap-4">
-                                <span class="font-display font-bold text-base sm:text-lg text-[#2F6B3C] tracking-wider pt-0.5 shrink-0 select-none">
-                                    03.
-                                </span>
-                                <div class="space-y-1">
-                                    <h4 class="font-display font-bold text-base sm:text-lg text-reaktoria-deep-forest uppercase tracking-wide">
-                                        DISCOVER
-                                    </h4>
-                                    <p class="text-sm sm:text-base text-reaktoria-ink/80 leading-relaxed font-body">
-                                        Synthesize a new mineral compound and record its real chemical properties.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                        </x-ui.parchment-scroll>
                     </div>
 
                 </div>

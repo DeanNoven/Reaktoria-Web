@@ -66,19 +66,34 @@
 @layer base {
     body {
         font-family: var(--font-body);
-        background-color: #F8FAF7;
         color: var(--color-reaktoria-ink);
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
     }
 
-    h1, h2, h3, h4, h5, h6 {
+    .image-background {
+        background: url("/images/backgrounds/grand-realm-scroll.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
         font-family: var(--font-display);
         letter-spacing: 0.02em;
     }
 
     @media (prefers-reduced-motion: reduce) {
-        *, ::before, ::after {
+
+        *,
+        ::before,
+        ::after {
             animation-duration: 0.01ms !important;
             animation-iteration-count: 1 !important;
             transition-duration: 0.01ms !important;

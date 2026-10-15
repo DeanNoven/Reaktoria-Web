@@ -13,3 +13,7 @@ Route::get('/world', function () {
 Route::get('/foundation', function () {
     return view('pages.foundation');
 });
+
+Route::get('/preview/parchment', function () {
+    return view('preview.parchment');
+});
